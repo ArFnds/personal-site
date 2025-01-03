@@ -7,7 +7,7 @@ import { useTheme } from "./ThemeProvider";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
-	const { t, i18n } = useTranslation();
+	const { t } = useTranslation();
 	const { theme } = useTheme();
 	const [isOpen, setIsOpen] = React.useState(false);
 
@@ -21,20 +21,11 @@ const Navbar = () => {
 	];
 
 	return (
-		<nav
-			className={`${
-				theme === "dark" ? "bg-gray-800 text-white" : "bg-white text-gray-800"
-			} shadow-lg fixed w-full z-50`}
-		>
+		<nav className="bg-background text-foreground shadow-lg fixed w-full z-50">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex justify-between h-16">
 					<div className="flex items-center">
-						<NavLink
-							to="/"
-							className={`text-xl font-bold ${
-								theme === "dark" ? "text-white" : "text-gray-800"
-							}`}
-						>
+						<NavLink to="/" className="text-xl font-bold text-foreground">
 							Arnaud Fernandes
 						</NavLink>
 					</div>

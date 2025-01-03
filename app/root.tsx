@@ -13,6 +13,7 @@ import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n/i18n";
 import Navbar from "./components/NavBar";
 import { ThemeProvider } from "./components/ThemeProvider";
+import Footer from "./components/Footer";
 
 export const links: Route.LinksFunction = () => [
 	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -43,6 +44,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 						<ThemeProvider defaultTheme="system">
 							<Navbar />
 							<main className="pt-16">{children}</main>
+							<Footer />
 						</ThemeProvider>
 					</I18nextProvider>
 				</div>

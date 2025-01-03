@@ -9,7 +9,7 @@
 	},
 	"hero": {
 		"title": "Arnaud Fernandes",
-		"subtitle": ".NET Core (C#) & React Expert",
+		"subtitle": "Development of customized digital projects | Expertise in C#, Go & React | Innovative, high-performance solutions",
 		"cta": "Get in Touch"
 	},
 	"about": {
@@ -33,5 +33,8 @@
 			"title": "Team Leadership",
 			"description": "Leading and mentoring technical teams to achieve excellence"
 		}
+	},
+	"footer": {
+		"contact": "Contact me"
 	}
 }
