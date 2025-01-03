@@ -4,37 +4,31 @@ import {
 	Links,
 	Meta,
 	Outlet,
+	redirect,
 	Scripts,
 	ScrollRestoration,
 } from "react-router";
 
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
-import { I18nextProvider, useTranslation } from "react-i18next";
+import { I18nextProvider } from "react-i18next";
 import Navbar from "./components/NavBar";
 import { ThemeProvider } from "./components/ThemeProvider";
 import Footer from "./components/Footer";
-import i18n from "./i18n/i18n";
+import i18n, { availableLanguages } from "./i18n/i18n";
 import { favicon, robotIndex } from "./meta";
 
-export const loader = async ({ request }: Route.LoaderArgs) => {
-	const cookies = request.headers.get("Cookie");
-	if (cookies) {
-		const cookie = cookies
-			.split(";")
-			.map((cookie) => cookie.trim())
-			.find((cookie) => cookie.startsWith("lang="));
-		if (cookie) {
-			const lang = cookie.split("=")[1];
-			i18n.changeLanguage(lang);
-			return data({ lang });
-		}
+export const loader = async ({ params, request }: Route.LoaderArgs) => {
+	if (params.lang && availableLanguages.includes(params.lang)) {
+		i18n.changeLanguage(params.lang);
+		return data({ lang: params.lang });
 	}
-	return {};
+	const url = new URL(request.url);
+	return redirect(`/${i18n.language}${url.pathname}`);
 };
 
 // meta function
-export const meta: Route.MetaFunction = ({ data }: Route.MetaArgs) => {
+export const meta: Route.MetaFunction = (_: Route.MetaArgs) => {
 	const title =
 		"Arnaud Fernandes - Software Engineer for custom digital projects";
 	const description =

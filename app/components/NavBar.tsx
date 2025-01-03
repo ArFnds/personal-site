@@ -7,17 +7,20 @@ import { useTheme } from "./ThemeProvider";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
 	const { theme } = useTheme();
 	const [isOpen, setIsOpen] = React.useState(false);
 
 	const navItems = [
-		{ path: "/", label: t("navigation.home") },
-		{ path: "/about", label: t("navigation.about") },
-		{ path: "/portfolio", label: t("navigation.portfolio") },
-		{ path: "/mentoring", label: t("navigation.mentoring") },
-		{ path: "/conferences", label: t("navigation.conferences") },
-		{ path: "/contact", label: t("navigation.contact") },
+		{ path: `/${i18n.language}`, label: t("navigation.home") },
+		{ path: `/${i18n.language}/about`, label: t("navigation.about") },
+		{ path: `/${i18n.language}/portfolio`, label: t("navigation.portfolio") },
+		{ path: `/${i18n.language}/mentoring`, label: t("navigation.mentoring") },
+		{
+			path: `/${i18n.language}/conferences`,
+			label: t("navigation.conferences"),
+		},
+		{ path: `/${i18n.language}/contact`, label: t("navigation.contact") },
 	];
 
 	return (

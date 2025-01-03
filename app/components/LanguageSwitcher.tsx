@@ -9,6 +9,8 @@ import { Button } from "~/components/ui/button";
 import { GlobeIcon } from "lucide-react";
 import { cn } from "~/lib/utils";
 import Cookies from "js-cookie";
+import { useLocation, useNavigate } from "react-router";
+import { availableLanguages } from "~/i18n/i18n";
 
 const languages = [
 	{ code: "en", label: "English" },
@@ -17,10 +19,22 @@ const languages = [
 
 export const LanguageSwitcher = () => {
 	const { i18n } = useTranslation();
+	// hooks to redirect
+	const location = useLocation();
+	const navigate = useNavigate();
 
 	const changeLanguage = (language: string) => {
-		Cookies.set("lang", language);
-		i18n.changeLanguage(language);
+		const splitedPath = location.pathname.split("/");
+		const pathLang = splitedPath[1];
+		const hasLang = pathLang && availableLanguages.includes(pathLang);
+		if (hasLang) {
+			window.location.pathname = location.pathname.replace(
+				`/${i18n.language}`,
+				`/${language}`,
+			);
+		} else {
+			window.location.pathname = `/${language}${location.pathname}`;
+		}
 	};
 
 	return (

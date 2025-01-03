@@ -3,13 +3,16 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import en from "./locales/en.json";
 import fr from "./locales/fr.json";
-import Cookies from "js-cookie";
 
-const languageDetector = new LanguageDetector();
+export const availableLanguages = ["en", "fr"];
+
+const languageDetector = new LanguageDetector(undefined, {
+	order: ["path"],
+});
 languageDetector.addDetector({
-	name: "cookie",
+	name: "path",
 	lookup(options) {
-		return Cookies.get("lang");
+		return window.location.pathname.split("/")[1];
 	},
 });
 
