@@ -74,7 +74,9 @@ const Home = () => {
 							<Card className="shadow-md">
 								<CardHeader>
 									<Code2 className="h-12 w-12 text-blue-600 mb-4" />
-									<CardTitle>{t("features.feature1.title")}</CardTitle>
+									<CardTitle>
+										<h2>{t("features.feature1.title")}</h2>
+									</CardTitle>
 								</CardHeader>
 								<CardContent>{t("features.feature1.description")}</CardContent>
 							</Card>
@@ -88,7 +90,9 @@ const Home = () => {
 							<Card className="shadow-md">
 								<CardHeader>
 									<Rocket className="h-12 w-12 text-blue-600 mb-4" />
-									<CardTitle>{t("features.feature2.title")}</CardTitle>
+									<CardTitle>
+										<h2>{t("features.feature2.title")}</h2>
+									</CardTitle>
 								</CardHeader>
 								<CardContent>{t("features.feature2.description")}</CardContent>
 							</Card>
@@ -102,7 +106,9 @@ const Home = () => {
 							<Card className="shadow-md">
 								<CardHeader>
 									<Users className="h-12 w-12 text-blue-600 mb-4" />
-									<CardTitle>{t("features.feature3.title")}</CardTitle>
+									<CardTitle>
+										<h2>{t("features.feature3.title")}</h2>
+									</CardTitle>
 								</CardHeader>
 								<CardContent>{t("features.feature3.description")}</CardContent>
 							</Card>

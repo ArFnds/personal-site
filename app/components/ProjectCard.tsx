@@ -35,7 +35,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 				className="w-full h-48 object-cover"
 			/>
 			<CardHeader>
-				<CardTitle>{title}</CardTitle>
+				<CardTitle>
+					<h2>{title}</h2>
+				</CardTitle>
 				<CardDescription>{description}</CardDescription>
 			</CardHeader>
 			<CardFooter>

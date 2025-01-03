@@ -59,6 +59,7 @@ const Contact = (_: Route.ComponentProps) => {
 		<div className="min-h-screen py-16">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<SectionHeader
+					h1
 					title={t("sectionHeader.title")}
 					subtitle={t("sectionHeader.subtitle")}
 				/>
@@ -69,7 +70,9 @@ const Contact = (_: Route.ComponentProps) => {
 					>
 						<Card>
 							<CardHeader>
-								<CardTitle>{t("formHeader.title")}</CardTitle>
+								<CardTitle>
+									<h2>{t("formHeader.title")}</h2>
+								</CardTitle>
 								<CardDescription>{t("formHeader.description")}</CardDescription>
 							</CardHeader>
 							<CardContent>
@@ -142,7 +145,9 @@ const Contact = (_: Route.ComponentProps) => {
 					>
 						<Card>
 							<CardHeader>
-								<CardTitle>{t("info.title")}</CardTitle>
+								<CardTitle>
+									<h2>{t("info.title")}</h2>
+								</CardTitle>
 								<CardDescription>{t("info.description")}</CardDescription>
 							</CardHeader>
 							<CardContent>

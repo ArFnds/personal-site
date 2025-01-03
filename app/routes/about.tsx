@@ -93,7 +93,7 @@ const About = () => {
 			>
 				{experiences.map((experience) => (
 					<motion.div
-						key={`${experience.duration}${experience.role}`}
+						key={`${experience.duration}${experience.role}${experience.company}`}
 						className="hover:shadow-xl transform hover:scale-105 transition-transform"
 						variants={{
 							hidden: { opacity: 0, y: 20 },
@@ -103,7 +103,7 @@ const About = () => {
 						<Card className="border border-gray-200 rounded-lg overflow-hidden">
 							<CardHeader>
 								<CardTitle className="text-xl font-semibold">
-									{experience.role}
+									<h2>{experience.role}</h2>
 								</CardTitle>
 								<CardDescription>
 									{experience.company} - {experience.duration}

@@ -36,6 +36,7 @@ const Conferences = () => {
 		<div className="min-h-screen py-16">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<SectionHeader
+					h1
 					title="Conference Talks"
 					subtitle="Sharing knowledge and experiences with the tech community"
 				/>
@@ -50,7 +51,9 @@ const Conferences = () => {
 						>
 							<Card>
 								<CardHeader>
-									<CardTitle>{conference.title}</CardTitle>
+									<CardTitle>
+										<h2>{conference.title}</h2>
+									</CardTitle>
 									<CardDescription className="flex items-center gap-2">
 										<Calendar className="w-4 h-4" />
 										{conference.date}

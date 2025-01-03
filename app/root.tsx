@@ -1,4 +1,5 @@
 import {
+	data,
 	isRouteErrorResponse,
 	Links,
 	Meta,
@@ -14,6 +15,7 @@ import Navbar from "./components/NavBar";
 import { ThemeProvider } from "./components/ThemeProvider";
 import Footer from "./components/Footer";
 import i18n from "./i18n/i18n";
+import { favicon, robotIndex } from "./meta";
 
 export const loader = async ({ request }: Route.LoaderArgs) => {
 	const cookies = request.headers.get("Cookie");
@@ -25,10 +27,101 @@ export const loader = async ({ request }: Route.LoaderArgs) => {
 		if (cookie) {
 			const lang = cookie.split("=")[1];
 			i18n.changeLanguage(lang);
-			return { lang };
+			return data({ lang });
 		}
 	}
 	return {};
+};
+
+// meta function
+export const meta: Route.MetaFunction = ({ data }: Route.MetaArgs) => {
+	const title =
+		"Arnaud Fernandes - Software Engineer for custom digital projects";
+	const description =
+		"Arnaud Fernandes, Software Engineer qui aide les startups et entreprises à concevoir des solutions performantes et sur mesure.";
+	const keywords =
+		"Arnaud Fernandes, Lead Technique Fullstack, .NET Core, C#, React, Go, développement web, microservices, solutions sur mesure, conseil en informatique, architecture logicielle, startups, développement de logiciels, performance des applications, sécurité des applications, coaching technique, gestion de projet IT";
+	const url = "https://arnaudfernandes.com/";
+	return [
+		...favicon,
+		...robotIndex,
+		{
+			title,
+		},
+		{
+			name: "description",
+			content: description,
+		},
+		{
+			name: "keywords",
+			content: keywords,
+		},
+		{
+			name: "author",
+			content: "Arnaud Fernandes",
+		},
+		{
+			tagName: "link",
+			rel: "canonical",
+			href: url,
+		},
+		{
+			property: "og:title",
+			content: title,
+		},
+		{
+			property: "og:description",
+			content: description,
+		},
+		{
+			property: "og:url",
+			content: url,
+		},
+		{
+			property: "og:type",
+			content: "profile",
+		},
+		{
+			property: "og:locale",
+			content: i18n.language,
+		},
+		{
+			property: "og:image",
+			content: "https://arnaudfernandes.com/og.jpg",
+		},
+		{
+			property: "og:image:width",
+			content: "1920",
+		},
+		{
+			property: "og:image:height",
+			content: "929",
+		},
+		{
+			property: "twitter:card",
+			content: "summary_large_image",
+		},
+		{
+			property: "twitter:title",
+			content: title,
+		},
+		{
+			property: "twitter:description",
+			content: description,
+		},
+		{
+			property: "twitter:image",
+			content: "https://arnaudfernandes.com/twitter.jpg",
+		},
+		{
+			property: "twitter:site",
+			content: "@ArnaudFnds",
+		},
+		{
+			property: "twitter:creator",
+			content: "@ArnaudFnds",
+		},
+	];
 };
 
 export const links: Route.LinksFunction = () => [

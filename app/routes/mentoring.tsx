@@ -16,8 +16,6 @@ import {
 const Mentoring = () => {
 	const { theme } = useTheme();
 
-	const isDarkTheme = theme === "dark";
-
 	const services = [
 		{
 			icon: <BookOpen className="w-8 h-8 text-blue-600" />,
@@ -43,6 +41,7 @@ const Mentoring = () => {
 		<div className="min-h-screen py-16">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<SectionHeader
+					h1
 					title="Mentoring Services"
 					subtitle="Empowering developers to reach their full potential"
 				/>
@@ -59,7 +58,7 @@ const Mentoring = () => {
 								<CardHeader>
 									<CardTitle className="flex gap-2 items-center">
 										{service.icon}
-										{service.title}
+										<h2>{service.title}</h2>
 									</CardTitle>
 								</CardHeader>
 								<CardContent>{service.description}</CardContent>
