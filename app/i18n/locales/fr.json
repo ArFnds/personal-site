@@ -8,7 +8,7 @@
 		"contact": "Contact"
 	},
 	"hero": {
-		"title": "Lead Technique Fullstack",
+		"title": "Arnaud Fernandes",
 		"subtitle": "Expert en .NET Core (C#) & React",
 		"cta": "Me Contacter"
 	},
@@ -19,5 +19,19 @@
 	"themeSwitcher": {
 		"light": "Clair",
 		"dark": "Sombre"
+	},
+	"features": {
+		"feature1": {
+			"title": "Excellence Technologique",
+			"description": "Specialisé en .NET Core, React et les architectures microservices"
+		},
+		"feature2": {
+			"title": "Croissance des startups",
+			"description": "Fournissant des solutions innovantes pour les startups et les entreprises en croissance"
+		},
+		"feature3": {
+			"title": "Leadership d'équipe",
+			"description": "Direction et encadrement des équipes techniques pour atteindre l'excellence"
+		}
 	}
 }
