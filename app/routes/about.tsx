@@ -7,70 +7,28 @@ import {
 	CardContent,
 	CardDescription,
 	CardFooter,
+	CardImage,
 } from "~/components/ui/card";
 import { Badge } from "~/components/ui/badge";
 import { motion } from "framer-motion";
+import { BriefcaseBusinessIcon, Calendar1Icon, MapPinIcon } from "lucide-react";
 
-const experiences = [
-	{
-		company: "Eurotunnel",
-		role: "Leader technique Fullstack .NET Core (C#) / React",
-		duration: "Déc. 2022 - Aujourd’hui (2 ans 2 mois)",
-		location: "À distance",
-		description:
-			"Développement de micro-services innovants pour le suivi des camions traversant la Manche. Modernisation des composants liés au suivi des véhicules et du back-office chauffeur.",
-		technologies: [
-			"C# .NET 6/7/8",
-			"ReactJS",
-			"Typescript",
-			"Azure",
-			"Gherkin",
-		],
-	},
-	{
-		company: "Sage",
-		role: "Senior Developer Fullstack .NET Core (C#) / React",
-		duration: "Juin 2021 - Déc. 2022 (1 an 7 mois)",
-		location: "À distance",
-		description:
-			"Conseils sur l'architecture microservices, maintenance corrective, et mise en place de POC.",
-		technologies: [
-			"Docker",
-			"Kubernetes",
-			"Microservices",
-			"Apache Kafka",
-			".NET Core",
-		],
-	},
-	{
-		company: "Cdiscount",
-		role: "Leader Technique Fullstack .NET Core (C#) / React",
-		duration: "Juin 2018 - Juin 2021 (3 ans 1 mois)",
-		location: "À distance",
-		description:
-			"Coaching et gestion des savoir-faire des équipes inshore & offshore. Analyse des besoins, développement complexe, et relecture de code React pour la direction IT Commerce.",
-		technologies: [
-			"Docker",
-			"React.js",
-			"Apache Kafka",
-			"Kubernetes",
-			".NET Core",
-			"MongoDB",
-		],
-	},
-	{
-		company: "Tech-Magister",
-		role: "Fondateur",
-		duration: "Nov. 2016 - Aujourd’hui (8 ans 3 mois)",
-		location: "France et International",
-		description:
-			"Coaching, gestion des savoir-faire techniques, analyse des besoins, et accompagnement au développement.",
-		technologies: ["Développement logiciel", "Gestion de projet", "Scrum"],
-	},
-];
+type Experience = {
+	company: string;
+	logo?: string;
+	role: string;
+	duration: string;
+	location: string;
+	description: string;
+	technologies: string[];
+};
 
 const About = () => {
 	const { t } = useTranslation();
+	const experiences = t("experiences", {
+		returnObjects: true,
+		defaultValue: [],
+	}) as Experience[];
 
 	return (
 		<div className="max-w-4xl mx-auto p-6">
@@ -101,12 +59,18 @@ const About = () => {
 						}}
 					>
 						<Card className="border border-gray-200 rounded-lg overflow-hidden">
+							<CardImage src={experience.logo} />
 							<CardHeader>
 								<CardTitle className="text-xl font-semibold">
 									<h2>{experience.role}</h2>
 								</CardTitle>
-								<CardDescription>
-									{experience.company} - {experience.duration}
+								<CardDescription className="flex items-center">
+									<BriefcaseBusinessIcon className="mr-1" />
+									{experience.company}
+									<Calendar1Icon className="mr-1 ml-4" />
+									{experience.duration}
+									<MapPinIcon className="mr-1 ml-4" />
+									{experience.location}
 								</CardDescription>
 							</CardHeader>
 							<CardContent>{experience.description}</CardContent>
