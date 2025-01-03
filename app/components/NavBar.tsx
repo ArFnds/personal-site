@@ -4,15 +4,12 @@ import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router";
 import ThemeSwitcher from "./ThemeSwitcher";
 import { useTheme } from "./ThemeProvider";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
 	const { t, i18n } = useTranslation();
 	const { theme } = useTheme();
 	const [isOpen, setIsOpen] = React.useState(false);
-
-	const toggleLanguage = () => {
-		i18n.changeLanguage(i18n.language === "en" ? "fr" : "en");
-	};
 
 	const navItems = [
 		{ path: "/", label: t("navigation.home") },
@@ -61,16 +58,7 @@ const Navbar = () => {
 								{item.label}
 							</NavLink>
 						))}
-						<button
-							type="button"
-							onClick={toggleLanguage}
-							className={`p-2 rounded-full ${
-								theme === "dark" ? "hover:bg-gray-700" : "hover:bg-gray-100"
-							}`}
-							aria-label="Toggle Language"
-						>
-							<Globe className="w-5 h-5" />
-						</button>
+						<LanguageSwitcher />
 						<ThemeSwitcher />
 					</div>
 
@@ -117,17 +105,7 @@ const Navbar = () => {
 								{item.label}
 							</NavLink>
 						))}
-						<button
-							type="button"
-							onClick={toggleLanguage}
-							className={`w-full text-left px-3 py-2 text-base font-medium ${
-								theme === "dark"
-									? "text-gray-300 hover:bg-gray-700"
-									: "text-gray-600 hover:bg-gray-50"
-							} rounded-md`}
-						>
-							{i18n.language === "en" ? "Français" : "English"}
-						</button>
+						<LanguageSwitcher />
 						<ThemeSwitcher />
 					</div>
 				</div>
