@@ -15,5 +15,9 @@
 	"about": {
 		"title": "About Me",
 		"description": "As a passionate fullstack lead developer and IT company founder, I specialize in microservices architectures, offering innovative and high-performance solutions for startups and growing companies."
+	},
+	"themeSwitcher": {
+		"light": "Light",
+		"dark": "Dark"
 	}
 }

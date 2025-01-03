@@ -12,6 +12,7 @@ import stylesheet from "./app.css?url";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n/i18n";
 import Navbar from "./components/NavBar";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 export const links: Route.LinksFunction = () => [
 	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -29,7 +30,7 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang="en">
+		<html lang="en" className="system">
 			<head>
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -39,8 +40,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
 			<body>
 				<div className="min-h-screen bg-gray-50">
 					<I18nextProvider i18n={i18n}>
-						<Navbar />
-						<main className="pt-16">{children}</main>
+						<ThemeProvider defaultTheme="system">
+							<Navbar />
+							<main className="pt-16">{children}</main>
+						</ThemeProvider>
 					</I18nextProvider>
 				</div>
 				<ScrollRestoration />
