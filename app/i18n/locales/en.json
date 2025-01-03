@@ -1,0 +1,19 @@
+{
+	"navigation": {
+		"home": "Home",
+		"about": "About Me",
+		"portfolio": "Portfolio",
+		"mentoring": "Mentoring",
+		"conferences": "Conferences",
+		"contact": "Contact"
+	},
+	"hero": {
+		"title": "Lead Technical Fullstack Developer",
+		"subtitle": ".NET Core (C#) & React Expert",
+		"cta": "Get in Touch"
+	},
+	"about": {
+		"title": "About Me",
+		"description": "As a passionate fullstack lead developer and IT company founder, I specialize in microservices architectures, offering innovative and high-performance solutions for startups and growing companies."
+	}
+}

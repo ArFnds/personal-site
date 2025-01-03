@@ -1,0 +1,19 @@
+{
+	"navigation": {
+		"home": "Accueil",
+		"about": "À Propos",
+		"portfolio": "Portfolio",
+		"mentoring": "Mentorat",
+		"conferences": "Conférences",
+		"contact": "Contact"
+	},
+	"hero": {
+		"title": "Lead Technique Fullstack",
+		"subtitle": "Expert en .NET Core (C#) & React",
+		"cta": "Me Contacter"
+	},
+	"about": {
+		"title": "À Propos",
+		"description": "En tant que lead technique fullstack passionné et fondateur d'une entreprise IT, je me spécialise dans les architectures microservices, en offrant des solutions innovantes et performantes pour les startups et les entreprises en croissance."
+	}
+}
