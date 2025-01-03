@@ -1,0 +1,9 @@
+defaultNamespace: default
+namespace: default
+
+helm:
+  releaseName: personal-site
+  chart: "onechart"
+  repo: "https://chart.onechart.dev"
+  valuesFiles:
+    - values.yaml

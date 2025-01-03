@@ -1,0 +1,22 @@
+image:
+  repository: "ghcr.io/arfnds/personal-site"
+  tag: "latest"
+imagePullSecrets:
+  - "ghcr.io"
+containerPort: 3000
+container:
+  imagePullPolicy: Always
+probe:
+  enabled: false
+vars:
+  OTEL_EXPORTER_OTLP_ENDPOINT: "https://obs.arbrerus.ru/api/default/"
+ingress:
+  host: "arnaudfernandes.com"
+  tlsEnabled: true
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spreadAcrossNodes: false
+nodeSelector:
+  topology.kubernetes.io/region: "europe-central-1"
+resources:
+  ignore: true
