@@ -1,5 +1,14 @@
 import { ExternalLink, Github } from "lucide-react";
 import type React from "react";
+import { Badge } from "./ui/badge";
+import {
+	Card,
+	CardDescription,
+	CardFooter,
+	CardHeader,
+	CardImage,
+	CardTitle,
+} from "./ui/card";
 
 interface ProjectCardProps {
 	title: string;
@@ -19,19 +28,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 	githubUrl,
 }) => {
 	return (
-		<div className="bg-white rounded-lg shadow-md overflow-hidden">
-			<img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
-			<div className="p-6">
-				<h3 className="text-xl font-semibold mb-2">{title}</h3>
-				<p className="text-gray-600 mb-4">{description}</p>
-				<div className="flex flex-wrap gap-2 mb-4">
+		<Card className="overflow-hidden">
+			<CardImage
+				src={imageUrl}
+				alt={title}
+				className="w-full h-48 object-cover"
+			/>
+			<CardHeader>
+				<CardTitle>{title}</CardTitle>
+				<CardDescription>{description}</CardDescription>
+			</CardHeader>
+			<CardFooter>
+				<div className="flex flex-wrap gap-2">
 					{technologies.map((tech) => (
-						<span
-							key={tech}
-							className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
-						>
-							{tech}
-						</span>
+						<Badge key={tech}>{tech}</Badge>
 					))}
 				</div>
 				<div className="flex space-x-4">
@@ -58,8 +68,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 						</a>
 					)}
 				</div>
-			</div>
-		</div>
+			</CardFooter>
+		</Card>
 	);
 };
 

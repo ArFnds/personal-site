@@ -16,6 +16,29 @@
 		"title": "À Propos",
 		"description": "En tant que lead technique fullstack passionné et fondateur d'une entreprise IT, je me spécialise dans les architectures microservices, en offrant des solutions innovantes et performantes pour les startups et les entreprises en croissance."
 	},
+	"contact": {
+		"sectionHeader": {
+			"title": "Me Contacter",
+			"subtitle": "Laissez-moi un message pour discuter de votre projet"
+		},
+		"formHeader": {
+			"title": "Me Contacter",
+			"description": "Contactez-moi via le formulaire ci-dessous ou par email"
+		},
+		"form": {
+			"name": "Nom",
+			"email": "Email",
+			"subject": "Sujet",
+			"message": "Message",
+			"submit": "Envoyer"
+		},
+		"info": {
+			"title": "Informations de contact",
+			"description": "J'aimerais avoir de vos nouvelles ! Que vous souhaitiez collaborer à un projet, que vous ayez une question ou que vous souhaitiez simplement vous connecter, je suis là pour vous aider.",
+			"scheduleaMeeting": "Planifier un rendez-vous",
+			"linkedinProfile": "Profil LinkedIn"
+		}
+	},
 	"themeSwitcher": {
 		"light": "Clair",
 		"dark": "Sombre"
@@ -23,7 +46,7 @@
 	"features": {
 		"feature1": {
 			"title": "Excellence Technologique",
-			"description": "Specialisé en .NET Core, React et les architectures microservices"
+			"description": "Specialisé en .NET Core, React, Go et les architectures microservices"
 		},
 		"feature2": {
 			"title": "Croissance des startups",
@@ -32,6 +55,20 @@
 		"feature3": {
 			"title": "Leadership d'équipe",
 			"description": "Direction et encadrement des équipes techniques pour atteindre l'excellence"
+		}
+	},
+	"projects": {
+		"project1": {
+			"title": "Eurotunnel Freight Tracking",
+			"description": "Système microservices basé sur le suivi des camions traversant la Manche.",
+			"technologies": ["React", ".NET Core", "Azure", "Microservices"],
+			"imageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+		},
+		"project2": {
+			"title": "Cdiscount à Volonté",
+			"description": "Développement de services abonnements pour la plateforme e-commerce Cdiscount.",
+			"technologies": ["React", ".NET Core", "Azure", "Microservices"],
+			"imageUrl": "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
 		}
 	},
 	"footer": {

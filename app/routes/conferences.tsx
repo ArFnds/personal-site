@@ -2,6 +2,15 @@ import { motion } from "framer-motion";
 import { Calendar, ExternalLink, MapPin } from "lucide-react";
 import React from "react";
 import SectionHeader from "../components/SectionHeader";
+import { buttonVariants } from "~/components/ui/button";
+import {
+	Card,
+	CardContent,
+	CardDescription,
+	CardFooter,
+	CardHeader,
+	CardTitle,
+} from "~/components/ui/card";
 
 const Conferences = () => {
 	const conferences = [
@@ -34,31 +43,34 @@ const Conferences = () => {
 				<div className="space-y-8">
 					{conferences.map((conference, index) => (
 						<motion.div
-							key={index}
+							key={conference.title}
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: index * 0.2 }}
-							className="bg-white rounded-lg shadow-md p-6"
 						>
-							<h3 className="text-xl font-semibold mb-2">{conference.title}</h3>
-							<div className="flex items-center space-x-4 text-gray-600 mb-4">
-								<div className="flex items-center">
-									<Calendar className="w-4 h-4 mr-2" />
-									<span>{conference.date}</span>
-								</div>
-								<div className="flex items-center">
-									<MapPin className="w-4 h-4 mr-2" />
-									<span>{conference.location}</span>
-								</div>
-							</div>
-							<p className="text-gray-700 mb-4">{conference.description}</p>
-							<a
-								href={conference.link}
-								className="inline-flex items-center text-blue-600 hover:text-blue-700"
-							>
-								Learn More
-								<ExternalLink className="w-4 h-4 ml-2" />
-							</a>
+							<Card>
+								<CardHeader>
+									<CardTitle>{conference.title}</CardTitle>
+									<CardDescription className="flex items-center gap-2">
+										<Calendar className="w-4 h-4" />
+										{conference.date}
+										<MapPin className="w-4 h-4 ml-2" />
+										<span>{conference.location}</span>
+									</CardDescription>
+								</CardHeader>
+								<CardContent>{conference.description}</CardContent>
+								<CardFooter>
+									<a
+										href={conference.link}
+										className={buttonVariants({
+											variant: "link",
+										})}
+									>
+										Learn More
+										<ExternalLink className="w-4 h-4 ml-2" />
+									</a>
+								</CardFooter>
+							</Card>
 						</motion.div>
 					))}
 				</div>
@@ -68,3 +80,25 @@ const Conferences = () => {
 };
 
 export default Conferences;
+/*
+<h3 className="text-xl font-semibold mb-2">{conference.title}</h3>
+							<div className="flex items-center space-x-4 mb-4">
+								<div className="flex items-center">
+									<Calendar className="w-4 h-4 mr-2" />
+									<span>{conference.date}</span>
+								</div>
+								<div className="flex items-center">
+									<MapPin className="w-4 h-4 mr-2" />
+									<span>{conference.location}</span>
+								</div>
+							</div>
+							<p className="mb-4">{conference.description}</p>
+							<a
+								href={conference.link}
+								className={buttonVariants({
+									variant: "link",
+								})}
+							>
+								Learn More
+								<ExternalLink className="w-4 h-4 ml-2" />
+							</a>*/

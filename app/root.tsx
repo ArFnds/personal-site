@@ -9,11 +9,27 @@ import {
 
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
-import { I18nextProvider } from "react-i18next";
-import i18n from "./i18n/i18n";
+import { I18nextProvider, useTranslation } from "react-i18next";
 import Navbar from "./components/NavBar";
 import { ThemeProvider } from "./components/ThemeProvider";
 import Footer from "./components/Footer";
+import i18n from "./i18n/i18n";
+
+export const loader = async ({ request }: Route.LoaderArgs) => {
+	const cookies = request.headers.get("Cookie");
+	if (cookies) {
+		const cookie = cookies
+			.split(";")
+			.map((cookie) => cookie.trim())
+			.find((cookie) => cookie.startsWith("lang="));
+		if (cookie) {
+			const lang = cookie.split("=")[1];
+			i18n.changeLanguage(lang);
+			return { lang };
+		}
+	}
+	return {};
+};
 
 export const links: Route.LinksFunction = () => [
 	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -31,7 +47,7 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang="en" className="system">
+		<html lang={i18n.language} className="system">
 			<head>
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -39,7 +55,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<Links />
 			</head>
 			<body>
-				<div className="min-h-screen bg-gray-50">
+				<div className="min-h-screen bg-background text-foreground">
 					<I18nextProvider i18n={i18n}>
 						<ThemeProvider defaultTheme="system">
 							<Navbar />
@@ -55,7 +71,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 	);
 }
 
-export default function App() {
+export default function App(_: Route.ComponentProps) {
 	return <Outlet />;
 }
 

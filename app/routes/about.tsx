@@ -6,6 +6,7 @@ import {
 	CardTitle,
 	CardContent,
 	CardDescription,
+	CardFooter,
 } from "~/components/ui/card";
 import { Badge } from "~/components/ui/badge";
 import { motion } from "framer-motion";
@@ -101,26 +102,21 @@ const About = () => {
 					>
 						<Card className="border border-gray-200 rounded-lg overflow-hidden">
 							<CardHeader>
-								<CardTitle className="text-xl font-semibold text-gray-800">
+								<CardTitle className="text-xl font-semibold">
 									{experience.role}
 								</CardTitle>
-								<CardDescription className="text-sm text-gray-600">
+								<CardDescription>
 									{experience.company} - {experience.duration}
 								</CardDescription>
 							</CardHeader>
-							<CardContent>
-								<p className="mb-4 text-gray-700">{experience.description}</p>
-								<p className="font-semibold text-gray-800 mb-2">
-									{t("technologies", "Technologies utilisées")}:
-								</p>
-								<div className="flex flex-wrap gap-2">
-									{experience.technologies.map((tech, i) => (
-										<Badge key={tech} variant="secondary">
-											{tech}
-										</Badge>
-									))}
-								</div>
-							</CardContent>
+							<CardContent>{experience.description}</CardContent>
+							<CardFooter className="flex flex-wrap gap-2">
+								{experience.technologies.map((tech, i) => (
+									<Badge key={tech} variant="secondary">
+										{tech}
+									</Badge>
+								))}
+							</CardFooter>
 						</Card>
 					</motion.div>
 				))}

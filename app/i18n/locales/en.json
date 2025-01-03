@@ -16,6 +16,29 @@
 		"title": "About Me",
 		"description": "As a passionate fullstack lead developer and IT company founder, I specialize in microservices architectures, offering innovative and high-performance solutions for startups and growing companies."
 	},
+	"contact": {
+		"sectionHeader": {
+			"title": "Contact Me",
+			"subtitle": "Let's discuss how I can help with your next project"
+		},
+		"formHeader": {
+			"title": "Get in Touch",
+			"description": "Contact me using the form below or via email"
+		},
+		"form": {
+			"name": "Name",
+			"email": "Email",
+			"subject": "Subject",
+			"message": "Message",
+			"submit": "Send"
+		},
+		"info": {
+			"title": "Contact Information",
+			"description": "I'd love to hear from you! Whether you're looking to collaborate on a project, have a question, or just want to connect, I'm here to help.",
+			"scheduleaMeeting": "Schedule a Meeting",
+			"linkedinProfile": "LinkedIn Profile"
+		}
+	},
 	"themeSwitcher": {
 		"light": "Light",
 		"dark": "Dark"
@@ -23,7 +46,7 @@
 	"features": {
 		"feature1": {
 			"title": "Technical Excellence",
-			"description": "Specialized in .NET Core, React, and microservices architecture"
+			"description": "Specialized in .NET Core, React, Go and microservices architecture"
 		},
 		"feature2": {
 			"title": "Startup Growth",
@@ -34,7 +57,21 @@
 			"description": "Leading and mentoring technical teams to achieve excellence"
 		}
 	},
+	"projects": {
+		"project1": {
+			"title": "Eurotunnel Freight Tracking",
+			"description": "Microservices-based tracking system for trucks crossing the Manche.",
+			"technologies": ["React", ".NET Core", "Azure", "Microservices"],
+			"imageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+		},
+		"project2": {
+			"title": "Cdiscount à Volonté",
+			"description": "Development of subscription services for an the 1st French e-commerce platform.",
+			"technologies": ["React", ".NET Core", "Azure", "Microservices"],
+			"imageUrl": "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+		}
+	},
 	"footer": {
-		"contact": "Contact me"
+		"contact": "Get in touch"
 	}
 }

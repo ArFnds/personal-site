@@ -5,6 +5,13 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import { useTheme } from "~/components/ThemeProvider";
 import { buttonVariants } from "~/components/ui/button";
+import {
+	Card,
+	CardContent,
+	CardDescription,
+	CardHeader,
+	CardTitle,
+} from "~/components/ui/card";
 import { cn } from "~/lib/utils";
 
 const Home = () => {
@@ -63,54 +70,42 @@ const Home = () => {
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5 }}
-							className={cn(
-								"p-6 bg-background rounded-lg shadow-lg",
-								isDarkTheme && "dark:shadow-white",
-							)}
 						>
-							<Code2 className="h-12 w-12 text-blue-600 mb-4" />
-							<h3 className="text-xl font-semibold mb-2">
-								{t("features.feature1.title")}
-							</h3>
-							<p className="text-gray-600">
-								{t("features.feature1.description")}
-							</p>
+							<Card className="shadow-md">
+								<CardHeader>
+									<Code2 className="h-12 w-12 text-blue-600 mb-4" />
+									<CardTitle>{t("features.feature1.title")}</CardTitle>
+								</CardHeader>
+								<CardContent>{t("features.feature1.description")}</CardContent>
+							</Card>
 						</motion.div>
 
 						<motion.div
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5, delay: 0.2 }}
-							className={cn(
-								"p-6 bg-background rounded-lg shadow-lg",
-								isDarkTheme && "dark:shadow-white",
-							)}
 						>
-							<Rocket className="h-12 w-12 text-blue-600 mb-4" />
-							<h3 className="text-xl font-semibold mb-2">
-								{t("features.feature2.title")}
-							</h3>
-							<p className="text-gray-600">
-								{t("features.feature2.description")}
-							</p>
+							<Card className="shadow-md">
+								<CardHeader>
+									<Rocket className="h-12 w-12 text-blue-600 mb-4" />
+									<CardTitle>{t("features.feature2.title")}</CardTitle>
+								</CardHeader>
+								<CardContent>{t("features.feature2.description")}</CardContent>
+							</Card>
 						</motion.div>
 
 						<motion.div
 							initial={{ opacity: 0, y: 20 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5, delay: 0.4 }}
-							className={cn(
-								"p-6 bg-background rounded-lg shadow-lg",
-								isDarkTheme && "dark:shadow-white",
-							)}
 						>
-							<Users className="h-12 w-12 text-blue-600 mb-4" />
-							<h3 className="text-xl font-semibold mb-2">
-								{t("features.feature3.title")}
-							</h3>
-							<p className="text-gray-600">
-								{t("features.feature3.description")}
-							</p>
+							<Card className="shadow-md">
+								<CardHeader>
+									<Users className="h-12 w-12 text-blue-600 mb-4" />
+									<CardTitle>{t("features.feature3.title")}</CardTitle>
+								</CardHeader>
+								<CardContent>{t("features.feature3.description")}</CardContent>
+							</Card>
 						</motion.div>
 					</div>
 				</div>

@@ -8,6 +8,7 @@ import {
 import { Button } from "~/components/ui/button";
 import { GlobeIcon } from "lucide-react";
 import { cn } from "~/lib/utils";
+import Cookies from "js-cookie";
 
 const languages = [
 	{ code: "en", label: "English" },
@@ -18,6 +19,7 @@ export const LanguageSwitcher = () => {
 	const { i18n } = useTranslation();
 
 	const changeLanguage = (language: string) => {
+		Cookies.set("lang", language);
 		i18n.changeLanguage(language);
 	};
 

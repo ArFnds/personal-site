@@ -3,9 +3,18 @@ import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import en from "./locales/en.json";
 import fr from "./locales/fr.json";
+import Cookies from "js-cookie";
+
+const languageDetector = new LanguageDetector();
+languageDetector.addDetector({
+	name: "cookie",
+	lookup(options) {
+		return Cookies.get("lang");
+	},
+});
 
 i18n
-	.use(LanguageDetector)
+	.use(languageDetector)
 	.use(initReactI18next)
 	.init({
 		resources: {
