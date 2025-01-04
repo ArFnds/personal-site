@@ -6,9 +6,6 @@ import { useTheme } from "./ThemeProvider";
 import { Button } from "./ui/button";
 
 export default function ThemeSwitcher() {
-	const { t } = useTranslation("translation", {
-		keyPrefix: "themeSwitcher",
-	});
 	const { theme, setTheme } = useTheme();
 	const handleThemeChange = () => {
 		if (theme === "dark") {
@@ -22,17 +19,11 @@ export default function ThemeSwitcher() {
 		}
 	};
 	return (
-		<Button variant="outline" onClick={handleThemeChange}>
+		<Button variant="ghost" size={"icon"} onClick={handleThemeChange}>
 			{theme === "dark" ? (
-				<>
-					<Sun className="h-5 w-5" />
-					{t("dark")}
-				</>
+				<Sun className="h-5 w-5" />
 			) : (
-				<>
-					<Moon className="h-5 w-5" />
-					{t("light")}
-				</>
+				<Moon className="h-5 w-5" />
 			)}
 		</Button>
 	);
