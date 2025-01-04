@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
-import { Separator } from "~/components/ui/separator";
 import { NavLink } from "react-router";
 import LinkedInIcon from "~/assets/linkedin.svg?react";
-import { useTheme } from "./ThemeProvider";
+import { Separator } from "~/components/ui/separator";
 import { cn } from "~/lib/utils";
+import { useTheme } from "./ThemeProvider";
 
 const Footer = () => {
 	const { t } = useTranslation();

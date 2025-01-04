@@ -1,17 +1,10 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Code2, Rocket, Users } from "lucide-react";
-import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import { useTheme } from "~/components/ThemeProvider";
 import { buttonVariants } from "~/components/ui/button";
-import {
-	Card,
-	CardContent,
-	CardDescription,
-	CardHeader,
-	CardTitle,
-} from "~/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import { cn } from "~/lib/utils";
 
 const Home = () => {

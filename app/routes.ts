@@ -12,4 +12,5 @@ export default [
 	route("/:lang?/conferences", "routes/conferences.tsx"),
 	route("/:lang?/mentoring", "routes/mentoring.tsx"),
 	route("/:lang?/contact", "routes/contact.tsx"),
+	route("sitemap.xml", "routes/sitemap.tsx"),
 ] satisfies RouteConfig;

@@ -2,15 +2,10 @@ import { motion } from "framer-motion";
 import { Calendar, Mail, MapPin, Send } from "lucide-react";
 import { zfd } from "zod-form-data";
 
-import LinkedIn from "~/assets/linkedin.svg?react";
-import SectionHeader from "../components/SectionHeader";
-import { contactInfo } from "../config/contact";
-import { z } from "zod";
+import { useTranslation } from "react-i18next";
 import { data, useFetcher } from "react-router";
-import type { Route } from "./+types/contact";
-import { cn } from "~/lib/utils";
-import { Label } from "~/components/ui/label";
-import { Textarea } from "~/components/ui/textarea";
+import { z } from "zod";
+import LinkedIn from "~/assets/linkedin.svg?react";
 import { TextField } from "~/components/TextField";
 import { Button } from "~/components/ui/button";
 import {
@@ -20,7 +15,12 @@ import {
 	CardHeader,
 	CardTitle,
 } from "~/components/ui/card";
-import { useTranslation } from "react-i18next";
+import { Label } from "~/components/ui/label";
+import { Textarea } from "~/components/ui/textarea";
+import { cn } from "~/lib/utils";
+import SectionHeader from "../components/SectionHeader";
+import { contactInfo } from "../config/contact";
+import type { Route } from "./+types/contact";
 
 const contactFormSchema = zfd.formData({
 	name: z.string().min(1, { message: "Name is required" }).max(50),

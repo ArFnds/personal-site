@@ -1,7 +1,7 @@
 /// Theme Switcher Component
 
-import { useTranslation } from "react-i18next";
 import { Moon, Sun } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { useTheme } from "./ThemeProvider";
 import { Button } from "./ui/button";
 

@@ -1,20 +1,20 @@
 import {
-	data,
-	isRouteErrorResponse,
 	Links,
 	Meta,
 	Outlet,
-	redirect,
 	Scripts,
 	ScrollRestoration,
+	data,
+	isRouteErrorResponse,
+	redirect,
 } from "react-router";
 
+import { I18nextProvider } from "react-i18next";
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
-import { I18nextProvider } from "react-i18next";
+import Footer from "./components/Footer";
 import Navbar from "./components/NavBar";
 import { ThemeProvider } from "./components/ThemeProvider";
-import Footer from "./components/Footer";
 import i18n, { availableLanguages } from "./i18n/i18n";
 import { favicon, robotIndex } from "./meta";
 

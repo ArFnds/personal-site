@@ -2,9 +2,9 @@ import { Globe, Menu } from "lucide-react";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink, useLocation } from "react-router";
-import ThemeSwitcher from "./ThemeSwitcher";
-import { useTheme } from "./ThemeProvider";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useTheme } from "./ThemeProvider";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const Navbar = () => {
 	const { t, i18n } = useTranslation();
@@ -46,8 +46,10 @@ const Navbar = () => {
 								className={({ isActive }) =>
 									`text-sm font-medium transition-colors ${
 										isActive &&
-										(item.path !== `/${i18n.language}` ||
-											location.pathname === `/${i18n.language}`)
+										(
+											item.path !== `/${i18n.language}` ||
+												location.pathname === `/${i18n.language}`
+										)
 											? "text-blue-600"
 											: theme === "dark"
 												? "text-gray-300 hover:text-blue-400"

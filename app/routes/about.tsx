@@ -1,17 +1,16 @@
-import React from "react";
+import { motion } from "framer-motion";
+import { BriefcaseBusinessIcon, Calendar1Icon, MapPinIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Badge } from "~/components/ui/badge";
 import {
 	Card,
-	CardHeader,
-	CardTitle,
 	CardContent,
 	CardDescription,
 	CardFooter,
+	CardHeader,
 	CardImage,
+	CardTitle,
 } from "~/components/ui/card";
-import { Badge } from "~/components/ui/badge";
-import { motion } from "framer-motion";
-import { BriefcaseBusinessIcon, Calendar1Icon, MapPinIcon } from "lucide-react";
 
 type Experience = {
 	company: string;

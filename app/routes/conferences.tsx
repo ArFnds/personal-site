@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import { Calendar, ExternalLink, MapPin } from "lucide-react";
-import React from "react";
-import SectionHeader from "../components/SectionHeader";
 import { buttonVariants } from "~/components/ui/button";
 import {
 	Card,
@@ -11,6 +9,7 @@ import {
 	CardHeader,
 	CardTitle,
 } from "~/components/ui/card";
+import SectionHeader from "../components/SectionHeader";
 
 const Conferences = () => {
 	const conferences = [

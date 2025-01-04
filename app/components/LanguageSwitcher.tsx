@@ -1,16 +1,16 @@
+import Cookies from "js-cookie";
+import { GlobeIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useLocation, useNavigate } from "react-router";
+import { Button } from "~/components/ui/button";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from "~/components/ui/dropdown-menu";
-import { Button } from "~/components/ui/button";
-import { GlobeIcon } from "lucide-react";
-import { cn } from "~/lib/utils";
-import Cookies from "js-cookie";
-import { useLocation, useNavigate } from "react-router";
 import { availableLanguages } from "~/i18n/i18n";
+import { cn } from "~/lib/utils";
 
 const languages = [
 	{ code: "en", label: "English" },
