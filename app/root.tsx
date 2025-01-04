@@ -155,6 +155,20 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				</div>
 				<ScrollRestoration />
 				<Scripts />
+				<script
+					async
+					src="https://www.googletagmanager.com/gtag/js?id=G-9X1ZS89XE1"
+				/>
+				<script
+					// biome-ignore lint/security/noDangerouslySetInnerHtml: google tags
+					dangerouslySetInnerHTML={{
+						__html: `window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+
+				gtag('config', 'G-9X1ZS89XE1');`,
+					}}
+				/>
 			</body>
 		</html>
 	);
