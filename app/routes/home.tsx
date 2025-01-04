@@ -19,7 +19,8 @@ const Home = () => {
 			<section
 				className={cn(
 					"relative h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50",
-					"bg-no-repeat bg-top bg-cover",
+					"bg-no-repeat bg-cover",
+					"bg-[top_right_-500px] md:bg-top",
 				)}
 				style={{
 					backgroundImage: "url('/hero-bg.jpg')",
