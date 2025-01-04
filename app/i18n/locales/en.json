@@ -28,7 +28,8 @@
 		},
 		"formHeader": {
 			"title": "Get in Touch",
-			"description": "Contact me using the form below or via email"
+			"description": "Contact me using the form below or via email",
+			"success": "Thank you for your message! I'll get back to you soon."
 		},
 		"form": {
 			"name": "Name",

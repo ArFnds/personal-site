@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
-import { Calendar, Mail, MapPin, Send } from "lucide-react";
-import { zfd } from "zod-form-data";
+import { Calendar, CheckCheckIcon, Mail, MapPin, Send } from "lucide-react";
 
 import { useTranslation } from "react-i18next";
-import { data, useFetcher } from "react-router";
-import { z } from "zod";
+import { useLocation } from "react-router";
 import LinkedIn from "~/assets/linkedin.svg?react";
 import { TextField } from "~/components/TextField";
 import { Button } from "~/components/ui/button";
@@ -17,43 +15,16 @@ import {
 } from "~/components/ui/card";
 import { Label } from "~/components/ui/label";
 import { Textarea } from "~/components/ui/textarea";
-import { cn } from "~/lib/utils";
+import { siteUrl, web3formsApiKey } from "~/config";
 import SectionHeader from "../components/SectionHeader";
 import { contactInfo } from "../config/contact";
 import type { Route } from "./+types/contact";
 
-const contactFormSchema = zfd.formData({
-	name: z.string().min(1, { message: "Name is required" }).max(50),
-	email: z.string().email({ message: "Invalid email address" }).max(200),
-	subject: z.string().min(1, { message: "Subject is required" }).max(50),
-	message: z.string().min(1, { message: "Message is required" }).max(1000),
-});
-
-type ContactFormSchema = z.infer<typeof contactFormSchema>;
-
-export async function action({ request }: Route.ActionArgs) {
-	const formData = await request.formData();
-	const contactForm = contactFormSchema.safeParse(formData);
-
-	if (!contactForm.success) {
-		return data({ errors: contactForm.error.flatten() });
-	}
-
-	// TODO - send email
-
-	return {};
-}
-
 const Contact = (_: Route.ComponentProps) => {
+	const location = useLocation();
 	const { t } = useTranslation(undefined, {
 		keyPrefix: "contact",
 	});
-	const fetcher = useFetcher<
-		ContactFormSchema & {
-			errors: z.typeToFlattenedError<ContactFormSchema, string>;
-		}
-	>();
-	const errors = fetcher.data?.errors;
 
 	return (
 		<div className="min-h-screen py-16">
@@ -70,13 +41,32 @@ const Contact = (_: Route.ComponentProps) => {
 					>
 						<Card>
 							<CardHeader>
+								{location.search.includes("success") && (
+									<p className="text-green-500 mb-4 flex gap-2">
+										<CheckCheckIcon /> {t("formHeader.success")}
+									</p>
+								)}
 								<CardTitle>
 									<h2>{t("formHeader.title")}</h2>
 								</CardTitle>
 								<CardDescription>{t("formHeader.description")}</CardDescription>
 							</CardHeader>
 							<CardContent>
-								<fetcher.Form method="post">
+								<form action="https://api.web3forms.com/submit" method="post">
+									<input
+										type="hidden"
+										name="access_key"
+										value={web3formsApiKey}
+									/>
+									<input type="checkbox" name="botcheck" className="hidden" />
+									<input
+										type="hidden"
+										name="redirect"
+										value={new URL(
+											`${location.pathname}?success`,
+											siteUrl,
+										).toString()}
+									/>
 									<div>
 										<TextField
 											label={t("form.name")}
@@ -84,7 +74,7 @@ const Contact = (_: Route.ComponentProps) => {
 											id="name"
 											type="text"
 											required
-											error={errors?.fieldErrors.name?.at(0)}
+											maxLength={255}
 										/>
 									</div>
 
@@ -95,7 +85,7 @@ const Contact = (_: Route.ComponentProps) => {
 											id="email"
 											type="email"
 											required
-											error={errors?.fieldErrors.email?.at(0)}
+											maxLength={255}
 										/>
 									</div>
 
@@ -105,36 +95,27 @@ const Contact = (_: Route.ComponentProps) => {
 											name="subject"
 											id="subject"
 											required
-											error={errors?.fieldErrors.subject?.at(0)}
+											maxLength={255}
 										/>
 									</div>
 
 									<div>
-										<Label
-											htmlFor="message"
-											className={cn(
-												errors?.fieldErrors.message && "text-destructive",
-											)}
-										>
-											{t("form.message")}
-										</Label>
-										{errors?.fieldErrors.message && (
-											<p
-												className={cn(
-													"text-[0.8rem] font-medium text-destructive",
-												)}
-											>
-												{errors?.fieldErrors.message.at(0)}
-											</p>
-										)}
-										<Textarea name="message" id="message" rows={4} required />
+										<Label htmlFor="message">{t("form.message")}</Label>
+
+										<Textarea
+											name="message"
+											id="message"
+											rows={4}
+											required
+											maxLength={1000}
+										/>
 									</div>
 
 									<Button type="submit" className="mt-4 mx-auto flex">
 										<Send className="w-4 h-4" />
 										{t("form.submit")}
 									</Button>
-								</fetcher.Form>
+								</form>
 							</CardContent>
 						</Card>
 					</motion.div>

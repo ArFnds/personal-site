@@ -28,7 +28,8 @@
 		},
 		"formHeader": {
 			"title": "Me Contacter",
-			"description": "Contactez-moi via le formulaire ci-dessous ou par email"
+			"description": "Contactez-moi via le formulaire ci-dessous ou par email",
+			"success": "Merci d'avoir envoyé votre message. Je vous recontacterai sous peu."
 		},
 		"form": {
 			"name": "Nom",

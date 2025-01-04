@@ -8,3 +8,5 @@ export const siteMapRoutes = [
 	{ path: "/:lang?/mentoring" },
 	{ path: "/:lang?/contact" },
 ];
+
+export const web3formsApiKey = "cbed3cff-969b-40cf-915b-7be71dc21dee";
