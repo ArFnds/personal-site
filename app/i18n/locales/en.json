@@ -129,6 +129,25 @@
 			"technologies": ["Software development", "Project management", "Scrum"]
 		}
 	],
+	"mentoring": {
+		"title": "Mentoring Services",
+		"subtitle": "Empowering developers to reach their full potential",
+		"cta": "Schedule a Mentoring Session",
+		"services": {
+			"technicalGuidance": {
+				"title": "Technical Guidance",
+				"description": "Personalized mentoring in .NET Core, React, and microservices architecture."
+			},
+			"teamLeadership": {
+				"title": "Team Leadership",
+				"description": "Learn effective team management and technical leadership skills."
+			},
+			"careerCounseling": {
+				"title": "Career Counseling",
+				"description": "Strategic guidance for career growth in software development."
+			}
+		}
+	},
 	"footer": {
 		"contact": "Get in touch"
 	}

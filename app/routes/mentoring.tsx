@@ -12,28 +12,25 @@ import {
 	CardHeader,
 	CardTitle,
 } from "~/components/ui/card";
+import { useTranslation } from "react-i18next";
 
 const Mentoring = () => {
-	const { theme } = useTheme();
-
+	const { t } = useTranslation();
 	const services = [
 		{
 			icon: <BookOpen className="w-8 h-8 text-blue-600" />,
-			title: "Technical Guidance",
-			description:
-				"Personalized mentoring in .NET Core, React, and microservices architecture.",
+			title: t("mentoring.services.technicalGuidance.title"),
+			description: t("mentoring.services.technicalGuidance.description"),
 		},
 		{
 			icon: <Users className="w-8 h-8 text-blue-600" />,
-			title: "Team Leadership",
-			description:
-				"Learn effective team management and technical leadership skills.",
+			title: t("mentoring.services.teamLeadership.title"),
+			description: t("mentoring.services.teamLeadership.description"),
 		},
 		{
 			icon: <Target className="w-8 h-8 text-blue-600" />,
-			title: "Career Development",
-			description:
-				"Strategic guidance for career growth in software development.",
+			title: t("mentoring.services.careerCounseling.title"),
+			description: t("mentoring.services.careerCounseling.description"),
 		},
 	];
 
@@ -42,8 +39,8 @@ const Mentoring = () => {
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<SectionHeader
 					h1
-					title="Mentoring Services"
-					subtitle="Empowering developers to reach their full potential"
+					title={t("mentoring.title")}
+					subtitle={t("mentoring.subtitle")}
 				/>
 
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -54,7 +51,7 @@ const Mentoring = () => {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: index * 0.2 }}
 						>
-							<Card>
+							<Card className="h-full">
 								<CardHeader>
 									<CardTitle className="flex gap-2 items-center">
 										{service.icon}
@@ -79,7 +76,7 @@ const Mentoring = () => {
 						rel="noopener noreferrer"
 						className={buttonVariants({ variant: "default" })}
 					>
-						Schedule a Mentoring Session
+						{t("mentoring.cta")}
 					</a>
 				</motion.div>
 			</div>

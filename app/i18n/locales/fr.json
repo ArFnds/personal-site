@@ -129,6 +129,25 @@
 			"technologies": ["Développement logiciel", "Gestion de projet", "Scrum"]
 		}
 	],
+	"mentoring": {
+		"title": "Services de mentorat",
+		"subtitle": "Donner aux développeurs les moyens d’atteindre leur plein potentiel",
+		"cta": "Planifier une séance de mentorat",
+		"services": {
+			"technicalGuidance": {
+				"title": "Conseils techniques",
+				"description": "Mentorat personnalisé dans l’architecture .NET Core, React et microservices."
+			},
+			"teamLeadership": {
+				"title": "Direction d'équipe",
+				"description": "Apprenez des compétences efficaces en matière de gestion d’équipe et de leadership technique."
+			},
+			"careerCounseling": {
+				"title": "Orientation professionnelle",
+				"description": "Orientation stratégique pour l'évolution de carrière dans le développement de logiciels."
+			}
+		}
+	},
 	"footer": {
 		"contact": "Contactez-moi"
 	}
