@@ -1,3 +1,4 @@
+import { TwitterIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router";
 import LinkedInIcon from "~/assets/linkedin.svg?react";
@@ -37,7 +38,18 @@ const Footer = () => {
 							} transition`}
 						>
 							<LinkedInIcon className="w-5 h-5 inline-block mr-2" />
-							LinkedIn
+						</a>
+						<a
+							href="https://x.com/ArnaudFnds"
+							target="_blank"
+							rel="noopener noreferrer"
+							className={`${
+								isDarkTheme
+									? "text-gray-400 hover:text-gray-100"
+									: "text-gray-600 hover:text-gray-800"
+							} transition`}
+						>
+							<TwitterIcon className="w-5 h-5 inline-block mr-2" />
 						</a>
 						<NavLink
 							to="/contact"

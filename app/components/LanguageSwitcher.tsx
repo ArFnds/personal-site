@@ -1,6 +1,6 @@
 import { GlobeIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useLocation, useNavigate } from "react-router";
+import { useLocation } from "react-router";
 import { Button } from "~/components/ui/button";
 import {
 	DropdownMenu,
@@ -14,13 +14,12 @@ import { cn } from "~/lib/utils";
 const languages = [
 	{ code: "en", label: "English" },
 	{ code: "fr", label: "Français" },
+	{ code: "ru", label: "Русский" },
 ];
 
 export const LanguageSwitcher = () => {
 	const { i18n } = useTranslation();
-	// hooks to redirect
 	const location = useLocation();
-	const navigate = useNavigate();
 
 	const changeLanguage = (language: string) => {
 		const splitedPath = location.pathname.split("/");
