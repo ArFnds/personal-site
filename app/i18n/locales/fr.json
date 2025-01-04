@@ -1,4 +1,9 @@
 {
+	"meta": {
+		"title": "Arnaud Fernandes - Software Engineer for custom digital projects",
+		"description": "Arnaud Fernandes, Software Engineer qui aide les startups et entreprises à concevoir des solutions performantes et sur mesure.",
+		"keywords": "Arnaud Fernandes, Lead Technique Fullstack, .NET Core, C#, React, Go, développement web, microservices, solutions sur mesure, conseil en informatique, architecture logicielle, startups, développement de logiciels, performance des applications, sécurité des applications, coaching technique, gestion de projet IT"
+	},
 	"navigation": {
 		"home": "Accueil",
 		"about": "À Propos",

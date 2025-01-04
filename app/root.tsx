@@ -15,6 +15,8 @@ import stylesheet from "./app.css?url";
 import Footer from "./components/Footer";
 import Navbar from "./components/NavBar";
 import { ThemeProvider } from "./components/ThemeProvider";
+import { siteUrl } from "./config";
+import { contactInfo } from "./config/contact";
 import i18n, { availableLanguages } from "./i18n/i18n";
 import { favicon, robotIndex } from "./meta";
 
@@ -29,13 +31,11 @@ export const loader = async ({ params, request }: Route.LoaderArgs) => {
 
 // meta function
 export const meta: Route.MetaFunction = (_: Route.MetaArgs) => {
-	const title =
-		"Arnaud Fernandes - Software Engineer for custom digital projects";
-	const description =
-		"Arnaud Fernandes, Software Engineer qui aide les startups et entreprises à concevoir des solutions performantes et sur mesure.";
-	const keywords =
-		"Arnaud Fernandes, Lead Technique Fullstack, .NET Core, C#, React, Go, développement web, microservices, solutions sur mesure, conseil en informatique, architecture logicielle, startups, développement de logiciels, performance des applications, sécurité des applications, coaching technique, gestion de projet IT";
-	const url = "https://arnaudfernandes.com/";
+	const t = i18n.t;
+	const title = t("meta.title");
+	const description = t("meta.description");
+	const keywords = t("meta.keywords");
+
 	return [
 		...favicon,
 		...robotIndex,
@@ -57,7 +57,7 @@ export const meta: Route.MetaFunction = (_: Route.MetaArgs) => {
 		{
 			tagName: "link",
 			rel: "canonical",
-			href: url,
+			href: siteUrl,
 		},
 		{
 			property: "og:title",
@@ -69,7 +69,7 @@ export const meta: Route.MetaFunction = (_: Route.MetaArgs) => {
 		},
 		{
 			property: "og:url",
-			content: url,
+			content: siteUrl,
 		},
 		{
 			property: "og:type",
@@ -81,7 +81,7 @@ export const meta: Route.MetaFunction = (_: Route.MetaArgs) => {
 		},
 		{
 			property: "og:image",
-			content: "https://arnaudfernandes.com/og.jpg",
+			content: `${siteUrl}/og.jpg`,
 		},
 		{
 			property: "og:image:width",
@@ -105,15 +105,15 @@ export const meta: Route.MetaFunction = (_: Route.MetaArgs) => {
 		},
 		{
 			property: "twitter:image",
-			content: "https://arnaudfernandes.com/twitter.jpg",
+			content: `${siteUrl}/twitter.jpg`,
 		},
 		{
 			property: "twitter:site",
-			content: "@ArnaudFnds",
+			content: contactInfo.twitter,
 		},
 		{
 			property: "twitter:creator",
-			content: "@ArnaudFnds",
+			content: contactInfo.twitter,
 		},
 	];
 };
