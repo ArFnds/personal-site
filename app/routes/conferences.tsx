@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Calendar, ExternalLink, MapPin } from "lucide-react";
+import { Calendar, ExternalLink, MapPin, MicVocalIcon } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { buttonVariants } from "~/components/ui/button";
 import {
 	Card,
@@ -7,39 +8,44 @@ import {
 	CardDescription,
 	CardFooter,
 	CardHeader,
+	CardImage,
 	CardTitle,
 } from "~/components/ui/card";
+import { contactInfo } from "~/config/contact";
 import SectionHeader from "../components/SectionHeader";
 
+type Conference = {
+	title: string;
+	date: string;
+	description: string;
+	location?: string;
+	imageUrl?: string;
+	link?: string;
+};
+
 const Conferences = () => {
-	const conferences = [
-		{
-			title: "Modern Microservices Architecture",
-			date: "June 15, 2024",
-			location: "Paris, France",
-			description:
-				"Deep dive into building scalable microservices with .NET Core and React.",
-			link: "#",
-		},
-		{
-			title: "Frontend Development Best Practices",
-			date: "September 20, 2024",
-			location: "Lyon, France",
-			description:
-				"Exploring modern React patterns and performance optimization techniques.",
-			link: "#",
-		},
-	];
+	const { t } = useTranslation(undefined, { keyPrefix: "conferences" });
+	const conferences = t("conferences", {
+		returnObjects: true,
+		defaultValue: [],
+	}) as Conference[];
 
 	return (
 		<div className="min-h-screen py-16">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<SectionHeader
-					h1
-					title="Conference Talks"
-					subtitle="Sharing knowledge and experiences with the tech community"
-				/>
-
+				<SectionHeader h1 title={t("title")} subtitle={t("subtitle")} />
+				<div className="mb-8 flex justify-center">
+					<a
+						href={contactInfo.calendar}
+						target="_blank"
+						rel="noreferrer"
+						className={buttonVariants({
+							variant: "default",
+						})}
+					>
+						<MicVocalIcon /> {t("cta")}
+					</a>
+				</div>
 				<div className="space-y-8">
 					{conferences.map((conference, index) => (
 						<motion.div
@@ -49,6 +55,9 @@ const Conferences = () => {
 							transition={{ delay: index * 0.2 }}
 						>
 							<Card>
+								{conference.imageUrl && (
+									<CardImage src={conference.imageUrl} alt={conference.title} />
+								)}
 								<CardHeader>
 									<CardTitle>
 										<h2>{conference.title}</h2>
@@ -56,21 +65,27 @@ const Conferences = () => {
 									<CardDescription className="flex items-center gap-2">
 										<Calendar className="w-4 h-4" />
 										{conference.date}
-										<MapPin className="w-4 h-4 ml-2" />
-										<span>{conference.location}</span>
+										{conference.location && (
+											<>
+												<MapPin className="w-4 h-4 ml-2" />{" "}
+												<span>{conference.location}</span>
+											</>
+										)}
 									</CardDescription>
 								</CardHeader>
 								<CardContent>{conference.description}</CardContent>
 								<CardFooter>
-									<a
-										href={conference.link}
-										className={buttonVariants({
-											variant: "link",
-										})}
-									>
-										Learn More
-										<ExternalLink className="w-4 h-4 ml-2" />
-									</a>
+									{conference.link && (
+										<a
+											href={conference.link}
+											className={buttonVariants({
+												variant: "link",
+											})}
+										>
+											Learn More
+											<ExternalLink className="w-4 h-4 ml-2" />
+										</a>
+									)}
 								</CardFooter>
 							</Card>
 						</motion.div>

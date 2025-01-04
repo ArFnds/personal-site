@@ -135,6 +135,19 @@
 			"url": "https://www.tech-magister.com/"
 		}
 	],
+	"conferences": {
+		"title": "Conférences",
+		"subtitle": "Partage des connaissances et des expériences avec la communauté technologique",
+		"cta": "Planifier une conférence",
+		"conferences": [
+			{
+				"title": "Présentation d'un projet FinTech",
+				"description": "Présentation d'un projet dans la sphère FinTech lors d'une conférence.",
+				"date": "28 mars 2023",
+				"imageUrl": "https://images.unsplash.com/photo-1561525155-40a650192479?q=80&w=900&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+			}
+		]
+	},
 	"mentoring": {
 		"title": "Services de mentorat",
 		"subtitle": "Donner aux développeurs les moyens d’atteindre leur plein potentiel",
