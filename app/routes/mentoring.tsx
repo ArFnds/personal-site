@@ -2,13 +2,7 @@ import { motion } from "framer-motion";
 import { BookOpen, Target, Users } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { buttonVariants } from "~/components/ui/button";
-import {
-	Card,
-	CardContent,
-	CardFooter,
-	CardHeader,
-	CardTitle,
-} from "~/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import SectionHeader from "../components/SectionHeader";
 
 const Mentoring = () => {

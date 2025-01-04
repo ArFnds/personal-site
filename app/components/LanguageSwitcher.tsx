@@ -1,4 +1,3 @@
-import Cookies from "js-cookie";
 import { GlobeIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router";
