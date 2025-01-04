@@ -1,8 +1,8 @@
 import { Readable } from "node:stream";
 import { SitemapStream, streamToPromise } from "sitemap";
+import { siteMapRoutes } from "~/config";
 import { availableLanguages } from "~/i18n/i18n";
 import { getDomainUrl } from "~/lib/utils";
-import routes from "~/routes";
 import type { Route } from "./+types/sitemap";
 
 export const loader = async ({ request }: Route.LoaderArgs) => {
@@ -11,7 +11,7 @@ export const loader = async ({ request }: Route.LoaderArgs) => {
 	const links = [];
 
 	for (const lng of availableLanguages) {
-		for (const route of routes) {
+		for (const route of siteMapRoutes) {
 			links.push({
 				url: route.path?.replace(":lang?", lng),
 				changefreq: "daily",
