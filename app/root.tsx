@@ -30,11 +30,13 @@ export const loader = async ({ params, request }: Route.LoaderArgs) => {
 };
 
 // meta function
-export const meta: Route.MetaFunction = (_: Route.MetaArgs) => {
+export const meta: Route.MetaFunction = ({ location }: Route.MetaArgs) => {
 	const t = i18n.t;
 	const title = t("meta.title");
 	const description = t("meta.description");
 	const keywords = t("meta.keywords");
+
+	const url = new URL(location.pathname, siteUrl);
 
 	return [
 		...favicon,
@@ -57,7 +59,7 @@ export const meta: Route.MetaFunction = (_: Route.MetaArgs) => {
 		{
 			tagName: "link",
 			rel: "canonical",
-			href: siteUrl,
+			href: url.toString(),
 		},
 		{
 			property: "og:title",
@@ -69,7 +71,7 @@ export const meta: Route.MetaFunction = (_: Route.MetaArgs) => {
 		},
 		{
 			property: "og:url",
-			content: siteUrl,
+			content: url.toString(),
 		},
 		{
 			property: "og:type",
