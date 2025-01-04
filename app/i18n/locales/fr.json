@@ -68,7 +68,7 @@
 			"title": "Eurotunnel Freight Tracking",
 			"description": "Système microservices basé sur le suivi des camions traversant la Manche.",
 			"technologies": ["React", ".NET Core", "Azure", "Microservices"],
-			"imageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+			"imageUrl": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=800&h=200&auto=format&fit=crop"
 		},
 		"project2": {
 			"title": "Cdiscount à Volonté",
