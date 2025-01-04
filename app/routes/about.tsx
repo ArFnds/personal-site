@@ -20,6 +20,7 @@ type Experience = {
 	location: string;
 	description: string;
 	technologies: string[];
+	url?: string;
 };
 
 const About = () => {
@@ -65,7 +66,19 @@ const About = () => {
 								</CardTitle>
 								<CardDescription className="flex items-center">
 									<BriefcaseBusinessIcon className="mr-1" />
-									{experience.company}
+									{experience.url ? (
+										<a
+											href={experience.url}
+											// biome-ignore lint/a11y/noBlankTarget: trusted site
+											target="_blank"
+											rel="noopener"
+											className="text-blue-600 hover:underline"
+										>
+											{experience.company}
+										</a>
+									) : (
+										experience.company
+									)}
 									<Calendar1Icon className="mr-1 ml-4" />
 									{experience.duration}
 									<MapPinIcon className="mr-1 ml-4" />

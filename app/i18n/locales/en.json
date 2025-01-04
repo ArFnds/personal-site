@@ -131,7 +131,8 @@
 			"duration": "Nov. 2016 - Today (8 years 3 months)",
 			"location": "France and International",
 			"description": "Coaching, management of technical know-how, needs analysis, and development support.",
-			"technologies": ["Software development", "Project management", "Scrum"]
+			"technologies": ["Software development", "Project management", "Scrum"],
+			"url": "https://www.tech-magister.com/"
 		}
 	],
 	"mentoring": {

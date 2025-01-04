@@ -131,7 +131,8 @@
 			"duration": "Nov. 2016 - Aujourd’hui (8 ans 3 mois)",
 			"location": "France et International",
 			"description": "Coaching, gestion des savoir-faire techniques, analyse des besoins, et accompagnement au développement.",
-			"technologies": ["Développement logiciel", "Gestion de projet", "Scrum"]
+			"technologies": ["Développement logiciel", "Gestion de projet", "Scrum"],
+			"url": "https://www.tech-magister.com/"
 		}
 	],
 	"mentoring": {
