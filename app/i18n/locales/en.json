@@ -83,7 +83,7 @@
 			"company": "Eurotunnel",
 			"role": "Technical Leader Fullstack .NET Core (C#) / React",
 			"logo": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-			"duration": "Dec.2022 - Today",
+			"startDate": "2022-12",
 			"location": "Remote",
 			"description": "Development of innovative micro-services for tracking trucks crossing the Channel. ",
 			"technologies": [
@@ -98,7 +98,8 @@
 			"company": "Sage",
 			"role": "Senior Developer Fullstack .NET Core (C#) / React",
 			"logo": "https://images.unsplash.com/photo-1511376868136-742c0de8c9a8?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-			"duration": "June 2021 - Dec. 2022 (1 year 7 months)",
+			"startDate": "2021-06",
+			"endDate": "2022-12",
 			"location": "Remote",
 			"description": "Advice on microservices architecture, corrective maintenance, and POC implementation.",
 			"technologies": [
@@ -113,7 +114,8 @@
 			"company": "Cdiscount",
 			"role": "Technical Leader Fullstack .NET Core (C#) / React",
 			"logo": "https://images.unsplash.com/photo-1561069934-eee225952461?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-			"duration": "June 2018 - June 2021 (3 years 1 month)",
+			"startDate": "2018-06",
+			"endDate": "2021-06",
 			"location": "Remote",
 			"description": "Coaching and management of know-how for inshore & offshore teams. ",
 			"technologies": [
@@ -129,7 +131,7 @@
 			"company": "Tech-Magister",
 			"role": "Founder",
 			"logo": "/tech-magister-cover.jpg",
-			"duration": "Nov. 2016 - Today (8 years 3 months)",
+			"startDate": "2016-11",
 			"location": "France and International",
 			"description": "Coaching, management of technical know-how, needs analysis, and development support.",
 			"technologies": ["Software development", "Project management", "Scrum"],

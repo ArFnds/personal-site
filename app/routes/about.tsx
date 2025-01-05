@@ -1,6 +1,8 @@
+import { format, formatDistance, formatRelative } from "date-fns";
 import { motion } from "framer-motion";
 import { BriefcaseBusinessIcon, Calendar1Icon, MapPinIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
+
 import { Badge } from "~/components/ui/badge";
 import {
 	Card,
@@ -11,24 +13,58 @@ import {
 	CardImage,
 	CardTitle,
 } from "~/components/ui/card";
+import { dateLocale } from "~/i18n/i18n";
 
-type Experience = {
+type RawExperience = {
 	company: string;
 	logo?: string;
 	role: string;
-	duration: string;
+	startDate: string;
+	endDate?: string;
 	location: string;
 	description: string;
 	technologies: string[];
 	url?: string;
 };
 
+type DisplayExperience = RawExperience & {
+	duration: string;
+};
+
 const About = () => {
 	const { t } = useTranslation();
-	const experiences = t("experiences", {
-		returnObjects: true,
-		defaultValue: [],
-	}) as Experience[];
+	const experiences = (
+		t("experiences", {
+			returnObjects: true,
+			defaultValue: [],
+		}) as RawExperience[]
+	).map((experience) => {
+		const now = new Date();
+		const startDate = new Date(experience.startDate);
+		const endDate = experience.endDate
+			? new Date(experience.endDate)
+			: new Date();
+		const duration = formatDistance(startDate, endDate, {
+			locale: dateLocale(),
+		});
+
+		return {
+			...experience,
+			startDate: format(startDate, "MMM yyyy", { locale: dateLocale() }),
+			endDate: experience.endDate
+				? format(new Date(experience.endDate), "MMM yyyy", {
+						locale: dateLocale(),
+					})
+				: formatRelative(
+						new Date(now.getFullYear(), now.getMonth(), now.getDate()),
+						new Date(now.getFullYear(), now.getMonth(), now.getDate()),
+						{
+							locale: dateLocale(),
+						},
+					).split(" ")[0],
+			duration,
+		} satisfies DisplayExperience;
+	});
 
 	return (
 		<div className="max-w-4xl mx-auto p-6">
@@ -80,7 +116,8 @@ const About = () => {
 										experience.company
 									)}
 									<Calendar1Icon className="mr-1 ml-4" />
-									{experience.duration}
+									{experience.startDate} - {experience.endDate} (
+									{experience.duration})
 									<MapPinIcon className="mr-1 ml-4" />
 									{experience.location}
 								</CardDescription>

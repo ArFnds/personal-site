@@ -5,7 +5,9 @@ import en from "./locales/en.json";
 import fr from "./locales/fr.json";
 import ru from "./locales/ru.json";
 
-export const availableLanguages = ["en", "fr", "ru"];
+import * as dateFnsLocales from "date-fns/locale";
+
+export const availableLanguages = ["en", "fr", "ru"] as const;
 
 const languageDetector = new LanguageDetector(undefined, {
 	order: ["path"],
@@ -31,5 +33,17 @@ i18n
 			escapeValue: false,
 		},
 	});
+
+const dateLocales = {
+	en: dateFnsLocales.enUS,
+	fr: dateFnsLocales.fr,
+	ru: dateFnsLocales.ru,
+};
+
+export const dateLocale = (i18nInstance?: typeof i18n) => {
+	const instance = i18nInstance || i18n;
+	const lang = instance.language as (typeof availableLanguages)[number];
+	return dateLocales[lang];
+};
 
 export default i18n;

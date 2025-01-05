@@ -83,7 +83,7 @@
 			"company": "Eurotunnel",
 			"role": "Leader technique Fullstack .NET Core (C#) / React",
 			"logo": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-			"duration": "Déc. 2022 - Aujourd’hui (2 ans 2 mois)",
+			"startDate": "2022-12",
 			"location": "À distance",
 			"description": "Développement de micro-services innovants pour le suivi des camions traversant la Manche. Modernisation des composants liés au suivi des véhicules et du back-office chauffeur.",
 			"technologies": [
@@ -98,7 +98,8 @@
 			"company": "Sage",
 			"role": "Senior Developer Fullstack .NET Core (C#) / React",
 			"logo": "https://images.unsplash.com/photo-1511376868136-742c0de8c9a8?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-			"duration": "Juin 2021 - Déc. 2022 (1 an 7 mois)",
+			"startDate": "2021-06",
+			"endDate": "2022-12",
 			"location": "À distance",
 			"description": "Conseils sur l'architecture microservices, maintenance corrective, et mise en place de POC.",
 			"technologies": [
@@ -113,7 +114,8 @@
 			"company": "Cdiscount",
 			"role": "Leader Technique Fullstack .NET Core (C#) / React",
 			"logo": "https://images.unsplash.com/photo-1561069934-eee225952461?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-			"duration": "Juin 2018 - Juin 2021 (3 ans 1 mois)",
+			"startDate": "2020-06",
+			"endDate": "2021-06",
 			"location": "À distance",
 			"description": "Coaching et gestion des savoir-faire des équipes inshore & offshore. Analyse des besoins, développement complexe, et relecture de code React pour la direction IT Commerce.",
 			"technologies": [
@@ -129,7 +131,7 @@
 			"company": "Tech-Magister",
 			"role": "Fondateur",
 			"logo": "/tech-magister-cover.jpg",
-			"duration": "Nov. 2016 - Aujourd’hui (8 ans 3 mois)",
+			"startDate": "2016-11",
 			"location": "France et International",
 			"description": "Coaching, gestion des savoir-faire techniques, analyse des besoins, et accompagnement au développement.",
 			"technologies": ["Développement logiciel", "Gestion de projet", "Scrum"],
