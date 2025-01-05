@@ -1,6 +1,7 @@
 import { GlobeIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router";
+
 import { Button } from "~/components/ui/button";
 import {
 	DropdownMenu,
@@ -11,10 +12,26 @@ import {
 import { availableLanguages } from "~/i18n/i18n";
 import { cn } from "~/lib/utils";
 
+import FrFlag from "~/assets/flags/fr.svg?react";
+import EnFlag from "~/assets/flags/gb.svg?react";
+import RuFlag from "~/assets/flags/ru.svg?react";
+
 const languages = [
-	{ code: "en", label: "English" },
-	{ code: "fr", label: "Français" },
-	{ code: "ru", label: "Русский" },
+	{
+		code: "en",
+		label: "English",
+		Flag: EnFlag,
+	},
+	{
+		code: "fr",
+		label: "Français",
+		Flag: FrFlag,
+	},
+	{
+		code: "ru",
+		label: "Русский",
+		Flag: RuFlag,
+	},
 ];
 
 export const LanguageSwitcher = () => {
@@ -24,6 +41,7 @@ export const LanguageSwitcher = () => {
 	const changeLanguage = (language: string) => {
 		const splitedPath = location.pathname.split("/");
 		const pathLang = splitedPath[1];
+		// @ts-expect-error testing inclusion
 		const hasLang = pathLang && availableLanguages.includes(pathLang);
 		if (hasLang) {
 			window.location.pathname = location.pathname.replace(
@@ -35,13 +53,13 @@ export const LanguageSwitcher = () => {
 		}
 	};
 
+	const currentLanguage = languages.find((lang) => lang.code === i18n.language);
+
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
 				<Button variant="outline" size="icon">
-					{languages
-						.find((lang) => lang.code === i18n.language)
-						?.code.toUpperCase() || <GlobeIcon />}
+					{currentLanguage ? <currentLanguage.Flag /> : <GlobeIcon />}
 				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent>
@@ -54,6 +72,7 @@ export const LanguageSwitcher = () => {
 							i18n.language === lang.code ? "font-bold" : "",
 						)}
 					>
+						<lang.Flag />
 						{lang.label}
 					</DropdownMenuItem>
 				))}
