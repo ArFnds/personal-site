@@ -1,4 +1,5 @@
 import type { MetaDescriptor } from "react-router";
+import { contactInfo } from "./config/contact";
 
 export const favicon: MetaDescriptor[] = [
 	{
@@ -42,3 +43,111 @@ export const robotIndex = robots.map((robot) => ({
 	name: robot,
 	content: "index",
 }));
+
+/**
+ * Constructs a meta information array for a webpage.
+ *
+ * @param {Object} params - Parameters for building meta tags.
+ * @param {string} params.title - The title of the webpage.
+ * @param {string} params.description - A brief description of the webpage content.
+ * @param {string} params.keywords - An array of keywords relevant to the webpage.
+ * @param {string} params.locale - The locale identifier for the webpage.
+ * @param {URL} params.siteUrl - The base URL of the site.
+ * @param {URL} params.currentUrl - The current URL of the webpage.
+ *
+ * @returns {Array} An array of meta descriptors and Open Graph metadata.
+ */
+export const buildMeta = ({
+	title,
+	description,
+	keywords,
+	locale,
+	siteUrl,
+	currentUrl,
+}: {
+	title: string;
+	description: string;
+	keywords: string;
+	locale: string;
+	siteUrl: string;
+	currentUrl: URL;
+}) => [
+	...favicon,
+	...robotIndex,
+	{
+		title,
+	},
+	{
+		name: "description",
+		content: description,
+	},
+	{
+		name: "keywords",
+		content: keywords,
+	},
+	{
+		name: "author",
+		content: "Arnaud Fernandes",
+	},
+	{
+		tagName: "link",
+		rel: "canonical",
+		href: currentUrl.toString(),
+	},
+	{
+		property: "og:title",
+		content: title,
+	},
+	{
+		property: "og:description",
+		content: description,
+	},
+	{
+		property: "og:url",
+		content: currentUrl.toString(),
+	},
+	{
+		property: "og:type",
+		content: "profile",
+	},
+	{
+		property: "og:locale",
+		content: locale,
+	},
+	{
+		property: "og:image",
+		content: `${siteUrl}/og.jpg`,
+	},
+	{
+		property: "og:image:width",
+		content: "1920",
+	},
+	{
+		property: "og:image:height",
+		content: "929",
+	},
+	{
+		property: "twitter:card",
+		content: "summary_large_image",
+	},
+	{
+		property: "twitter:title",
+		content: title,
+	},
+	{
+		property: "twitter:description",
+		content: description,
+	},
+	{
+		property: "twitter:image",
+		content: `${siteUrl}/twitter.jpg`,
+	},
+	{
+		property: "twitter:site",
+		content: contactInfo.twitter,
+	},
+	{
+		property: "twitter:creator",
+		content: contactInfo.twitter,
+	},
+];

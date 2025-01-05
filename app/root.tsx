@@ -16,11 +16,11 @@ import Footer from "./components/Footer";
 import Navbar from "./components/NavBar";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { siteUrl } from "./config";
-import { contactInfo } from "./config/contact";
 import i18n, { availableLanguages } from "./i18n/i18n";
-import { favicon, robotIndex } from "./meta";
+import { buildMeta } from "./meta";
 
 export const loader = async ({ params, request }: Route.LoaderArgs) => {
+	// @ts-expect-error check inclusion
 	if (params.lang && availableLanguages.includes(params.lang)) {
 		i18n.changeLanguage(params.lang);
 		return data({ lang: params.lang });
@@ -38,86 +38,14 @@ export const meta: Route.MetaFunction = ({ location }: Route.MetaArgs) => {
 
 	const url = new URL(location.pathname, siteUrl);
 
-	return [
-		...favicon,
-		...robotIndex,
-		{
-			title,
-		},
-		{
-			name: "description",
-			content: description,
-		},
-		{
-			name: "keywords",
-			content: keywords,
-		},
-		{
-			name: "author",
-			content: "Arnaud Fernandes",
-		},
-		{
-			tagName: "link",
-			rel: "canonical",
-			href: url.toString(),
-		},
-		{
-			property: "og:title",
-			content: title,
-		},
-		{
-			property: "og:description",
-			content: description,
-		},
-		{
-			property: "og:url",
-			content: url.toString(),
-		},
-		{
-			property: "og:type",
-			content: "profile",
-		},
-		{
-			property: "og:locale",
-			content: i18n.language,
-		},
-		{
-			property: "og:image",
-			content: `${siteUrl}/og.jpg`,
-		},
-		{
-			property: "og:image:width",
-			content: "1920",
-		},
-		{
-			property: "og:image:height",
-			content: "929",
-		},
-		{
-			property: "twitter:card",
-			content: "summary_large_image",
-		},
-		{
-			property: "twitter:title",
-			content: title,
-		},
-		{
-			property: "twitter:description",
-			content: description,
-		},
-		{
-			property: "twitter:image",
-			content: `${siteUrl}/twitter.jpg`,
-		},
-		{
-			property: "twitter:site",
-			content: contactInfo.twitter,
-		},
-		{
-			property: "twitter:creator",
-			content: contactInfo.twitter,
-		},
-	];
+	return buildMeta({
+		title,
+		description,
+		keywords,
+		siteUrl,
+		currentUrl: url,
+		locale: i18n.language,
+	});
 };
 
 export const links: Route.LinksFunction = () => [

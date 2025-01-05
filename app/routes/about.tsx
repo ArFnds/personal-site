@@ -32,6 +32,34 @@ type DisplayExperience = RawExperience & {
 	duration: string;
 };
 
+function rawToDisplay(experience: RawExperience): DisplayExperience {
+	const now = new Date();
+	const startDate = new Date(experience.startDate);
+	const endDate = experience.endDate
+		? new Date(experience.endDate)
+		: new Date();
+	const duration = formatDistance(startDate, endDate, {
+		locale: dateLocale(),
+	});
+
+	return {
+		...experience,
+		startDate: format(startDate, "MMM yyyy", { locale: dateLocale() }),
+		endDate: experience.endDate
+			? format(new Date(experience.endDate), "MMM yyyy", {
+					locale: dateLocale(),
+				})
+			: formatRelative(
+					new Date(now.getFullYear(), now.getMonth(), now.getDate()),
+					new Date(now.getFullYear(), now.getMonth(), now.getDate()),
+					{
+						locale: dateLocale(),
+					},
+				).split(" ")[0],
+		duration,
+	} satisfies DisplayExperience;
+}
+
 const About = () => {
 	const { t } = useTranslation();
 	const experiences = (
@@ -39,33 +67,7 @@ const About = () => {
 			returnObjects: true,
 			defaultValue: [],
 		}) as RawExperience[]
-	).map((experience) => {
-		const now = new Date();
-		const startDate = new Date(experience.startDate);
-		const endDate = experience.endDate
-			? new Date(experience.endDate)
-			: new Date();
-		const duration = formatDistance(startDate, endDate, {
-			locale: dateLocale(),
-		});
-
-		return {
-			...experience,
-			startDate: format(startDate, "MMM yyyy", { locale: dateLocale() }),
-			endDate: experience.endDate
-				? format(new Date(experience.endDate), "MMM yyyy", {
-						locale: dateLocale(),
-					})
-				: formatRelative(
-						new Date(now.getFullYear(), now.getMonth(), now.getDate()),
-						new Date(now.getFullYear(), now.getMonth(), now.getDate()),
-						{
-							locale: dateLocale(),
-						},
-					).split(" ")[0],
-			duration,
-		} satisfies DisplayExperience;
-	});
+	).map(rawToDisplay);
 
 	return (
 		<div className="max-w-4xl mx-auto p-6">
