@@ -34,7 +34,11 @@ const Conferences = () => {
 		<div className="min-h-screen py-16">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<SectionHeader h1 title={t("title")} subtitle={t("subtitle")} />
-				<div className="mb-8 flex justify-center">
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					className="mb-8 flex justify-center"
+				>
 					<a
 						href={contactInfo.calendar}
 						target="_blank"
@@ -45,7 +49,7 @@ const Conferences = () => {
 					>
 						<MicVocalIcon /> {t("cta")}
 					</a>
-				</div>
+				</motion.div>
 				<div className="space-y-8">
 					{conferences.map((conference, index) => (
 						<motion.div
