@@ -22,7 +22,7 @@ const TechList: FC<{ technologies: { name: string; logo: string }[] }> = ({
 						},
 					},
 				}}
-				className="grid grid-cols-2 md:flex items-center justify-center gap-6"
+				className="grid grid-cols-2 md:flex md:flex-row items-center justify-center gap-6"
 			>
 				{technologies.map((tech) => (
 					<motion.li
