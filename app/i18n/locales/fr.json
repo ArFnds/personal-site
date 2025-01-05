@@ -82,7 +82,8 @@
 		{
 			"company": "Eurotunnel",
 			"role": "Leader technique Fullstack .NET Core (C#) / React",
-			"logo": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			"headerImage": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			"logo": "/logo/getlink.webp",
 			"startDate": "2022-12",
 			"location": "À distance",
 			"description": "Dans le cadre de cette mission, le développement de micro-services innovants a été réalisé afin d'étendre les capacités de suivi des camions de marchandises traversant la Manche. \n\nPar ailleurs, la modernisation technique de composants essentiels liés au suivi des véhicules a été menée à bien. Le backoffice de l'application utilisée par les chauffeurs a également été repensé et enrichi de nouvelles fonctionnalités pour optimiser leur expérience globale.",
@@ -97,7 +98,8 @@
 		{
 			"company": "Sage",
 			"role": "Senior Developer Fullstack .NET Core (C#) / React",
-			"logo": "https://images.unsplash.com/photo-1511376868136-742c0de8c9a8?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			"headerImage": "https://images.unsplash.com/photo-1511376868136-742c0de8c9a8?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			"logo": "/logo/sage.png",
 			"startDate": "2021-06",
 			"endDate": "2022-12",
 			"location": "À distance",
@@ -113,7 +115,8 @@
 		{
 			"company": "Cdiscount",
 			"role": "Leader Technique Fullstack .NET Core (C#) / React",
-			"logo": "https://images.unsplash.com/photo-1561069934-eee225952461?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			"headerImage": "https://images.unsplash.com/photo-1561069934-eee225952461?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			"logo": "/logo/cdiscount.png",
 			"startDate": "2020-06",
 			"endDate": "2021-06",
 			"location": "À distance",
@@ -130,7 +133,7 @@
 		{
 			"company": "Tech-Magister",
 			"role": "Fondateur",
-			"logo": "/tech-magister-cover.jpg",
+			"headerImage": "/tech-magister-cover.jpg",
 			"startDate": "2016-11",
 			"location": "France et International",
 			"description": "L’entreprise propose des services de coaching, d'accompagnement et de gestion des savoir-faire pour les équipes techniques, assurant un transfert de compétences efficace et durable.\n\nUne analyse approfondie des besoins et des contraintes techniques est réalisée afin de définir les meilleures stratégies de développement. Cela inclut des études détaillées, un chiffrage précis et une budgétisation rigoureuse des projets.\n\nLes phases de développement sont prises en charge, y compris les étapes les plus complexes, ainsi que la mise en place et l'exécution des phases de tests techniques, garantissant des solutions de haute qualité et parfaitement adaptées aux attentes.",
