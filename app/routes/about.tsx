@@ -40,6 +40,8 @@ const technologies = [
 	{ name: "Go", logo: "/logos/go.svg" },
 	{ name: "TypeScript", logo: "/logos/typescript.svg" },
 	{ name: "Node.js", logo: "/logos/nodejs.svg" },
+	{ name: "Docker", logo: "/logos/docker.svg" },
+	{ name: "Kubernetes", logo: "/logos/kubernetes.svg" },
 ];
 
 function rawToDisplay(experience: RawExperience): DisplayExperience {
