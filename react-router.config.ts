@@ -5,6 +5,6 @@ export default {
 	// Server-side render by default, to enable SPA mode set this to `false`
 	ssr: true,
 	prerender(args) {
-		return ["/fr", "/en"];
+		return ["/fr", "/en", "/ru"];
 	},
 } satisfies Config;

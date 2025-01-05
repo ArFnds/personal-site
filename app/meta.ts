@@ -1,7 +1,7 @@
 import type { MetaDescriptor } from "react-router";
 import { contactInfo } from "./config/contact";
 
-export const favicon: MetaDescriptor[] = [
+const favicon: MetaDescriptor[] = [
 	{
 		tagName: "link",
 		rel: "apple-touch-icon",
@@ -38,11 +38,20 @@ const robots = [
 	"bingbot",
 ];
 
-export const robotIndex = robots.map((robot) => ({
+const robotIndex = robots.map((robot) => ({
 	tagName: "meta",
 	name: robot,
 	content: "index",
 }));
+
+// <meta name="yandex-verification" content="f21860230b242401" />
+const yandex: MetaDescriptor[] = [
+	{
+		tagName: "meta",
+		name: "yandex-verification",
+		content: "f21860230b242401",
+	},
+];
 
 /**
  * Constructs a meta information array for a webpage.
@@ -74,6 +83,7 @@ export const buildMeta = ({
 }) => [
 	...favicon,
 	...robotIndex,
+	...yandex,
 	{
 		title,
 	},
