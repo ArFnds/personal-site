@@ -19,7 +19,10 @@
 	},
 	"about": {
 		"title": "À Propos",
-		"description": "En tant que lead technique fullstack passionné et fondateur d'une entreprise IT, je me spécialise dans les architectures microservices, en offrant des solutions innovantes et performantes pour les startups et les entreprises en croissance."
+		"description": "En tant que lead technique fullstack passionné et fondateur d'une entreprise IT, je me spécialise dans les architectures microservices, en offrant des solutions innovantes et performantes pour les startups et les entreprises en croissance.",
+		"digitalDna": {
+			"title": "ADN Digitale"
+		}
 	},
 	"contact": {
 		"sectionHeader": {
@@ -83,7 +86,7 @@
 			"company": "Eurotunnel",
 			"role": "Leader technique Fullstack .NET Core (C#) / React",
 			"headerImage": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-			"logo": "/logo/getlink.webp",
+			"logo": "/logos/getlink.webp",
 			"startDate": "2022-12",
 			"location": "À distance",
 			"description": "Dans le cadre de cette mission, le développement de micro-services innovants a été réalisé afin d'étendre les capacités de suivi des camions de marchandises traversant la Manche. \n\nPar ailleurs, la modernisation technique de composants essentiels liés au suivi des véhicules a été menée à bien. Le backoffice de l'application utilisée par les chauffeurs a également été repensé et enrichi de nouvelles fonctionnalités pour optimiser leur expérience globale.",
@@ -99,7 +102,7 @@
 			"company": "Sage",
 			"role": "Senior Developer Fullstack .NET Core (C#) / React",
 			"headerImage": "https://images.unsplash.com/photo-1511376868136-742c0de8c9a8?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-			"logo": "/logo/sage.png",
+			"logo": "/logos/sage.png",
 			"startDate": "2021-06",
 			"endDate": "2022-12",
 			"location": "À distance",
@@ -116,7 +119,7 @@
 			"company": "Cdiscount",
 			"role": "Leader Technique Fullstack .NET Core (C#) / React",
 			"headerImage": "https://images.unsplash.com/photo-1561069934-eee225952461?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-			"logo": "/logo/cdiscount.png",
+			"logo": "/logos/cdiscount.png",
 			"startDate": "2020-06",
 			"endDate": "2021-06",
 			"location": "À distance",

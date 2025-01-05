@@ -2,6 +2,7 @@ import { format, formatDistance, formatRelative } from "date-fns";
 import { motion } from "framer-motion";
 import { BriefcaseBusinessIcon, Calendar1Icon, MapPinIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import TechList from "~/components/TechList";
 
 import { Badge } from "~/components/ui/badge";
 import {
@@ -13,6 +14,7 @@ import {
 	CardImage,
 	CardTitle,
 } from "~/components/ui/card";
+import { Separator } from "~/components/ui/separator";
 import { dateLocale } from "~/i18n/i18n";
 
 type RawExperience = {
@@ -31,6 +33,14 @@ type RawExperience = {
 type DisplayExperience = RawExperience & {
 	duration: string;
 };
+
+const technologies = [
+	{ name: ".NET Core", logo: "/logos/dotnet.svg" }, // Remplacez les chemins par vos images
+	{ name: "React", logo: "/logos/react.svg" },
+	{ name: "Go", logo: "/logos/go.svg" },
+	{ name: "TypeScript", logo: "/logos/typescript.svg" },
+	{ name: "Node.js", logo: "/logos/nodejs.svg" },
+];
 
 function rawToDisplay(experience: RawExperience): DisplayExperience {
 	const now = new Date();
@@ -71,6 +81,16 @@ const About = () => {
 
 	return (
 		<div className="max-w-4xl mx-auto p-6">
+			<motion.h1
+				className="text-3xl font-bold mb-6 text-center"
+				initial={{ opacity: 0, y: -20 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.5 }}
+			>
+				{t("about.digitalDna.title", "Digital DNA")}
+			</motion.h1>
+			<TechList technologies={technologies} />
+			<Separator className="my-8 invisible" />
 			<motion.h1
 				className="text-3xl font-bold mb-6 text-center"
 				initial={{ opacity: 0, y: -20 }}

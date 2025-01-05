@@ -19,7 +19,10 @@
 	},
 	"about": {
 		"title": "Обо мне",
-		"description": "Как страстный ведущий разработчик полного стека и основатель ИТ-компании, я специализируюсь на микросервисных архитектурах, предлагая инновационные и высокопроизводительные решения для стартапов и растущих компаний."
+		"description": "Как страстный ведущий разработчик полного стека и основатель ИТ-компании, я специализируюсь на микросервисных архитектурах, предлагая инновационные и высокопроизводительные решения для стартапов и растущих компаний.",
+		"digitalDna": {
+			"title": "Цифровая ДНК"
+		}
 	},
 	"contact": {
 		"sectionHeader": {
@@ -83,7 +86,7 @@
 			"company": "GetLink",
 			"role": "Технический руководитель Fullstack .NET Core (C#)/React",
 			"headerImage": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-			"logo": "/logo/getlink.webp",
+			"logo": "/logos/getlink.webp",
 			"startDate": "2022-12",
 			"location": "Удаленный",
 			"description": "В рамках этой миссии были разработаны инновационные микросервисы для улучшения возможностей отслеживания грузовых автомобилей, пересекающих Ла-Манш.\n\nКроме того, была успешно проведена техническая модернизация ключевых компонентов, связанных с отслеживанием транспортных средств. Бэк-офис приложения, используемого водителями, также был переработан и дополнен новыми функциями для улучшения их общего опыта.",
@@ -99,7 +102,7 @@
 			"company": "Sage",
 			"role": "Старший разработчик Fullstack .NET Core (C#)/React",
 			"headerImage": "https://images.unsplash.com/photo-1511376868136-742c0de8c9a8?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-			"logo": "/logo/sage.png",
+			"logo": "/logos/sage.png",
 			"startDate": "2021-06",
 			"endDate": "2022-12",
 			"location": "Удаленный",
@@ -116,7 +119,7 @@
 			"company": "Cdiscount",
 			"role": "Технический руководитель Fullstack .NET Core (C#)/React",
 			"headerImage": "https://images.unsplash.com/photo-1561069934-eee225952461?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-			"logo": "/logo/cdiscount.png",
+			"logo": "/logos/cdiscount.png",
 			"startDate": "2018-06",
 			"endDate": "2021-06",
 			"location": "Удаленный",
