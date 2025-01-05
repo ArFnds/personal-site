@@ -85,7 +85,7 @@
 			"logo": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 			"startDate": "2022-12",
 			"location": "À distance",
-			"description": "Développement de micro-services innovants pour le suivi des camions traversant la Manche. Modernisation des composants liés au suivi des véhicules et du back-office chauffeur.",
+			"description": "Dans le cadre de cette mission, le développement de micro-services innovants a été réalisé afin d'étendre les capacités de suivi des camions de marchandises traversant la Manche. \n\nPar ailleurs, la modernisation technique de composants essentiels liés au suivi des véhicules a été menée à bien. Le backoffice de l'application utilisée par les chauffeurs a également été repensé et enrichi de nouvelles fonctionnalités pour optimiser leur expérience globale.",
 			"technologies": [
 				"C# .NET 6/7/8",
 				"ReactJS",
@@ -101,7 +101,7 @@
 			"startDate": "2021-06",
 			"endDate": "2022-12",
 			"location": "À distance",
-			"description": "Conseils sur l'architecture microservices, maintenance corrective, et mise en place de POC.",
+			"description": "Un accompagnement a été assuré pour la conception et la mise en œuvre d'une architecture micro-services, garantissant des solutions robustes et évolutives.\n\nUne maintenance corrective a été réalisée sur des applications développées en .NET 4.8, permettant de résoudre les problèmes techniques et d'optimiser leurs performances.\n\nDes analyses approfondies ont été menées, aboutissant à la réalisation de Proofs of Concept (POC) pour les mises à jour en temps réel, démontrant la faisabilité et l'efficacité des solutions proposées.",
 			"technologies": [
 				"Docker",
 				"Kubernetes",
@@ -117,7 +117,7 @@
 			"startDate": "2020-06",
 			"endDate": "2021-06",
 			"location": "À distance",
-			"description": "Coaching et gestion des savoir-faire des équipes inshore & offshore. Analyse des besoins, développement complexe, et relecture de code React pour la direction IT Commerce.",
+			"description": "Dans le cadre de cette mission, le coaching, l'accompagnement et la gestion des savoir-faire des équipes techniques inshore et offshore ont été assurés. Une analyse approfondie des besoins et des contraintes techniques a été menée, suivie d'une étude détaillée, d'un chiffrage précis et d'une budgétisation rigoureuse pour les développements à réaliser.\n\nLes phases de développement les plus complexes ont été prises en charge directement, garantissant leur succès.\n\nEn tant que référent pour React, la relecture de code React a été effectuée pour le compte de la direction IT Commerce, contribuant à maintenir des standards de qualité élevés.",
 			"technologies": [
 				"Docker",
 				"React.js",
@@ -133,7 +133,7 @@
 			"logo": "/tech-magister-cover.jpg",
 			"startDate": "2016-11",
 			"location": "France et International",
-			"description": "Coaching, gestion des savoir-faire techniques, analyse des besoins, et accompagnement au développement.",
+			"description": "L’entreprise propose des services de coaching, d'accompagnement et de gestion des savoir-faire pour les équipes techniques, assurant un transfert de compétences efficace et durable.\n\nUne analyse approfondie des besoins et des contraintes techniques est réalisée afin de définir les meilleures stratégies de développement. Cela inclut des études détaillées, un chiffrage précis et une budgétisation rigoureuse des projets.\n\nLes phases de développement sont prises en charge, y compris les étapes les plus complexes, ainsi que la mise en place et l'exécution des phases de tests techniques, garantissant des solutions de haute qualité et parfaitement adaptées aux attentes.",
 			"technologies": ["Développement logiciel", "Gestion de projet", "Scrum"],
 			"url": "https://www.tech-magister.com/"
 		}

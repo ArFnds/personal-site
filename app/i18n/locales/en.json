@@ -85,7 +85,7 @@
 			"logo": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 			"startDate": "2022-12",
 			"location": "Remote",
-			"description": "Development of innovative micro-services for tracking trucks crossing the Channel. ",
+			"description": "As part of this mission, innovative microservices were developed to enhance the tracking capabilities of freight trucks crossing the English Channel.\n\nAdditionally, the technical modernization of key components related to vehicle tracking was successfully carried out. The back office of the application used by drivers was also redesigned and enriched with new features to improve their overall experience.",
 			"technologies": [
 				"C#.NET 6/7/8",
 				"ReactJS",
@@ -101,7 +101,7 @@
 			"startDate": "2021-06",
 			"endDate": "2022-12",
 			"location": "Remote",
-			"description": "Advice on microservices architecture, corrective maintenance, and POC implementation.",
+			"description": "Guidance was provided on the design and implementation of a microservices architecture, ensuring robust and scalable solutions.\n\nCorrective maintenance was carried out for applications built with .NET 4.8, addressing technical issues and optimizing performance.\n\nIn-depth analyses were conducted, leading to the development of Proofs of Concept (POC) for real-time updates, demonstrating the feasibility and effectiveness of the proposed solutions.",
 			"technologies": [
 				"Docker",
 				"Kubernetes",
@@ -117,7 +117,7 @@
 			"startDate": "2018-06",
 			"endDate": "2021-06",
 			"location": "Remote",
-			"description": "Coaching and management of know-how for inshore & offshore teams. ",
+			"description": "This mission involved coaching, supporting, and managing the expertise of inshore and offshore technical teams. A thorough analysis of requirements and technical constraints was conducted, followed by detailed studies, accurate estimations, and meticulous budgeting for the developments. The most complex phases of development were handled directly to ensure their success.\n\nActing as a React Referent Reviewer, React code was reviewed for the IT Commerce department, ensuring high-quality standards were upheld.",
 			"technologies": [
 				"Docker",
 				"React.js",
@@ -133,7 +133,7 @@
 			"logo": "/tech-magister-cover.jpg",
 			"startDate": "2016-11",
 			"location": "France and International",
-			"description": "Coaching, management of technical know-how, needs analysis, and development support.",
+			"description": "The company offers coaching, support, and expertise management services for technical teams, ensuring effective and sustainable knowledge transfer.\n\nA thorough analysis of requirements and technical constraints is carried out to define the best development strategies. This includes detailed studies, precise cost estimation, and rigorous project budgeting.\n\nDevelopment phases are handled, including the most complex stages, along with the setup and execution of technical testing phases, delivering high-quality solutions tailored to specific needs.",
 			"technologies": ["Software development", "Project management", "Scrum"],
 			"url": "https://www.tech-magister.com/"
 		}

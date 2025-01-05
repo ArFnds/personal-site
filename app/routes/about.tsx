@@ -122,9 +122,11 @@ const About = () => {
 									{experience.location}
 								</CardDescription>
 							</CardHeader>
-							<CardContent>{experience.description}</CardContent>
+							<CardContent className="whitespace-pre-line">
+								{experience.description}
+							</CardContent>
 							<CardFooter className="flex flex-wrap gap-2">
-								{experience.technologies.map((tech, i) => (
+								{experience.technologies.map((tech) => (
 									<Badge key={tech} variant="secondary">
 										{tech}
 									</Badge>
