@@ -4,6 +4,12 @@ import { contactInfo } from "./config/contact";
 const favicon: MetaDescriptor[] = [
 	{
 		tagName: "link",
+		rel: "icon",
+		type: "image/x-icon",
+		href: "/favicon.ico",
+	},
+	{
+		tagName: "link",
 		rel: "apple-touch-icon",
 		sizes: "180x180",
 		href: "/apple-touch-icon.png",
