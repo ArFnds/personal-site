@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Calendar, ExternalLink, MapPin, MicVocalIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { type Photo, PhotoGallery } from "~/components/PhotoGallery";
 import { buttonVariants } from "~/components/ui/button";
 import {
 	Card,
@@ -21,6 +22,7 @@ type Conference = {
 	location?: string;
 	imageUrl?: string;
 	link?: string;
+	photos?: Photo[];
 };
 
 const Conferences = () => {
@@ -77,7 +79,12 @@ const Conferences = () => {
 										)}
 									</CardDescription>
 								</CardHeader>
-								<CardContent>{conference.description}</CardContent>
+								<CardContent>
+									{conference.description}
+									{conference.photos && (
+										<PhotoGallery photos={conference.photos} />
+									)}
+								</CardContent>
 								<CardFooter>
 									{conference.link && (
 										<a
