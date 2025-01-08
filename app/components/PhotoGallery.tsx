@@ -1,6 +1,8 @@
+import { Image } from "@unpic/react";
 import { AnimatePresence, type Variants, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, X } from "lucide-react";
-import { type FC, type MouseEventHandler, useState } from "react";
+import { type FC, type MouseEvent, useEffect, useState } from "react";
+
 import { Button } from "~/components/ui/button";
 import { Card } from "~/components/ui/card";
 
@@ -22,14 +24,14 @@ export const PhotoGallery: FC<{
 		setIsModalOpen(true);
 	};
 
-	const handleNext: MouseEventHandler<HTMLButtonElement> = (e) => {
+	const handleNext = (e: Pick<MouseEvent, "stopPropagation">) => {
 		e.stopPropagation();
 		setDirection(1);
 		// biome-ignore lint/style/noNonNullAssertion: if next, it means the index is already set
 		setSelectedIndex((prev) => (prev! + 1) % photos.length);
 	};
 
-	const handlePrevious: MouseEventHandler<HTMLButtonElement> = (e) => {
+	const handlePrevious = (e: Pick<MouseEvent, "stopPropagation">) => {
 		e.stopPropagation();
 		setDirection(-1);
 		// biome-ignore lint/style/noNonNullAssertion: if prev, it means the index is already set
@@ -41,27 +43,43 @@ export const PhotoGallery: FC<{
 		setSelectedIndex(null);
 	};
 
-	// Animation variants
-	const modalVariants = {
-		hidden: { opacity: 0 },
-		visible: { opacity: 1 },
-		exit: { opacity: 0 },
+	const handleKeyDown = (e: KeyboardEvent) => {
+		if (isModalOpen) {
+			if (e.key === "ArrowRight") handleNext(e);
+			if (e.key === "ArrowLeft") handlePrevious(e);
+			if (e.key === "Escape") handleClose();
+		}
 	};
+
+	// biome-ignore lint/correctness/useExhaustiveDependencies: handleKeyDown changes every rerender
+	useEffect(() => {
+		window.addEventListener("keydown", handleKeyDown);
+		return () => window.removeEventListener("keydown", handleKeyDown);
+	}, [isModalOpen]);
 
 	const slideVariants: Variants = {
 		enter: (direction) => ({
-			x: direction > 0 ? 1000 : -1000,
+			x: direction > 0 ? "100%" : "-100%",
 			opacity: 0,
+			position: "absolute",
 		}),
 		center: {
-			zIndex: 1,
 			x: 0,
 			opacity: 1,
+			position: "relative",
+			transition: {
+				duration: 0.3,
+				ease: "easeOut",
+			},
 		},
 		exit: (direction) => ({
-			zIndex: 0,
-			x: direction < 0 ? 1000 : -1000,
+			x: direction < 0 ? "100%" : "-100%",
 			opacity: 0,
+			position: "absolute",
+			transition: {
+				duration: 0.3,
+				ease: "easeIn",
+			},
 		}),
 	};
 
@@ -84,7 +102,9 @@ export const PhotoGallery: FC<{
 							className="relative cursor-pointer"
 							onClick={() => handlePhotoClick(index)}
 						>
-							<img
+							<Image
+								width={256}
+								height={192}
 								src={photo.url}
 								alt={photo.alt}
 								className="h-48 w-64 object-cover rounded-lg"
@@ -97,93 +117,73 @@ export const PhotoGallery: FC<{
 			{/* Modal View */}
 			<AnimatePresence>
 				{isModalOpen && selectedIndex !== null && (
-					<motion.div
+					// biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
+					<div
 						className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
-						variants={modalVariants}
-						initial="hidden"
-						animate="visible"
-						exit="exit"
 						onClick={handleClose}
 					>
-						<div className="relative w-full h-full flex items-center justify-center">
+						<div className="relative w-full h-full flex items-center justify-center p-8">
 							{/* Close Button */}
-							<motion.div
-								className="absolute top-4 right-4"
-								initial={{ opacity: 0, y: -20 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ delay: 0.2 }}
+							<Button
+								variant="ghost"
+								size="icon"
+								className="absolute top-4 right-4 z-50 text-white hover:bg-white/20"
+								onClick={handleClose}
 							>
-								<Button
-									variant="ghost"
-									size="icon"
-									className="text-white hover:bg-white/20"
-									onClick={handleClose}
-								>
-									<X className="h-6 w-6" />
-								</Button>
-							</motion.div>
+								<X className="h-6 w-6" />
+							</Button>
 
 							{/* Navigation Buttons */}
-							<motion.div
-								className="absolute left-4"
-								initial={{ opacity: 0, x: -20 }}
-								animate={{ opacity: 1, x: 0 }}
-								transition={{ delay: 0.2 }}
+							<Button
+								variant="ghost"
+								size="icon"
+								className="absolute left-4 z-50 text-white hover:bg-white/20"
+								onClick={handlePrevious}
 							>
-								<Button
-									variant="ghost"
-									size="icon"
-									className="text-white hover:bg-white/20"
-									onClick={handlePrevious}
-								>
-									<ArrowLeft className="h-6 w-6" />
-								</Button>
-							</motion.div>
+								<ArrowLeft className="h-6 w-6" />
+							</Button>
 
-							<motion.div
-								className="absolute right-4"
-								initial={{ opacity: 0, x: 20 }}
-								animate={{ opacity: 1, x: 0 }}
-								transition={{ delay: 0.2 }}
+							<Button
+								variant="ghost"
+								size="icon"
+								className="absolute right-4 z-50 text-white hover:bg-white/20"
+								onClick={handleNext}
 							>
-								<Button
-									variant="ghost"
-									size="icon"
-									className="text-white hover:bg-white/20"
-									onClick={handleNext}
-								>
-									<ArrowRight className="h-6 w-6" />
-								</Button>
-							</motion.div>
+								<ArrowRight className="h-6 w-6" />
+							</Button>
 
-							{/* Main Image */}
-							<AnimatePresence initial={false} custom={direction}>
-								<motion.div
-									key={selectedIndex}
+							{/* Main Image Container */}
+							{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+							<div
+								onClick={handleClose}
+								className="relative w-full h-full flex items-center justify-center overflow-hidden"
+							>
+								<AnimatePresence
+									initial={false}
 									custom={direction}
-									variants={slideVariants}
-									initial="enter"
-									animate="center"
-									exit="exit"
-									transition={{
-										x: { type: "spring", stiffness: 300, damping: 30 },
-										opacity: { duration: 0.2 },
-									}}
-									className="absolute max-w-4xl max-h-[80vh] p-4"
+									mode="popLayout"
 								>
-									{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
-									<img
-										src={photos[selectedIndex].url}
-										alt={photos[selectedIndex].alt}
-										className="max-h-full max-w-full object-contain"
-										onClick={(e) => {
-											e.stopPropagation();
-										}}
-									/>
-								</motion.div>
-							</AnimatePresence>
+									<motion.div
+										key={selectedIndex}
+										custom={direction}
+										variants={slideVariants}
+										initial="enter"
+										animate="center"
+										exit="exit"
+										className="flex items-center justify-center"
+									>
+										{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
+										<img
+											src={photos[selectedIndex].url}
+											alt={photos[selectedIndex].alt}
+											className="max-w-full max-h-[80vh] w-auto h-auto object-contain"
+											onClick={(e) => e.stopPropagation()}
+										/>
+									</motion.div>
+								</AnimatePresence>
+							</div>
 						</div>
-					</motion.div>
+					</div>
 				)}
 			</AnimatePresence>
 		</div>

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Calendar, ExternalLink, MapPin, MicVocalIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
+
 import { type Photo, PhotoGallery } from "~/components/PhotoGallery";
 import { buttonVariants } from "~/components/ui/button";
 import {
@@ -14,6 +15,7 @@ import {
 } from "~/components/ui/card";
 import { contactInfo } from "~/config/contact";
 import SectionHeader from "../components/SectionHeader";
+import type { Route } from "./+types/conferences";
 
 type Conference = {
 	title: string;
@@ -25,7 +27,7 @@ type Conference = {
 	photos?: Photo[];
 };
 
-const Conferences = () => {
+const Conferences = (_: Route.ComponentProps) => {
 	const { t } = useTranslation(undefined, { keyPrefix: "conferences" });
 	const conferences = t("conferences", {
 		returnObjects: true,
