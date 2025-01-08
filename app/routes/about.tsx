@@ -224,9 +224,10 @@ const About = () => {
 					</motion.div>
 				))}
 			</motion.div>
+			<Separator className="my-8 invisible" />
 			<motion.h1
 				id="certifications"
-				className="text-3xl font-bold my-6 text-center"
+				className="text-3xl font-bold mb-6 text-center"
 				initial={{ opacity: 0, y: -20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.5 }}
