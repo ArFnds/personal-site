@@ -13,7 +13,7 @@ export const TextField = ({
 }: React.ComponentProps<"input"> & {
 	label: string;
 	name: string;
-	error?: string;
+	error?: string | null;
 	placeholder?: string;
 	description?: string;
 }) => {
