@@ -28,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 	githubUrl,
 }) => {
 	return (
-		<Card className="overflow-hidden">
+		<Card className="overflow-hidden h-full">
 			<CardImage
 				src={imageUrl}
 				alt={title}
@@ -41,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 				<CardDescription>{description}</CardDescription>
 			</CardHeader>
 			<CardFooter>
-				<div className="flex flex-wrap gap-2">
+				<div className="flex flex-row flex-wrap gap-2">
 					{technologies.map((tech) => (
 						<Badge key={tech}>{tech}</Badge>
 					))}
