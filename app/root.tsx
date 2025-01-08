@@ -62,6 +62,8 @@ export const links: Route.LinksFunction = () => [
 	{ rel: "stylesheet", href: stylesheet },
 ];
 
+const isDev = process.env.NODE_ENV === "development";
+
 export function Layout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang={i18n.language} className="system">
@@ -71,11 +73,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<Meta />
 				<Links />
 				{/* Yandex.Metrika counter */}
-				<script
-					type="text/javascript"
-					// biome-ignore lint/security/noDangerouslySetInnerHtml: Yandex.Metrika
-					dangerouslySetInnerHTML={{
-						__html: `(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+				{!isDev && (
+					<script
+						type="text/javascript"
+						// biome-ignore lint/security/noDangerouslySetInnerHtml: Yandex.Metrika
+						dangerouslySetInnerHTML={{
+							__html: `(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
    m[i].l=1*new Date();
    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
@@ -86,21 +89,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
         trackLinks:true,
         accurateTrackBounce:true
    });`,
-					}}
-				/>
+						}}
+					/>
+				)}
 				{/* /Yandex.Metrika counter */}
 			</head>
 			<body>
 				{/* Yandex.Metrika counter */}
-				<noscript>
-					<div>
-						<img
-							src="https://mc.yandex.ru/watch/99440606"
-							style={{ position: "absolute", left: "-9999px" }}
-							alt=""
-						/>
-					</div>
-				</noscript>
+				{!isDev && (
+					<noscript>
+						<div>
+							<img
+								src="https://mc.yandex.ru/watch/99440606"
+								style={{ position: "absolute", left: "-9999px" }}
+								alt=""
+							/>
+						</div>
+					</noscript>
+				)}
 				{/* /Yandex.Metrika counter */}
 				<div className="min-h-screen bg-background text-foreground">
 					<I18nextProvider i18n={i18n}>
@@ -113,20 +119,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				</div>
 				<ScrollRestoration />
 				<Scripts />
-				<script
-					async
-					src="https://www.googletagmanager.com/gtag/js?id=G-9X1ZS89XE1"
-				/>
-				<script
-					// biome-ignore lint/security/noDangerouslySetInnerHtml: google tags
-					dangerouslySetInnerHTML={{
-						__html: `window.dataLayer = window.dataLayer || [];
+				{!isDev && (
+					<>
+						<script
+							async
+							src="https://www.googletagmanager.com/gtag/js?id=G-9X1ZS89XE1"
+						/>
+						<script
+							// biome-ignore lint/security/noDangerouslySetInnerHtml: google tags
+							dangerouslySetInnerHTML={{
+								__html: `window.dataLayer = window.dataLayer || [];
 				function gtag(){dataLayer.push(arguments);}
 				gtag('js', new Date());
 
 				gtag('config', 'G-9X1ZS89XE1');`,
-					}}
-				/>
+							}}
+						/>
+					</>
+				)}
 			</body>
 		</html>
 	);
