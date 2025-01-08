@@ -15,6 +15,12 @@ import {
 	CardTitle,
 } from "~/components/ui/card";
 import { Separator } from "~/components/ui/separator";
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipProvider,
+	TooltipTrigger,
+} from "~/components/ui/tooltip";
 import { dateLocale } from "~/i18n/i18n";
 
 type RawExperience = {
@@ -42,6 +48,29 @@ const technologies = [
 	{ name: "Node.js", logo: "/logos/nodejs.svg" },
 	{ name: "Docker", logo: "/logos/docker.svg" },
 	{ name: "Kubernetes", logo: "/logos/kubernetes.svg" },
+];
+
+const certifications = [
+	{
+		name: "Containers Basics",
+		imgUrl: "/certifications/certificate-3xw8w5zwgf.jpg",
+		link: "https://www.rancher.academy/certificates/3xw8w5zwgf",
+	},
+	{
+		name: "Kubernetes Basics",
+		imgUrl: "/certifications/certificate-qv5jeqx1rf.jpg",
+		link: "https://www.rancher.academy/certificates/qv5jeqx1rf",
+	},
+	{
+		name: "Rancher Basics",
+		imgUrl: "/certifications/certificate-wfzmbm7zfo.jpg",
+		link: "https://www.rancher.academy/certificates/wfzmbm7zfo",
+	},
+	{
+		name: "K3s Basics",
+		imgUrl: "/certifications/certificate-gjlospsgkt.jpg",
+		link: "https://www.rancher.academy/certificates/gjlospsgkt",
+	},
 ];
 
 function rawToDisplay(experience: RawExperience): DisplayExperience {
@@ -171,6 +200,44 @@ const About = () => {
 						</Card>
 					</motion.div>
 				))}
+			</motion.div>
+			<motion.h1
+				className="text-3xl font-bold my-6 text-center"
+				initial={{ opacity: 0, y: -20 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.5 }}
+			>
+				{t("certifications.title", "Certifications")}
+			</motion.h1>
+			<motion.div
+				className="space-y-6"
+				initial="hidden"
+				animate="visible"
+				variants={{
+					hidden: { opacity: 0 },
+					visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
+				}}
+			>
+				<div className="flex justify-center gap-2">
+					{certifications.map((certification) => (
+						<TooltipProvider key={certification.link}>
+							<Tooltip>
+								<TooltipTrigger>
+									<a
+										href={certification.link}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<img src={certification.imgUrl} alt={certification.name} />
+									</a>
+								</TooltipTrigger>
+								<TooltipContent>
+									<p>{certification.name}</p>
+								</TooltipContent>
+							</Tooltip>
+						</TooltipProvider>
+					))}
+				</div>
 			</motion.div>
 		</div>
 	);
