@@ -1,5 +1,11 @@
 import { Image } from "@unpic/react";
-import { AnimatePresence, type Variants, motion } from "framer-motion";
+import {
+	AnimatePresence,
+	type PanInfo,
+	type Variants,
+	motion,
+	useMotionValue,
+} from "framer-motion";
 import { ArrowLeft, ArrowRight, X } from "lucide-react";
 import { type FC, type MouseEvent, useEffect, useState } from "react";
 
@@ -18,6 +24,9 @@ export const PhotoGallery: FC<{
 	const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [direction, setDirection] = useState(0);
+	const swipeX = useMotionValue(0);
+	const SWIPE_THRESHOLD = 50;
+	const SWIPE_POWER = 0.3;
 
 	const handlePhotoClick = (index: number) => {
 		setSelectedIndex(index);
@@ -41,6 +50,22 @@ export const PhotoGallery: FC<{
 	const handleClose = () => {
 		setIsModalOpen(false);
 		setSelectedIndex(null);
+	};
+
+	const handleDragEnd = (
+		e: Pick<MouseEvent, "stopPropagation">,
+		info: PanInfo,
+	) => {
+		const swipe = info.offset.x;
+		const velocity = info.velocity.x;
+
+		if (Math.abs(swipe) > SWIPE_THRESHOLD || Math.abs(velocity) > 500) {
+			if (swipe < 0) {
+				handleNext(e);
+			} else {
+				handlePrevious(e);
+			}
+		}
 	};
 
 	const handleKeyDown = (e: KeyboardEvent) => {
@@ -170,6 +195,10 @@ export const PhotoGallery: FC<{
 										initial="enter"
 										animate="center"
 										exit="exit"
+										drag="x"
+										dragConstraints={{ left: 0, right: 0 }}
+										dragElastic={1}
+										onDragEnd={handleDragEnd}
 										className="flex items-center justify-center"
 									>
 										{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
@@ -178,6 +207,7 @@ export const PhotoGallery: FC<{
 											alt={photos[selectedIndex].alt}
 											className="max-w-full max-h-[80vh] w-auto h-auto object-contain"
 											onClick={(e) => e.stopPropagation()}
+											draggable="false"
 										/>
 									</motion.div>
 								</AnimatePresence>
