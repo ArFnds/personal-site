@@ -1,6 +1,6 @@
 image:
   repository: "ghcr.io/arfnds/personal-site"
-  tag: "v1.3.0"
+  tag: "v1.3.1"
 imagePullSecrets:
   - "ghcr.io"
 containerPort: 3000
