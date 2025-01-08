@@ -1,8 +1,15 @@
 import { format, formatDistance, formatRelative } from "date-fns";
 import { motion } from "framer-motion";
-import { BriefcaseBusinessIcon, Calendar1Icon, MapPinIcon } from "lucide-react";
+import {
+	ArrowBigDown,
+	BriefcaseBusinessIcon,
+	Calendar1Icon,
+	Info,
+	MapPinIcon,
+} from "lucide-react";
 import { useTranslation } from "react-i18next";
 import TechList from "~/components/TechList";
+import { Alert, AlertDescription, AlertTitle } from "~/components/ui/alert";
 
 import { Badge } from "~/components/ui/badge";
 import {
@@ -112,6 +119,21 @@ const About = () => {
 
 	return (
 		<div className="max-w-4xl mx-auto p-6">
+			<Alert className="mb-6">
+				<Info className="h-6 w-6" color="lightblue" />
+				<AlertTitle>{t("common.quickLink")}</AlertTitle>
+				<AlertDescription className="ml-4">
+					<a href="#experiences">
+						<ArrowBigDown className="inline h-4" />
+						{t("experiences.title", "Expériences Professionnelles")}
+					</a>{" "}
+					-{" "}
+					<a href="#certifications">
+						<ArrowBigDown className="inline h-4" />
+						{t("certifications.title", "Certifications")}
+					</a>
+				</AlertDescription>
+			</Alert>
 			<motion.h1
 				className="text-3xl font-bold mb-6 text-center"
 				initial={{ opacity: 0, y: -20 }}
@@ -123,6 +145,7 @@ const About = () => {
 			<TechList technologies={technologies} />
 			<Separator className="my-8 invisible" />
 			<motion.h1
+				id="experiences"
 				className="text-3xl font-bold mb-6 text-center"
 				initial={{ opacity: 0, y: -20 }}
 				animate={{ opacity: 1, y: 0 }}
@@ -202,6 +225,7 @@ const About = () => {
 				))}
 			</motion.div>
 			<motion.h1
+				id="certifications"
 				className="text-3xl font-bold my-6 text-center"
 				initial={{ opacity: 0, y: -20 }}
 				animate={{ opacity: 1, y: 0 }}

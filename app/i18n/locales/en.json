@@ -1,4 +1,7 @@
 {
+	"common": {
+		"quickLink": "Quick Links"
+	},
 	"meta": {
 		"title": "Arnaud Fernandes - Software Engineer for custom digital projects",
 		"description": "Arnaud Fernandes, Software Engineer who helps startups and companies design high-performance, tailor-made solutions.",
@@ -92,6 +95,9 @@
 			],
 			"imageUrl": "/projects/nsfw.jpg"
 		}
+	},
+	"certifications": {
+		"title": "Certifications"
 	},
 	"experiences.title": "Experience",
 	"experiences": [

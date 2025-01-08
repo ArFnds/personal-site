@@ -1,4 +1,7 @@
 {
+	"common": {
+		"quickLink": "Accès rapide"
+	},
 	"meta": {
 		"title": "Arnaud Fernandes - Software Engineer for custom digital projects",
 		"description": "Arnaud Fernandes, Software Engineer qui aide les startups et entreprises à concevoir des solutions performantes et sur mesure.",
@@ -106,6 +109,9 @@
 			],
 			"imageUrl": "/projects/nsfw.jpg"
 		}
+	},
+	"certifications": {
+		"title": "Certifications"
 	},
 	"experiences.title": "Expérience",
 	"experiences": [
