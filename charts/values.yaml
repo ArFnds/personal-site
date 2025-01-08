@@ -10,6 +10,7 @@ probe:
   enabled: false
 vars:
   OTEL_EXPORTER_OTLP_ENDPOINT: "https://obs.arbrerus.ru/api/default/"
+secretName: personal-site
 ingress:
   host: "arnaudfernandes.com"
   tlsEnabled: true

@@ -1,6 +1,10 @@
 export const recaptchaKey = "6LfLarEqAAAAACXihhxPaovmnzYTqLiBsyhoqlVI";
 
-export const mailUser = "arnaud.fernandes@yandex.ru";
-export const mailPass = "fvxxwhmyfhkofzho";
-export const mailTo = "me@arnaudfernandes.com";
-export const mailFrom = "arnaud.fernandes@yandex.ru";
+export const mailUser = process.env.MAIL_USER;
+export const mailPass = process.env.MAIL_PASS;
+export const mailTo = process.env.MAIL_TO;
+export const mailFrom = process.env.MAIL_FROM;
+
+if (!mailUser || !mailPass || !mailTo || !mailFrom) {
+	throw new Error("Missing mail credentials");
+}
