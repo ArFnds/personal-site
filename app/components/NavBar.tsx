@@ -33,6 +33,7 @@ const Navbar = () => {
 							to={`/${i18n.language}`}
 							className="text-xl font-bold text-foreground"
 						>
+							<img src="/logo.png" alt="AF" className="w-12 h-12 mr-2 inline" />
 							Arnaud Fernandes
 						</NavLink>
 					</div>
