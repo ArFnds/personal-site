@@ -189,6 +189,7 @@
 		"title": "Conferencias",
 		"subtitle": "Compartiendo conocimientos y experiencias con la comunidad tecnológica",
 		"cta": "Programe una conferencia",
+		"headparaph": "Compartir conocimientos y experiencias es esencial para avanzar en el mundo tecnológico. Las presentaciones realizadas en conferencias, cubren temas como <1>el desarrollo de software</1>, <2>las arquitecturas de microservicios</2>, <3>la optimización del rendimiento</3> y <4>las estrategias de crecimiento para empresas de TI</4>. Estos eventos son una oportunidad para inspirar, transmitir conocimientos prácticos y crear intercambios enriquecedores con profesionales apasionados.",
 		"conferences": [
 			{
 				"title": "Presentación de un proyecto FinTech",

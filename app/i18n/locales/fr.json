@@ -185,6 +185,7 @@
 		"title": "Conférences",
 		"subtitle": "Partage des connaissances et des expériences avec la communauté technologique",
 		"cta": "Planifier une conférence",
+		"headparaph": "Partager des connaissances et des expériences est essentiel pour faire avancer le monde technologique. Les interventions réalisées lors de conférences, couvrent des sujets tels que <1>le développement logiciel</1>, <2>les architectures microservices</2>, <3>l'optimisation des performances</3> et <4>les stratégies de croissance pour les entreprises IT</4>. Ces événements sont une opportunité d'inspirer, de transmettre des savoirs pratiques et de créer des échanges enrichissants avec des professionnels passionnés.",
 		"conferences": [
 			{
 				"title": "Présentation d'un projet FinTech",

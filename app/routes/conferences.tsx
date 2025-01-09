@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Calendar, ExternalLink, MapPin, MicVocalIcon } from "lucide-react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
+import { HeadParaph } from "~/components/HeadParaph";
 import { type Photo, PhotoGallery } from "~/components/PhotoGallery";
 import { buttonVariants } from "~/components/ui/button";
 import {
@@ -38,10 +39,23 @@ const Conferences = (_: Route.ComponentProps) => {
 		<div className="min-h-screen py-16">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<SectionHeader h1 title={t("title")} subtitle={t("subtitle")} />
+
+				<HeadParaph icon={<MicVocalIcon />}>
+					<Trans
+						i18nKey="conferences.headparaph"
+						components={[
+							<span key={0} className="text-blue-600 dark:text-blue-400" />,
+							<span key={1} className="text-blue-600 dark:text-blue-400" />,
+							<span key={2} className="text-blue-600 dark:text-blue-400" />,
+							<span key={3} className="text-blue-600 dark:text-blue-400" />,
+						]}
+					/>
+				</HeadParaph>
+
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
-					className="mb-8 flex justify-center"
+					className="my-8 flex justify-center"
 				>
 					<a
 						href={contactInfo.calendar}

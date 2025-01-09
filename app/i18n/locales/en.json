@@ -171,6 +171,7 @@
 		"title": "Conference Talks",
 		"subtitle": "Sharing knowledge and experiences with the tech community",
 		"cta": "Schedule a Conference Talk",
+		"headparaph": "Sharing knowledge and experiences is essential for advancing the technological world. The presentations cover topics such as <1>software development</1>, <2>microservices architectures</2>, <3>performance optimization</3>, and <4>IT business growth strategies</4>. These events are an opportunity to inspire, share practical knowledge, and create enriching exchanges with passionate professionals.",
 		"conferences": [
 			{
 				"title": "Presentation of a FinTech project",
