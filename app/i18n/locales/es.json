@@ -73,6 +73,7 @@
 		}
 	},
 	"projects": {
+		"description": "Cada proyecto completado refleja una <1>profunda experiencia técnica</1> y una <2>comprensión de las necesidades específicas del cliente</2>. Desde <3>aplicaciones web modernas</3> hasta <4>arquitecturas de microservicios robustas</4>, pasando por <5>soluciones personalizadas</5>, cada logro demuestra un compromiso con la entrega de resultados de alto rendimiento y sostenibles. Descubra una selección de proyectos que muestran la capacidad de transformar ideas en soluciones concretas e innovadoras.",
 		"project1": {
 			"title": "Seguimiento de carga del Eurotúnel",
 			"description": "Sistema de microservicios basado en el seguimiento de camiones que cruzan el Canal de la Mancha.",
@@ -217,6 +218,7 @@
 		"title": "Servicios de tutoría",
 		"subtitle": "Empoderar a los desarrolladores para que alcancen su máximo potencial",
 		"cta": "Programe una sesión de tutoría",
+		"headparaph": "No ha llegado tan lejos solo para quedarse aquí.",
 		"services": {
 			"technicalGuidance": {
 				"title": "Asesoramiento técnico",

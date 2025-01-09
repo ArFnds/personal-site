@@ -73,6 +73,7 @@
 		}
 	},
 	"projects": {
+		"description": "Chaque projet réalisé reflète une <1>expertise technique approfondie</1> et une <2>compréhension des besoins spécifiques des clients</2>. Des <3>applications web modernes</3> aux <4>architectures microservices robustes</4>, en passant par des <5>solutions sur mesure</5>, chaque réalisation témoigne d'un engagement à fournir des résultats performants et durables. Découvrez une sélection de projets qui illustrent une capacité à transformer des idées en solutions concrètes et innovantes.",
 		"project1": {
 			"title": "Eurotunnel Freight Tracking",
 			"description": "Système microservices basé sur le suivi des camions traversant la Manche.",
@@ -213,6 +214,7 @@
 		"title": "Services de mentorat",
 		"subtitle": "Donner aux développeurs les moyens d’atteindre leur plein potentiel",
 		"cta": "Planifier une séance de mentorat",
+		"headparaph": "Vous n'êtes pas allé si loin juste pour vous arrêter là.",
 		"services": {
 			"technicalGuidance": {
 				"title": "Conseils techniques",

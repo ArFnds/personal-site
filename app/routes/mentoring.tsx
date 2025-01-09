@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { BookOpen, Target, Users } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { HeadParaph } from "~/components/HeadParaph";
 import { buttonVariants } from "~/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import SectionHeader from "../components/SectionHeader";
@@ -34,11 +35,13 @@ const Mentoring = () => {
 					subtitle={t("mentoring.subtitle")}
 				/>
 
+				<HeadParaph icon={<Target />}>{t("mentoring.headparaph")}</HeadParaph>
+
 				<motion.div
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
 					transition={{ delay: 0.6 }}
-					className="mb-8 text-center"
+					className="my-8 text-center"
 				>
 					<a
 						href="https://cal.com/arnaudfernandes"
@@ -70,15 +73,6 @@ const Mentoring = () => {
 						</motion.div>
 					))}
 				</div>
-			</div>
-			<div
-				className="w-full h-96 mt-8 bg-center bg-cover invert dark:invert-0"
-				style={{
-					backgroundImage:
-						"url('https://images.unsplash.com/photo-1552508744-1696d4464960?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-				}}
-			>
-				&nbsp;
 			</div>
 		</div>
 	);

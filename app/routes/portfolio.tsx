@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
+import { HeadParaph } from "~/components/HeadParaph";
 import ProjectCard from "~/components/ProjectCard";
 import SectionHeader from "~/components/SectionHeader";
 
@@ -29,7 +30,20 @@ const Portfolio = () => {
 					subtitle="Featured projects and professional achievements"
 				/>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<HeadParaph>
+					<Trans
+						i18nKey="projects.description"
+						components={[
+							<span key={0} className="text-blue-600 dark:text-blue-400" />,
+							<span key={1} className="text-blue-600 dark:text-blue-400" />,
+							<span key={2} className="text-blue-600 dark:text-blue-400" />,
+							<span key={3} className="text-blue-600 dark:text-blue-400" />,
+							<span key={4} className="text-blue-600 dark:text-blue-400" />,
+						]}
+					/>
+				</HeadParaph>
+
+				<div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
 					{projects.map((project, index) => (
 						<motion.div
 							key={project.title}

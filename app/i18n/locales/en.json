@@ -73,6 +73,7 @@
 		}
 	},
 	"projects": {
+		"description": "Each completed project reflects <1>deep technical expertise</1> and an <2>understanding of specific client needs</2>. From <3>modern web applications</3> to <4>robust microservice architectures</4>, through <5>customized solutions</5>, each achievement demonstrates a commitment to delivering high-performance and sustainable results. Discover a selection of projects that showcase the ability to transform ideas into concrete and innovative solutions.",
 		"project1": {
 			"title": "Eurotunnel Freight Tracking",
 			"description": "Microservices-based tracking system for trucks crossing the Manche.",
@@ -199,6 +200,7 @@
 		"title": "Mentoring Services",
 		"subtitle": "Empowering developers to reach their full potential",
 		"cta": "Schedule a Mentoring Session",
+		"headparaph": "You didn't come so far to only come this far.",
 		"services": {
 			"technicalGuidance": {
 				"title": "Technical Guidance",
