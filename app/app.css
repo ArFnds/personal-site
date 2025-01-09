@@ -9,6 +9,12 @@ body {
 	@media (prefers-color-scheme: dark) {
 		color-scheme: dark;
 	}
+
+  /* CSS Hack for anchor text hidden behind the menu */
+  h1[id], h2[id] {
+    padding-top: 80px;
+    margin-top: -80px;
+  }
 }
 
 

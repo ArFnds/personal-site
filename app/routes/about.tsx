@@ -1,3 +1,4 @@
+import { Image } from "@unpic/react";
 import { format, formatDistance, formatRelative } from "date-fns";
 import { motion } from "framer-motion";
 import {
@@ -146,7 +147,7 @@ const About = () => {
 			<Separator className="my-8 invisible" />
 			<motion.h1
 				id="experiences"
-				className="text-3xl font-bold mb-6 text-center"
+				className="text-3xl font-bold mt-12 mb-6 text-center"
 				initial={{ opacity: 0, y: -20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.5 }}
@@ -243,9 +244,9 @@ const About = () => {
 					visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
 				}}
 			>
-				<div className="flex justify-center gap-2">
+				<div className="flex flex-wrap justify-center gap-2">
 					{certifications.map((certification) => (
-						<TooltipProvider key={certification.link}>
+						<TooltipProvider key={certification.link} delayDuration={200}>
 							<Tooltip>
 								<TooltipTrigger>
 									<a
@@ -253,7 +254,12 @@ const About = () => {
 										target="_blank"
 										rel="noopener noreferrer"
 									>
-										<img src={certification.imgUrl} alt={certification.name} />
+										<Image
+											layout="fullWidth"
+											height={200}
+											src={certification.imgUrl}
+											alt={certification.name}
+										/>
 									</a>
 								</TooltipTrigger>
 								<TooltipContent>
