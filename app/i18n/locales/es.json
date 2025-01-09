@@ -27,6 +27,9 @@
 			"title": "ADN digital"
 		}
 	},
+	"home": {
+		"bio": "Ingeniero de software apasionado y experto en soluciones digitales, especializado en <1>desarrollo de aplicaciones web modernas</1>, <2>diseño de arquitecturas de microservicios</2> y <3>consultoría en tecnologías avanzadas</3>. Con una sólida experiencia en grandes empresas y startups, cada proyecto es una oportunidad para transformar ideas en resultados concretos y eficientes."
+	},
 	"contact": {
 		"sectionHeader": {
 			"title": "Contáctame",

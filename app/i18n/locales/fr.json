@@ -27,6 +27,9 @@
 			"title": "ADN Digitale"
 		}
 	},
+	"home": {
+		"bio": "Ingénieur logiciel passionné et expert en solutions numériques, spécialisé dans <1>le développement d'applications web modernes</1>, <2>la conception d'architectures microservices</2> et <3>le conseil en technologies avancées</3>. Fort d'une expérience solide auprès de grandes entreprises et startups, chaque projet est une opportunité de transformer des idées en résultats concrets et performants."
+	},
 	"contact": {
 		"sectionHeader": {
 			"title": "Me Contacter",

@@ -27,6 +27,9 @@
 			"title": "Digital DNA"
 		}
 	},
+	"home": {
+		"bio": "Passionate software engineer and digital solutions expert, specialized in <1>modern web application development</1>, <2>microservices architecture design</2>, and <3>advanced technology consulting</3>. With solid experience in large companies and startups, each project is an opportunity to transform ideas into concrete and efficient results."
+	},
 	"contact": {
 		"sectionHeader": {
 			"title": "Contact Me",
