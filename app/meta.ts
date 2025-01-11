@@ -44,7 +44,7 @@ const robots = [
 	"bingbot",
 ];
 
-const robotIndex = robots.map((robot) => ({
+const robotIndex: MetaDescriptor[] = robots.map((robot) => ({
 	tagName: "meta",
 	name: robot,
 	content: "index",
@@ -86,84 +86,85 @@ export const buildMeta = ({
 	locale: string;
 	siteUrl: string;
 	currentUrl: URL;
-}) => [
-	...favicon,
-	...robotIndex,
-	...yandex,
-	{
-		title,
-	},
-	{
-		name: "description",
-		content: description,
-	},
-	{
-		name: "keywords",
-		content: keywords,
-	},
-	{
-		name: "author",
-		content: "Arnaud Fernandes",
-	},
-	{
-		tagName: "link",
-		rel: "canonical",
-		href: currentUrl.toString(),
-	},
-	{
-		property: "og:title",
-		content: title,
-	},
-	{
-		property: "og:description",
-		content: description,
-	},
-	{
-		property: "og:url",
-		content: currentUrl.toString(),
-	},
-	{
-		property: "og:type",
-		content: "profile",
-	},
-	{
-		property: "og:locale",
-		content: locale,
-	},
-	{
-		property: "og:image",
-		content: `${siteUrl}/og.jpg`,
-	},
-	{
-		property: "og:image:width",
-		content: "1920",
-	},
-	{
-		property: "og:image:height",
-		content: "929",
-	},
-	{
-		property: "twitter:card",
-		content: "summary_large_image",
-	},
-	{
-		property: "twitter:title",
-		content: title,
-	},
-	{
-		property: "twitter:description",
-		content: description,
-	},
-	{
-		property: "twitter:image",
-		content: `${siteUrl}/twitter.jpg`,
-	},
-	{
-		property: "twitter:site",
-		content: contactInfo.twitter,
-	},
-	{
-		property: "twitter:creator",
-		content: contactInfo.twitter,
-	},
-];
+}) =>
+	[
+		...favicon,
+		...robotIndex,
+		...yandex,
+		{
+			title,
+		},
+		{
+			name: "description",
+			content: description,
+		},
+		{
+			name: "keywords",
+			content: keywords,
+		},
+		{
+			name: "author",
+			content: "Arnaud Fernandes",
+		},
+		{
+			tagName: "link",
+			rel: "canonical",
+			href: currentUrl.toString(),
+		},
+		{
+			property: "og:title",
+			content: title,
+		},
+		{
+			property: "og:description",
+			content: description,
+		},
+		{
+			property: "og:url",
+			content: currentUrl.toString(),
+		},
+		{
+			property: "og:type",
+			content: "profile",
+		},
+		{
+			property: "og:locale",
+			content: locale,
+		},
+		{
+			property: "og:image",
+			content: `${siteUrl}/og.jpg`,
+		},
+		{
+			property: "og:image:width",
+			content: "1920",
+		},
+		{
+			property: "og:image:height",
+			content: "929",
+		},
+		{
+			property: "twitter:card",
+			content: "summary_large_image",
+		},
+		{
+			property: "twitter:title",
+			content: title,
+		},
+		{
+			property: "twitter:description",
+			content: description,
+		},
+		{
+			property: "twitter:image",
+			content: `${siteUrl}/twitter.jpg`,
+		},
+		{
+			property: "twitter:site",
+			content: contactInfo.twitter,
+		},
+		{
+			property: "twitter:creator",
+			content: contactInfo.twitter,
+		},
+	] satisfies MetaDescriptor[];

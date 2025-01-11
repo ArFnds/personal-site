@@ -2,15 +2,19 @@ import { motion } from "framer-motion";
 import { ArrowRight, Code2, Rocket, Users } from "lucide-react";
 import { Trans, useTranslation } from "react-i18next";
 import { Link } from "react-router";
+import person from "~/assets/structured-data/person";
 import { HeadParaph } from "~/components/HeadParaph";
-import { useTheme } from "~/components/ThemeProvider";
 import { buttonVariants } from "~/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import { cn } from "~/lib/utils";
 
+// export handle
+export const handle = {
+	structuredData: person,
+};
+
 const Home = () => {
 	const { t } = useTranslation();
-	const { theme } = useTheme();
 
 	return (
 		<div className="min-h-screen">

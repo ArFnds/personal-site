@@ -1,3 +1,5 @@
+import { has } from "es-toolkit/compat";
+import { I18nextProvider } from "react-i18next";
 import {
 	Links,
 	Meta,
@@ -7,9 +9,8 @@ import {
 	data,
 	isRouteErrorResponse,
 	redirect,
+	useMatches,
 } from "react-router";
-
-import { I18nextProvider } from "react-i18next";
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
 import Footer from "./components/Footer";
@@ -64,7 +65,11 @@ export const links: Route.LinksFunction = () => [
 
 const isDev = process.env.NODE_ENV === "development";
 
+const hasStructuredData = (o: unknown) => has(o, "structuredData");
+
 export function Layout({ children }: { children: React.ReactNode }) {
+	const matches = useMatches();
+
 	return (
 		<html lang={i18n.language} className="system">
 			<head>
@@ -72,6 +77,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<Meta />
 				<Links />
+				{matches
+					.filter((match) => match.handle && hasStructuredData(match.handle))
+					.map((match) => {
+						// @ts-expect-error we filetered
+						const structuredData = match.handle.structuredData as object;
+						return (
+							<script key={match.pathname} type="application/ld+json">
+								{JSON.stringify(structuredData)}
+							</script>
+						);
+					})}
 				{/* Yandex.Metrika counter */}
 				{!isDev && (
 					<script
