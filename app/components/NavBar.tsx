@@ -1,7 +1,7 @@
 import { Menu } from "lucide-react";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { NavLink, useLocation } from "react-router";
+import { NavLink } from "react-router";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useTheme } from "./ThemeProvider";
 import ThemeSwitcher from "./ThemeSwitcher";
@@ -10,10 +10,9 @@ const Navbar = () => {
 	const { t, i18n } = useTranslation();
 	const { theme } = useTheme();
 	const [isOpen, setIsOpen] = React.useState(false);
-	const location = useLocation();
 
 	const navItems = [
-		{ path: `/${i18n.language}`, label: t("navigation.home") },
+		{ path: `/${i18n.language}`, label: t("navigation.home"), end: true },
 		{ path: `/${i18n.language}/about`, label: t("navigation.about") },
 		{ path: `/${i18n.language}/portfolio`, label: t("navigation.portfolio") },
 		{ path: `/${i18n.language}/mentoring`, label: t("navigation.mentoring") },
@@ -44,13 +43,10 @@ const Navbar = () => {
 							<NavLink
 								key={item.path}
 								to={item.path}
+								end={item.end}
 								className={({ isActive }) =>
 									`text-sm font-medium transition-colors ${
-										isActive &&
-										(
-											item.path !== `/${i18n.language}` ||
-												location.pathname === `/${i18n.language}`
-										)
+										isActive
 											? "text-blue-600"
 											: theme === "dark"
 												? "text-gray-300 hover:text-blue-400"

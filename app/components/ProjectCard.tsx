@@ -73,7 +73,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 							rel="noopener noreferrer"
 							className="flex items-center text-blue-600 hover:text-blue-700"
 						>
-							<ExternalLink className="w-4 h-4 mr-2" />
+							<ExternalLink className="w-4 h-4 mx-2" />
 							{t("common.seeMore")}
 						</a>
 					)}
