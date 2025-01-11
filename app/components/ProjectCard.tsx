@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ArrowDownToDot, ExternalLink, Github } from "lucide-react";
 import type React from "react";
 import { useTranslation } from "react-i18next";
 import { Badge } from "./ui/badge";
@@ -19,6 +19,7 @@ interface ProjectCardProps {
 	liveUrl?: string;
 	githubUrl?: string;
 	isPublic?: boolean;
+	client?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -29,6 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 	liveUrl,
 	githubUrl,
 	isPublic,
+	client,
 }) => {
 	const { t } = useTranslation();
 	return (
@@ -49,6 +51,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 						</Badge>
 					)}
 					<h2>{title}</h2>
+					{client && (
+						<span className="text-muted-foreground ml-auto">
+							<ArrowDownToDot className="w-4 h-4 inline-block" />
+							{client}
+						</span>
+					)}
 				</CardTitle>
 				<CardDescription className="indent-2 whitespace-pre-line">
 					{description.split("\n").map((line, i) => (

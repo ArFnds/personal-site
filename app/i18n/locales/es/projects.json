@@ -11,10 +11,11 @@
 			"Docker",
 			"Kubernetes"
 		],
-		"imageUrl": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=800&h=200&auto=format&fit=crop"
+		"imageUrl": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=800&h=200&auto=format&fit=crop",
+		"client": "GetLink"
 	},
 	"project2": {
-		"title": "Cdescuento a voluntad",
+		"title": "Cdiscount à volonté",
 		"description": "En este proyecto, el desarrollo de la oferta 'Cdiscount à volonté' fue una prioridad. Esto implicó la creación de microservicios en Java con Spring y la mejora de la oferta en el sitio web para PC utilizando .NET y C#.\n Además, se realizaron mejoras en la oferta para plataformas móviles y aplicaciones utilizando React JS y React Native, garantizando una experiencia de usuario óptima.",
 		"technologies": [
 			"ReactJS",
@@ -25,7 +26,8 @@
 			"Kubernetes"
 		],
 		"imageUrl": "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-		"liveUrl": "https://www.cdiscount.com/cdav"
+		"liveUrl": "https://www.cdiscount.com/cdav",
+		"client": "Cdiscount"
 	},
 	"project3": {
 		"title": "Detección de imágenes NSFW",
@@ -38,7 +40,8 @@
 			"Kubernetes",
 			"GPU"
 		],
-		"imageUrl": "/projects/nsfw.jpg"
+		"imageUrl": "/projects/nsfw.jpg",
+		"client": "Private"
 	},
 	"ees": {
 		"title": "EES (Entry-Exit system)",
@@ -52,6 +55,20 @@
 			"Kubernetes"
 		],
 		"imageUrl": "/projects/ees.webp",
-		"liveUrl": "https://travel-europe.europa.eu/ees/what-ees_en"
+		"liveUrl": "https://travel-europe.europa.eu/ees/what-ees_en",
+		"client": "GetLink"
+	},
+	"boardingpax": {
+		"title": "Boarding Pax",
+		"description": "Suministro en tiempo real de planos de carga de los vagones de transporte de vehículos a través del Canal de la Mancha, para que el personal pueda validar la colocación de los vehículos. Este plan de carga también facilita la intervención en caso de incidente.",
+		"technologies": [
+			"React",
+			"Microservices",
+			"Docker",
+			"Kubernetes",
+			".NET Core"
+		],
+		"imageUrl": "/projects/boardingpax.avif",
+		"client": "GetLink"
 	}
 }

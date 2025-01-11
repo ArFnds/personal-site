@@ -11,6 +11,7 @@ const Portfolio = () => {
 		t("project2", { returnObjects: true }),
 		t("project3", { returnObjects: true }),
 		t("ees", { returnObjects: true }),
+		t("boardingpax", { returnObjects: true }),
 	];
 
 	return (

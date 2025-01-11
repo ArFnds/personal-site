@@ -4,14 +4,16 @@
 		"title": "Отслеживание грузов в Eurotunnel",
 		"description": "В этом проекте были разработаны инновационные микросервисы для расширения возможностей отслеживания грузовых автомобилей, пересекающих Ла-Манш.\n Параллельно была проведена техническая модернизация ключевых компонентов, связанных с отслеживанием транспортных средств.\n Кроме того, была обновлена бэк-офисная система, управляющая приложением, используемым водителями, с добавлением новых функций для улучшения их общего опыта.",
 		"technologies": ["React", ".NET Core", "Azure", "Микросервисы"],
-		"imageUrl": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=800&h=200&auto=format&fit=crop"
+		"imageUrl": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=800&h=200&auto=format&fit=crop",
+		"client": "GetLink"
 	},
 	"project2": {
 		"title": "Cdiscount à Volonté",
 		"description": "В этом проекте приоритетом было развитие предложения 'Cdiscount à volonté'. Это включало создание микросервисов на Java с использованием Spring и улучшение предложения на сайте для ПК с использованием .NET и C#.\n Также были внесены улучшения в предложение для мобильных платформ и приложений с использованием React JS и React Native, чтобы обеспечить оптимальный пользовательский опыт.",
 		"technologies": ["React", ".NET Core", "Azure", "Микросервисы"],
 		"imageUrl": "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-		"liveUrl": "https://www.cdiscount.com/cdav"
+		"liveUrl": "https://www.cdiscount.com/cdav",
+		"client": "Cdiscount"
 	},
 	"project3": {
 		"title": "Обнаружение изображений NSFW",
@@ -24,7 +26,8 @@
 			"Kubernetes",
 			"GPU"
 		],
-		"imageUrl": "/projects/nsfw.jpg"
+		"imageUrl": "/projects/nsfw.jpg",
+		"client": "Личный"
 	},
 	"ees": {
 		"title": "EES (Entry-Exit system)",
@@ -38,6 +41,20 @@
 			"Kubernetes"
 		],
 		"imageUrl": "/projects/ees.webp",
-		"liveUrl": "https://travel-europe.europa.eu/ees/what-ees_en"
+		"liveUrl": "https://travel-europe.europa.eu/ees/what-ees_en",
+		"client": "GetLink"
+	},
+	"boardingpax": {
+		"title": "Boarding Pax",
+		"description": "Предоставление в режиме реального времени планов погрузки вагонов для перевозки автомобилей через канал, чтобы сотрудники могли проверить размещение транспортных средств. Этот план погрузки также облегчает вмешательство в случае инцидента.",
+		"technologies": [
+			"React",
+			"Microservices",
+			"Docker",
+			"Kubernetes",
+			".NET Core"
+		],
+		"imageUrl": "/projects/boardingpax.avif",
+		"client": "GetLink"
 	}
 }

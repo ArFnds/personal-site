@@ -4,14 +4,16 @@
 		"title": "Eurotunnel Freight Tracking",
 		"description": "On this project, innovative microservices were developed to expand the tracking capabilities of freight trucks crossing the English Channel.\n In parallel, technical modernization of essential components related to vehicle tracking was undertaken.\n Additionally, the back-office managing the application used by drivers was upgraded with new features to enhance their overall experience.",
 		"technologies": ["React", ".NET Core", "Azure", "Microservices"],
-		"imageUrl": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=800&h=200&auto=format&fit=crop"
+		"imageUrl": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=800&h=200&auto=format&fit=crop",
+		"client": "GetLink"
 	},
 	"project2": {
 		"title": "Cdiscount à Volonté",
 		"description": "On this project, the development of the 'Cdiscount à volonté' offer was a priority. This involved creating microservices in Java with Spring and enhancing the offer on the PC website using .NET and C#.\n Additionally, improvements were made to the offer on mobile platforms and applications using React JS and React Native, ensuring an optimal user experience.",
 		"technologies": ["React", ".NET Core", "Azure", "Microservices"],
 		"imageUrl": "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-		"liveUrl": "https://www.cdiscount.com/cdav"
+		"liveUrl": "https://www.cdiscount.com/cdav",
+		"client": "Cdiscount"
 	},
 	"project3": {
 		"title": "Detection of NSFW images",
@@ -24,7 +26,8 @@
 			"Kubernetes",
 			"GPU"
 		],
-		"imageUrl": "/projects/nsfw.jpg"
+		"imageUrl": "/projects/nsfw.jpg",
+		"client": "Private"
 	},
 	"ees": {
 		"title": "EES (Entry-Exit system)",
@@ -38,6 +41,20 @@
 			"Kubernetes"
 		],
 		"imageUrl": "/projects/ees.webp",
-		"liveUrl": "https://travel-europe.europa.eu/ees/what-ees_en"
+		"liveUrl": "https://travel-europe.europa.eu/ees/what-ees_en",
+		"client": "GetLink"
+	},
+	"boardingpax": {
+		"title": "Boarding Pax",
+		"description": "Real-time provision of loading plans for cross-Channel vehicle transport wagons, to enable staff to validate vehicle placement. This loading plan also facilitates intervention in the event of an incident.",
+		"technologies": [
+			"React",
+			"Microservices",
+			"Docker",
+			"Kubernetes",
+			".NET Core"
+		],
+		"imageUrl": "/projects/boardingpax.avif",
+		"client": "GetLink"
 	}
 }
