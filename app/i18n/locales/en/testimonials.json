@@ -1,0 +1,18 @@
+{
+	"all": [
+		{
+			"id": 1,
+			"name": "Mourad Mouttaki",
+			"image": "/avatars/mourad.png",
+			"rating": 5,
+			"text": "I recommend Arnaud for his expertise. He is versatile, responsive, and always ready to propose effective solutions. An excellent collaborator, capable of moving projects forward with complete peace of mind."
+		},
+		{
+			"id": 2,
+			"name": "Ronan Jaffré",
+			"image": "/avatars/ronan.png",
+			"rating": 5,
+			"text": "I highly recommend Arnaud for any tech lead position. I had the pleasure of working with Arnaud at Cdiscount, where he demonstrated his exceptional skills in technical leadership."
+		}
+	]
+}

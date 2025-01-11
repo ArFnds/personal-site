@@ -4,6 +4,7 @@ import { Trans, useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import person from "~/assets/structured-data/person";
 import { HeadParaph } from "~/components/HeadParaph";
+import TestimonialList from "~/components/TestimonialList";
 import { buttonVariants } from "~/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import { cn } from "~/lib/utils";
@@ -13,8 +14,17 @@ export const handle = {
 	structuredData: person,
 };
 
+const Section = ({ children }: { children: React.ReactNode }) => (
+	<section className="my-20 bg-background text-foreground">
+		<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">{children}</div>
+	</section>
+);
+
 const Home = () => {
 	const { t } = useTranslation();
+	const { t: tTestimonials } = useTranslation("testimonials");
+
+	const testimonials = tTestimonials("all", { returnObjects: true });
 
 	return (
 		<div className="min-h-screen">
@@ -60,75 +70,74 @@ const Home = () => {
 			</section>
 
 			{/* Brief introduction section */}
-			<section className="my-20 bg-background text-foreground">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<HeadParaph>
-						<Trans
-							i18nKey="home.bio"
-							components={[
-								<span key={0} className="text-blue-600 dark:text-blue-400" />,
-								<span key={1} className="text-blue-600 dark:text-blue-400" />,
-								<span key={2} className="text-blue-600 dark:text-blue-400" />,
-							]}
-						/>
-					</HeadParaph>
-				</div>
-			</section>
+			<Section>
+				<HeadParaph>
+					<Trans
+						i18nKey="home.bio"
+						components={[
+							<span key={0} className="text-blue-600 dark:text-blue-400" />,
+							<span key={1} className="text-blue-600 dark:text-blue-400" />,
+							<span key={2} className="text-blue-600 dark:text-blue-400" />,
+						]}
+					/>
+				</HeadParaph>
+			</Section>
 
 			{/* Features Section */}
-			<section className="my-20 bg-background text-foreground">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-						<motion.div
-							initial={{ opacity: 0, y: 20 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5 }}
-						>
-							<Card className="shadow-md">
-								<CardHeader>
-									<Code2 className="h-12 w-12 text-blue-600 mb-4" />
-									<CardTitle>
-										<h2>{t("features.feature1.title")}</h2>
-									</CardTitle>
-								</CardHeader>
-								<CardContent>{t("features.feature1.description")}</CardContent>
-							</Card>
-						</motion.div>
+			<Section>
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5 }}
+					>
+						<Card className="shadow-md">
+							<CardHeader>
+								<Code2 className="h-12 w-12 text-blue-600 mb-4" />
+								<CardTitle>
+									<h2>{t("features.feature1.title")}</h2>
+								</CardTitle>
+							</CardHeader>
+							<CardContent>{t("features.feature1.description")}</CardContent>
+						</Card>
+					</motion.div>
 
-						<motion.div
-							initial={{ opacity: 0, y: 20 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5, delay: 0.2 }}
-						>
-							<Card className="shadow-md">
-								<CardHeader>
-									<Rocket className="h-12 w-12 text-blue-600 mb-4" />
-									<CardTitle>
-										<h2>{t("features.feature2.title")}</h2>
-									</CardTitle>
-								</CardHeader>
-								<CardContent>{t("features.feature2.description")}</CardContent>
-							</Card>
-						</motion.div>
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: 0.2 }}
+					>
+						<Card className="shadow-md">
+							<CardHeader>
+								<Rocket className="h-12 w-12 text-blue-600 mb-4" />
+								<CardTitle>
+									<h2>{t("features.feature2.title")}</h2>
+								</CardTitle>
+							</CardHeader>
+							<CardContent>{t("features.feature2.description")}</CardContent>
+						</Card>
+					</motion.div>
 
-						<motion.div
-							initial={{ opacity: 0, y: 20 }}
-							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5, delay: 0.4 }}
-						>
-							<Card className="shadow-md">
-								<CardHeader>
-									<Users className="h-12 w-12 text-blue-600 mb-4" />
-									<CardTitle>
-										<h2>{t("features.feature3.title")}</h2>
-									</CardTitle>
-								</CardHeader>
-								<CardContent>{t("features.feature3.description")}</CardContent>
-							</Card>
-						</motion.div>
-					</div>
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: 0.4 }}
+					>
+						<Card className="shadow-md">
+							<CardHeader>
+								<Users className="h-12 w-12 text-blue-600 mb-4" />
+								<CardTitle>
+									<h2>{t("features.feature3.title")}</h2>
+								</CardTitle>
+							</CardHeader>
+							<CardContent>{t("features.feature3.description")}</CardContent>
+						</Card>
+					</motion.div>
 				</div>
-			</section>
+			</Section>
+			<Section>
+				<TestimonialList testimonials={testimonials} />
+			</Section>
 		</div>
 	);
 };

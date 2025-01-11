@@ -14,6 +14,11 @@ import esProjects from "./locales/es/projects.json";
 import frProjects from "./locales/fr/projects.json";
 import ruProjects from "./locales/ru/projects.json";
 
+import enTestimonials from "./locales/en/testimonials.json";
+import esTestimonials from "./locales/es/testimonials.json";
+import frTestimonials from "./locales/fr/testimonials.json";
+import ruTestimonials from "./locales/ru/testimonials.json";
+
 export const availableLanguages = ["en", "fr", "ru", "es"] as const;
 const dateLocales = {
 	en: dateFnsLocales.enUS,
@@ -36,10 +41,26 @@ i18next
 		defaultNS: "translation",
 		fallbackLng: "en",
 		resources: {
-			en: { translation: enDefault, projects: enProjects },
-			es: { translation: esDefault, projects: esProjects },
-			fr: { translation: frDefault, projects: frProjects },
-			ru: { translation: ruDefault, projects: ruProjects },
+			en: {
+				translation: enDefault,
+				projects: enProjects,
+				testimonials: enTestimonials,
+			},
+			es: {
+				translation: esDefault,
+				projects: esProjects,
+				testimonials: esTestimonials,
+			},
+			fr: {
+				translation: frDefault,
+				projects: frProjects,
+				testimonials: frTestimonials,
+			},
+			ru: {
+				translation: ruDefault,
+				projects: ruProjects,
+				testimonials: ruTestimonials,
+			},
 		},
 		interpolation: {
 			escapeValue: false,
