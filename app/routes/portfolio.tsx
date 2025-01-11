@@ -19,6 +19,7 @@ const Portfolio = () => {
 		t("projects.project1", { returnObjects: true }),
 		t("projects.project2", { returnObjects: true }),
 		t("projects.project3", { returnObjects: true }),
+		t("projects.ees", { returnObjects: true }),
 	] as Project[];
 
 	return (

@@ -1,6 +1,7 @@
 {
 	"common": {
-		"quickLink": "Accès rapide"
+		"quickLink": "Accès rapide",
+		"seeMore": "Voir plus"
 	},
 	"meta": {
 		"title": "Arnaud Fernandes - Software Engineer for custom digital projects",
@@ -76,7 +77,7 @@
 		"description": "Chaque projet réalisé reflète une <1>expertise technique approfondie</1> et une <2>compréhension des besoins spécifiques des clients</2>. Des <3>applications web modernes</3> aux <4>architectures microservices robustes</4>, en passant par des <5>solutions sur mesure</5>, chaque réalisation témoigne d'un engagement à fournir des résultats performants et durables. Découvrez une sélection de projets qui illustrent une capacité à transformer des idées en solutions concrètes et innovantes.",
 		"project1": {
 			"title": "Eurotunnel Freight Tracking",
-			"description": "Système microservices basé sur le suivi des camions traversant la Manche.",
+			"description": "Sur ce projet, des microservices innovants ont été développés pour étendre les capacités de suivi des camions de marchandises traversant la Manche.\n En parallèle, une modernisation technique de certains composants essentiels liés au suivi des véhicules a été réalisée.\n De plus, le back-office gérant l'application utilisée par les chauffeurs a été amélioré avec de nouvelles fonctionnalités pour optimiser leur expérience globale.",
 			"technologies": [
 				"React",
 				".NET Core",
@@ -89,7 +90,7 @@
 		},
 		"project2": {
 			"title": "Cdiscount à Volonté",
-			"description": "Développement de services abonnements pour la plateforme e-commerce Cdiscount.",
+			"description": "Sur ce projet, le développement de l'offre \"Cdiscount à volonté\" a été une priorité. Cela a impliqué la création de microservices en Java avec Spring et l'enrichissement de l'offre sur le site PC grâce à .NET et C#.\n Parallèlement, des améliorations ont été apportées à l'offre sur les plateformes mobiles et les applications, en utilisant React JS et React Native, pour garantir une expérience utilisateur optimale.",
 			"technologies": [
 				"React",
 				".NET Core",
@@ -98,7 +99,8 @@
 				"Docker",
 				"Kubernetes"
 			],
-			"imageUrl": "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+			"imageUrl": "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+			"liveUrl": "https://www.cdiscount.com/cdav"
 		},
 		"project3": {
 			"title": "Détection d'image NSFW",
@@ -112,6 +114,20 @@
 				"GPU"
 			],
 			"imageUrl": "/projects/nsfw.jpg"
+		},
+		"ees": {
+			"title": "EES (Entry-Exit system)",
+			"description": "Le système d’entrée/sortie (EES) sera un système informatique automatisé permettant d’enregistrer les voyageurs en provenance de pays tiers. C’est un projet présenté par la Commission européenne.\nMa mission sur ce projet a été la mis en place l’architecture globale de la solution (une dizaine de micro-services, 2 frontaux, sur 5 domaines applicatifs)",
+			"technologies": [
+				".NET Core",
+				"React",
+				"Microservices",
+				"Azure",
+				"Docker",
+				"Kubernetes"
+			],
+			"imageUrl": "/projects/ees.webp",
+			"liveUrl": "https://travel-europe.europa.eu/ees/what-ees_en"
 		}
 	},
 	"certifications": {
