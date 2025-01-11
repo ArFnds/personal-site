@@ -30,21 +30,9 @@ import {
 	TooltipTrigger,
 } from "~/components/ui/tooltip";
 import { dateLocale } from "~/i18n/i18n";
+import type { Experience } from "~/i18n/types";
 
-type RawExperience = {
-	company: string;
-	headerImage?: string;
-	logo?: string;
-	role: string;
-	startDate: string;
-	endDate?: string;
-	location: string;
-	description: string;
-	technologies: string[];
-	url?: string;
-};
-
-type DisplayExperience = RawExperience & {
+type DisplayExperience = Experience & {
 	duration: string;
 };
 
@@ -81,7 +69,7 @@ const certifications = [
 	},
 ];
 
-function rawToDisplay(experience: RawExperience): DisplayExperience {
+function rawToDisplay(experience: Experience): DisplayExperience {
 	const now = new Date();
 	const startDate = new Date(experience.startDate);
 	const endDate = experience.endDate
@@ -115,7 +103,7 @@ const About = () => {
 		t("experiences", {
 			returnObjects: true,
 			defaultValue: [],
-		}) as RawExperience[]
+		}) as Experience[]
 	).map(rawToDisplay);
 
 	return (

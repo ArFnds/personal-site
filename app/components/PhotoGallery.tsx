@@ -4,7 +4,6 @@ import {
 	type PanInfo,
 	type Variants,
 	motion,
-	useMotionValue,
 } from "framer-motion";
 import { ArrowLeft, ArrowRight, X } from "lucide-react";
 import { type FC, type MouseEvent, useEffect, useState } from "react";
@@ -13,7 +12,7 @@ import { Button } from "~/components/ui/button";
 import { Card } from "~/components/ui/card";
 
 export type Photo = {
-	id: number;
+	id: string;
 	url: string;
 	alt: string;
 };
@@ -24,9 +23,7 @@ export const PhotoGallery: FC<{
 	const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [direction, setDirection] = useState(0);
-	const swipeX = useMotionValue(0);
 	const SWIPE_THRESHOLD = 50;
-	const SWIPE_POWER = 0.3;
 
 	const handlePhotoClick = (index: number) => {
 		setSelectedIndex(index);

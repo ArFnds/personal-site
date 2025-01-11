@@ -3,7 +3,7 @@ import { Calendar, ExternalLink, MapPin, MicVocalIcon } from "lucide-react";
 import { Trans, useTranslation } from "react-i18next";
 
 import { HeadParaph } from "~/components/HeadParaph";
-import { type Photo, PhotoGallery } from "~/components/PhotoGallery";
+import { PhotoGallery } from "~/components/PhotoGallery";
 import { buttonVariants } from "~/components/ui/button";
 import {
 	Card,
@@ -15,25 +15,16 @@ import {
 	CardTitle,
 } from "~/components/ui/card";
 import { contactInfo } from "~/config/contact";
+import type { TrFile } from "~/i18n/types";
 import SectionHeader from "../components/SectionHeader";
 import type { Route } from "./+types/conferences";
-
-type Conference = {
-	title: string;
-	date: string;
-	description: string;
-	location?: string;
-	imageUrl?: string;
-	link?: string;
-	photos?: Photo[];
-};
 
 const Conferences = (_: Route.ComponentProps) => {
 	const { t } = useTranslation(undefined, { keyPrefix: "conferences" });
 	const conferences = t("conferences", {
 		returnObjects: true,
 		defaultValue: [],
-	}) as Conference[];
+	}) as TrFile["conferences"]["conferences"];
 
 	return (
 		<div className="min-h-screen py-16">

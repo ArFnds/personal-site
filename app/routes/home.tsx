@@ -12,8 +12,6 @@ const Home = () => {
 	const { t } = useTranslation();
 	const { theme } = useTheme();
 
-	const isDarkTheme = theme === "dark";
-
 	return (
 		<div className="min-h-screen">
 			{/* Hero Section */}

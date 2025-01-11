@@ -3,15 +3,7 @@ import { Trans, useTranslation } from "react-i18next";
 import { HeadParaph } from "~/components/HeadParaph";
 import ProjectCard from "~/components/ProjectCard";
 import SectionHeader from "~/components/SectionHeader";
-
-type Project = {
-	title: string;
-	description: string;
-	technologies: string[];
-	imageUrl: string;
-	liveUrl?: string;
-	githubUrl?: string;
-};
+import type { Project } from "~/i18n/types";
 
 const Portfolio = () => {
 	const { t } = useTranslation();

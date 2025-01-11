@@ -1,0 +1,268 @@
+import type { TrFile } from "../types";
+
+export default {
+	common: {
+		quickLink: "Quick Links",
+		seeMore: "See More",
+	},
+	meta: {
+		title: "Arnaud Fernandes - Software Engineer for custom digital projects",
+		description:
+			"Arnaud Fernandes, Software Engineer who helps startups and companies design high-performance, tailor-made solutions.",
+		keywords:
+			"Arnaud Fernandes, Fullstack Technical Lead, .NET Core, C#, React, Go, web development, microservices, custom solutions, IT consulting, software architecture, startups, software development, application performance, application security, technical coaching, IT project management",
+	},
+	navigation: {
+		home: "Home",
+		about: "About Me",
+		portfolio: "Portfolio",
+		mentoring: "Mentoring",
+		conferences: "Conferences",
+		contact: "Contact",
+	},
+	hero: {
+		title: "Arnaud Fernandes",
+		subtitle:
+			"Development of customized digital projects | Innovative, high-performance solutions",
+		cta: "Get in Touch",
+	},
+	about: {
+		title: "About Me",
+		description:
+			"As a passionate fullstack lead developer and IT company founder, I specialize in microservices architectures, offering innovative and high-performance solutions for startups and growing companies.",
+		digitalDna: {
+			title: "Digital DNA",
+		},
+	},
+	home: {
+		bio: "Passionate software engineer and digital solutions expert, specialized in <1>modern web application development</1>, <2>microservices architecture design</2>, and <3>advanced technology consulting</3>. With solid experience in large companies and startups, each project is an opportunity to transform ideas into concrete and efficient results.",
+	},
+	contact: {
+		sectionHeader: {
+			title: "Contact Me",
+			subtitle: "Let's discuss how I can help with your next project",
+		},
+		formHeader: {
+			title: "Get in Touch",
+			description: "Contact me using the form below or via email",
+			success: "Thank you for your message! I'll get back to you soon.",
+		},
+		form: {
+			name: "Name",
+			email: "Email",
+			subject: "Subject",
+			message: "Message",
+			submit: "Send",
+		},
+		info: {
+			title: "Contact Information",
+			description:
+				"I'd love to hear from you! Whether you're looking to collaborate on a project, have a question, or just want to connect, I'm here to help.",
+			scheduleaMeeting: "Schedule a Meeting",
+			linkedinProfile: "LinkedIn Profile",
+		},
+	},
+	themeSwitcher: {
+		light: "Light",
+		dark: "Dark",
+	},
+	features: {
+		feature1: {
+			title: "Technical Excellence",
+			description:
+				"Specialized in .NET Core, React, Go and microservices architecture",
+		},
+		feature2: {
+			title: "Startup Growth",
+			description:
+				"Providing innovative solutions for startups and growing companies",
+		},
+		feature3: {
+			title: "Team Leadership",
+			description:
+				"Leading and mentoring technical teams to achieve excellence",
+		},
+	},
+	projects: {
+		description:
+			"Each completed project reflects <1>deep technical expertise</1> and an <2>understanding of specific client needs</2>. From <3>modern web applications</3> to <4>robust microservice architectures</4>, through <5>customized solutions</5>, each achievement demonstrates a commitment to delivering high-performance and sustainable results. Discover a selection of projects that showcase the ability to transform ideas into concrete and innovative solutions.",
+		project1: {
+			title: "Eurotunnel Freight Tracking",
+			description:
+				"On this project, innovative microservices were developed to expand the tracking capabilities of freight trucks crossing the English Channel.\n In parallel, technical modernization of essential components related to vehicle tracking was undertaken.\n Additionally, the back-office managing the application used by drivers was upgraded with new features to enhance their overall experience.",
+			technologies: ["React", ".NET Core", "Azure", "Microservices"],
+			imageUrl:
+				"https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=800&h=200&auto=format&fit=crop",
+		},
+		project2: {
+			title: "Cdiscount à Volonté",
+			description:
+				"On this project, the development of the 'Cdiscount à volonté' offer was a priority. This involved creating microservices in Java with Spring and enhancing the offer on the PC website using .NET and C#.\n Additionally, improvements were made to the offer on mobile platforms and applications using React JS and React Native, ensuring an optimal user experience.",
+			technologies: ["React", ".NET Core", "Azure", "Microservices"],
+			imageUrl:
+				"https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+			liveUrl: "https://www.cdiscount.com/cdav",
+		},
+		project3: {
+			title: "Detection of NSFW images",
+			description:
+				"Development of a service to detect NSFW (Not Safe For Work) images based on AI for an upload system.",
+			technologies: [
+				"Python",
+				"IA",
+				"Docker",
+				"Microservices",
+				"Kubernetes",
+				"GPU",
+			],
+			imageUrl: "/projects/nsfw.jpg",
+		},
+		ees: {
+			title: "EES (Entry-Exit system)",
+			description:
+				"The Entry/Exit System (EES) will be an automated IT system designed to register travelers from third countries. It is a project introduced by the European Commission.\nMy role on this project was to design and implement the overall architecture of the solution (around ten microservices, two frontends, across five application domains).",
+			technologies: [
+				".NET Core",
+				"React",
+				"Microservices",
+				"Azure",
+				"Docker",
+				"Kubernetes",
+			],
+			imageUrl: "/projects/ees.webp",
+			liveUrl: "https://travel-europe.europa.eu/ees/what-ees_en",
+		},
+	},
+	certifications: {
+		title: "Certifications",
+	},
+	"experiences.title": "Experience",
+	experiences: [
+		{
+			company: "Eurotunnel",
+			role: "Technical Leader Fullstack .NET Core (C#) / React",
+			headerImage:
+				"https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			logo: "/logos/getlink.webp",
+			startDate: "2022-12",
+			location: "Remote",
+			description:
+				"As part of this mission, innovative microservices were developed to enhance the tracking capabilities of freight trucks crossing the English Channel.\n\nAdditionally, the technical modernization of key components related to vehicle tracking was successfully carried out. The back office of the application used by drivers was also redesigned and enriched with new features to improve their overall experience.",
+			technologies: [
+				"C#.NET 6/7/8",
+				"ReactJS",
+				"Typescript",
+				"Azure",
+				"Gherkin",
+			],
+		},
+		{
+			company: "Sage",
+			role: "Senior Developer Fullstack .NET Core (C#) / React",
+			headerImage:
+				"https://images.unsplash.com/photo-1511376868136-742c0de8c9a8?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			logo: "/logos/sage.png",
+			startDate: "2021-06",
+			endDate: "2022-12",
+			location: "Remote",
+			description:
+				"Guidance was provided on the design and implementation of a microservices architecture, ensuring robust and scalable solutions.\n\nCorrective maintenance was carried out for applications built with .NET 4.8, addressing technical issues and optimizing performance.\n\nIn-depth analyses were conducted, leading to the development of Proofs of Concept (POC) for real-time updates, demonstrating the feasibility and effectiveness of the proposed solutions.",
+			technologies: [
+				"Docker",
+				"Kubernetes",
+				"Microservices",
+				"Apache Kafka",
+				".NET Core",
+			],
+		},
+		{
+			company: "Cdiscount",
+			role: "Technical Leader Fullstack .NET Core (C#) / React",
+			headerImage:
+				"https://images.unsplash.com/photo-1561069934-eee225952461?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			logo: "/logos/cdiscount.png",
+			startDate: "2018-06",
+			endDate: "2021-06",
+			location: "Remote",
+			description:
+				"This mission involved coaching, supporting, and managing the expertise of inshore and offshore technical teams. A thorough analysis of requirements and technical constraints was conducted, followed by detailed studies, accurate estimations, and meticulous budgeting for the developments. The most complex phases of development were handled directly to ensure their success.\n\nActing as a React Referent Reviewer, React code was reviewed for the IT Commerce department, ensuring high-quality standards were upheld.",
+			technologies: [
+				"Docker",
+				"React",
+				"Apache Kafka",
+				"Kubernetes",
+				".NET Core",
+				"MongoDB",
+			],
+		},
+		{
+			company: "Tech-Magister",
+			role: "Founder",
+			headerImage: "/tech-magister-cover.jpg",
+			startDate: "2016-11",
+			location: "France and International",
+			description:
+				"The company offers coaching, support, and expertise management services for technical teams, ensuring effective and sustainable knowledge transfer.\n\nA thorough analysis of requirements and technical constraints is carried out to define the best development strategies. This includes detailed studies, precise cost estimation, and rigorous project budgeting.\n\nDevelopment phases are handled, including the most complex stages, along with the setup and execution of technical testing phases, delivering high-quality solutions tailored to specific needs.",
+			technologies: ["Software development", "Project management", "Scrum"],
+			url: "https://www.tech-magister.com/",
+		},
+	],
+	conferences: {
+		title: "Conference Talks",
+		subtitle: "Sharing knowledge and experiences with the tech community",
+		cta: "Schedule a Conference Talk",
+		headparaph:
+			"Sharing knowledge and experiences is essential for advancing the technological world. The presentations cover topics such as <1>software development</1>, <2>microservices architectures</2>, <3>performance optimization</3>, and <4>IT business growth strategies</4>. These events are an opportunity to inspire, share practical knowledge, and create enriching exchanges with passionate professionals.",
+		conferences: [
+			{
+				title: "Presentation of a FinTech project",
+				description:
+					"Presentation of a project in the FinTech sphere at a conference.",
+				date: "March 28, 2023",
+				photos: [
+					{
+						id: "1",
+						url: "/conferences/fintech/1.webp",
+						alt: "Presentation of a FinTech project photo 1",
+					},
+					{
+						id: "2",
+						url: "/conferences/fintech/2.webp",
+						alt: "Presentation of a FinTech project photo 2",
+					},
+					{
+						id: "3",
+						url: "/conferences/fintech/3.webp",
+						alt: "Presentation of a FinTech project photo 3",
+					},
+				],
+			},
+		],
+	},
+	mentoring: {
+		title: "Mentoring Services",
+		subtitle: "Empowering developers to reach their full potential",
+		cta: "Schedule a Mentoring Session",
+		headparaph: "You didn't come so far to only come this far.",
+		services: {
+			technicalGuidance: {
+				title: "Technical Guidance",
+				description:
+					"Personalized mentoring in .NET Core, React, and microservices architecture.",
+			},
+			teamLeadership: {
+				title: "Team Leadership",
+				description:
+					"Learn effective team management and technical leadership skills.",
+			},
+			careerCounseling: {
+				title: "Career Counseling",
+				description:
+					"Strategic guidance for career growth in software development.",
+			},
+		},
+	},
+	footer: {
+		contact: "Get in touch",
+	},
+} satisfies TrFile;
