@@ -147,6 +147,19 @@ export default {
 			imageUrl: "/projects/ees.webp",
 			liveUrl: "https://travel-europe.europa.eu/ees/what-ees_en",
 		},
+		boardingpax: {
+			title: "Boarding Pax",
+			description:
+				"Mise à disposition en temps réel des plans de chargement des wagons de transport de véhicules transmanche, pour permettre au personnel de valider le placement des véhicules. Ce plan de chargement permet aussi de faciliter les interventions en cas d’incident.",
+			technologies: [
+				"React",
+				"Microservices",
+				"Docker",
+				"Kubernetes",
+				".NET Core",
+			],
+			imageUrl: "/projects/boardingpax.webp",
+		},
 	},
 	certifications: {
 		title: "Certifications",
@@ -222,7 +235,7 @@ export default {
 			url: "https://www.tech-magister.com/",
 		},
 	],
-	conferences: {
+	conferencePage: {
 		title: "Conférences",
 		subtitle:
 			"Partage des connaissances et des expériences avec la communauté technologique",

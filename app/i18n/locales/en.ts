@@ -207,7 +207,7 @@ export default {
 			url: "https://www.tech-magister.com/",
 		},
 	],
-	conferences: {
+	conferencePage: {
 		title: "Conference Talks",
 		subtitle: "Sharing knowledge and experiences with the tech community",
 		cta: "Schedule a Conference Talk",

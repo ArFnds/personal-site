@@ -20,11 +20,11 @@ import SectionHeader from "../components/SectionHeader";
 import type { Route } from "./+types/conferences";
 
 const Conferences = (_: Route.ComponentProps) => {
-	const { t } = useTranslation(undefined, { keyPrefix: "conferences" });
-	const conferences = t("conferences", {
+	const { t } = useTranslation(undefined, { keyPrefix: "conferencePage" });
+	const conferences = t("conferencePage.conferences", {
 		returnObjects: true,
 		defaultValue: [],
-	}) as TrFile["conferences"]["conferences"];
+	}) as TrFile["conferencePage"]["conferences"];
 
 	return (
 		<div className="min-h-screen py-16">
@@ -33,7 +33,7 @@ const Conferences = (_: Route.ComponentProps) => {
 
 				<HeadParaph icon={<MicVocalIcon />}>
 					<Trans
-						i18nKey="conferences.headparaph"
+						i18nKey="conferencePage.headparaph"
 						components={[
 							<span key={0} className="text-blue-600 dark:text-blue-400" />,
 							<span key={1} className="text-blue-600 dark:text-blue-400" />,

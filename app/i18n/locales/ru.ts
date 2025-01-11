@@ -213,7 +213,7 @@ export default {
 			url: "https://www.tech-magister.com/",
 		},
 	],
-	conferences: {
+	conferencePage: {
 		title: "Конференции",
 		subtitle: "Обмен знаниями и опытом с технологическим сообществом",
 		cta: "Запланировать выступление на конференции",

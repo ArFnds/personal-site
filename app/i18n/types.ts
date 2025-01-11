@@ -12,7 +12,7 @@ export interface TrFile {
 	certifications: Certifications;
 	"experiences.title": string;
 	experiences: Experience[];
-	conferences: Conferences;
+	conferencePage: ConferencePage;
 	mentoring: Mentoring;
 	footer: Footer;
 }
@@ -122,6 +122,7 @@ export interface Projects {
 	project2: Project;
 	project3: Project;
 	ees: Project;
+	boardingpax: Project;
 }
 
 export interface Project {
@@ -149,7 +150,7 @@ export interface Experience {
 	url?: string;
 }
 
-export interface Conferences {
+export interface ConferencePage {
 	title: string;
 	subtitle: string;
 	cta: string;
