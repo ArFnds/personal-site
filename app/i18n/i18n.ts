@@ -3,10 +3,16 @@ import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 
-import en from "./locales/en";
-import es from "./locales/es";
-import fr from "./locales/fr";
-import ru from "./locales/ru";
+import i18next from "i18next";
+import enDefault from "./locales/en/translation.json";
+import esDefault from "./locales/es/translation.json";
+import frDefault from "./locales/fr/translation.json";
+import ruDefault from "./locales/ru/translation.json";
+
+import enProjects from "./locales/en/projects.json";
+import esProjects from "./locales/es/projects.json";
+import frProjects from "./locales/fr/projects.json";
+import ruProjects from "./locales/ru/projects.json";
 
 export const availableLanguages = ["en", "fr", "ru", "es"] as const;
 const dateLocales = {
@@ -16,35 +22,30 @@ const dateLocales = {
 	es: dateFnsLocales.es,
 };
 
-const languageDetector = new LanguageDetector(undefined, {
-	order: ["path"],
-});
-languageDetector.addDetector({
-	name: "path",
-	lookup(_) {
-		return window.location.pathname.split("/")[1];
-	},
-});
-
 export const dateLocale = (i18nInstance?: typeof i18n) => {
 	const instance = i18nInstance || i18n;
 	const lang = instance.language as (typeof availableLanguages)[number];
 	return dateLocales[lang];
 };
 
-i18n
-	.use(languageDetector)
+i18next
+	.use(LanguageDetector)
 	.use(initReactI18next)
 	.init({
-		resources: {
-			en: { translation: en },
-			fr: { translation: fr },
-			ru: { translation: ru },
-			es: { translation: es },
-		},
+		debug: process.env.NODE_ENV === "development",
+		defaultNS: "translation",
 		fallbackLng: "en",
+		resources: {
+			en: { translation: enDefault, projects: enProjects },
+			es: { translation: esDefault, projects: esProjects },
+			fr: { translation: frDefault, projects: frProjects },
+			ru: { translation: ruDefault, projects: ruProjects },
+		},
 		interpolation: {
 			escapeValue: false,
+		},
+		detection: {
+			order: ["path"],
 		},
 	});
 

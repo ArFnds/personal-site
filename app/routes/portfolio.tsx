@@ -3,16 +3,15 @@ import { Trans, useTranslation } from "react-i18next";
 import { HeadParaph } from "~/components/HeadParaph";
 import ProjectCard from "~/components/ProjectCard";
 import SectionHeader from "~/components/SectionHeader";
-import type { Project } from "~/i18n/types";
 
 const Portfolio = () => {
-	const { t } = useTranslation();
+	const { t } = useTranslation("projects");
 	const projects = [
-		t("projects.project1", { returnObjects: true }),
-		t("projects.project2", { returnObjects: true }),
-		t("projects.project3", { returnObjects: true }),
-		t("projects.ees", { returnObjects: true }),
-	] as Project[];
+		t("project1", { returnObjects: true }),
+		t("project2", { returnObjects: true }),
+		t("project3", { returnObjects: true }),
+		t("ees", { returnObjects: true }),
+	];
 
 	return (
 		<div className="min-h-screen py-16">
@@ -25,7 +24,8 @@ const Portfolio = () => {
 
 				<HeadParaph>
 					<Trans
-						i18nKey="projects.description"
+						t={t}
+						i18nKey="description"
 						components={[
 							<span key={0} className="text-blue-600 dark:text-blue-400" />,
 							<span key={1} className="text-blue-600 dark:text-blue-400" />,

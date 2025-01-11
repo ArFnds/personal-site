@@ -15,16 +15,15 @@ import {
 	CardTitle,
 } from "~/components/ui/card";
 import { contactInfo } from "~/config/contact";
-import type { TrFile } from "~/i18n/types";
 import SectionHeader from "../components/SectionHeader";
 import type { Route } from "./+types/conferences";
 
 const Conferences = (_: Route.ComponentProps) => {
 	const { t } = useTranslation(undefined, { keyPrefix: "conferencePage" });
-	const conferences = t("conferencePage.conferences", {
+	const conferences = t("conferences", {
 		returnObjects: true,
 		defaultValue: [],
-	}) as TrFile["conferencePage"]["conferences"];
+	});
 
 	return (
 		<div className="min-h-screen py-16">

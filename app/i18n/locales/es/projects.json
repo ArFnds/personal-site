@@ -1,0 +1,57 @@
+{
+	"description": "Cada proyecto completado refleja una <1>profunda experiencia técnica</1> y una <2>comprensión de las necesidades específicas del cliente</2>. Desde <3>aplicaciones web modernas</3> hasta <4>arquitecturas de microservicios robustas</4>, pasando por <5>soluciones personalizadas</5>, cada logro demuestra un compromiso con la entrega de resultados de alto rendimiento y sostenibles. Descubra una selección de proyectos que muestran la capacidad de transformar ideas en soluciones concretas e innovadoras.",
+	"project1": {
+		"title": "Seguimiento de carga del Eurotúnel",
+		"description": "En este proyecto, se desarrollaron microservicios innovadores para ampliar las capacidades de seguimiento de los camiones de mercancías que cruzan el Canal de la Mancha.\n Paralelamente, se realizó la modernización técnica de componentes esenciales relacionados con el seguimiento de vehículos.\n Además, se mejoró el sistema de back-office que gestiona la aplicación utilizada por los conductores, integrando nuevas funcionalidades para mejorar su experiencia general.",
+		"technologies": [
+			"ReactJS",
+			".NET Core",
+			"Azure",
+			"Microservicios",
+			"Docker",
+			"Kubernetes"
+		],
+		"imageUrl": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=800&h=200&auto=format&fit=crop"
+	},
+	"project2": {
+		"title": "Cdescuento a voluntad",
+		"description": "En este proyecto, el desarrollo de la oferta 'Cdiscount à volonté' fue una prioridad. Esto implicó la creación de microservicios en Java con Spring y la mejora de la oferta en el sitio web para PC utilizando .NET y C#.\n Además, se realizaron mejoras en la oferta para plataformas móviles y aplicaciones utilizando React JS y React Native, garantizando una experiencia de usuario óptima.",
+		"technologies": [
+			"ReactJS",
+			".NET Core",
+			"Azure",
+			"Microservicios",
+			"Docker",
+			"Kubernetes"
+		],
+		"imageUrl": "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+		"liveUrl": "https://www.cdiscount.com/cdav"
+	},
+	"project3": {
+		"title": "Detección de imágenes NSFW",
+		"description": "Desarrollo de un servicio de detección de imágenes NSFW (Not Safe For Work) basado en IA para un sistema de carga.",
+		"technologies": [
+			"Pitón",
+			"AI",
+			"Docker",
+			"Microservicios",
+			"Kubernetes",
+			"GPU"
+		],
+		"imageUrl": "/projects/nsfw.jpg"
+	},
+	"ees": {
+		"title": "EES (Entry-Exit system)",
+		"description": "El Sistema de Entrada/Salida (EES) será un sistema informático automatizado diseñado para registrar a los viajeros de terceros países. Es un proyecto presentado por la Comisión Europea.\nMi misión en este proyecto fue diseñar e implementar la arquitectura general de la solución (una decena de microservicios, dos frontales, en cinco dominios aplicativos).",
+		"technologies": [
+			".NET Core",
+			"React",
+			"Microservices",
+			"Azure",
+			"Docker",
+			"Kubernetes"
+		],
+		"imageUrl": "/projects/ees.webp",
+		"liveUrl": "https://travel-europe.europa.eu/ees/what-ees_en"
+	}
+}

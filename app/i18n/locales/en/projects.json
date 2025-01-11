@@ -1,0 +1,43 @@
+{
+	"description": "Each completed project reflects <1>deep technical expertise</1> and an <2>understanding of specific client needs</2>. From <3>modern web applications</3> to <4>robust microservice architectures</4>, through <5>customized solutions</5>, each achievement demonstrates a commitment to delivering high-performance and sustainable results. Discover a selection of projects that showcase the ability to transform ideas into concrete and innovative solutions.",
+	"project1": {
+		"title": "Eurotunnel Freight Tracking",
+		"description": "On this project, innovative microservices were developed to expand the tracking capabilities of freight trucks crossing the English Channel.\n In parallel, technical modernization of essential components related to vehicle tracking was undertaken.\n Additionally, the back-office managing the application used by drivers was upgraded with new features to enhance their overall experience.",
+		"technologies": ["React", ".NET Core", "Azure", "Microservices"],
+		"imageUrl": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=800&h=200&auto=format&fit=crop"
+	},
+	"project2": {
+		"title": "Cdiscount à Volonté",
+		"description": "On this project, the development of the 'Cdiscount à volonté' offer was a priority. This involved creating microservices in Java with Spring and enhancing the offer on the PC website using .NET and C#.\n Additionally, improvements were made to the offer on mobile platforms and applications using React JS and React Native, ensuring an optimal user experience.",
+		"technologies": ["React", ".NET Core", "Azure", "Microservices"],
+		"imageUrl": "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+		"liveUrl": "https://www.cdiscount.com/cdav"
+	},
+	"project3": {
+		"title": "Detection of NSFW images",
+		"description": "Development of a service to detect NSFW (Not Safe For Work) images based on AI for an upload system.",
+		"technologies": [
+			"Python",
+			"IA",
+			"Docker",
+			"Microservices",
+			"Kubernetes",
+			"GPU"
+		],
+		"imageUrl": "/projects/nsfw.jpg"
+	},
+	"ees": {
+		"title": "EES (Entry-Exit system)",
+		"description": "The Entry/Exit System (EES) will be an automated IT system designed to register travelers from third countries. It is a project introduced by the European Commission.\nMy role on this project was to design and implement the overall architecture of the solution (around ten microservices, two frontends, across five application domains).",
+		"technologies": [
+			".NET Core",
+			"React",
+			"Microservices",
+			"Azure",
+			"Docker",
+			"Kubernetes"
+		],
+		"imageUrl": "/projects/ees.webp",
+		"liveUrl": "https://travel-europe.europa.eu/ees/what-ees_en"
+	}
+}

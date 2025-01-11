@@ -30,11 +30,6 @@ import {
 	TooltipTrigger,
 } from "~/components/ui/tooltip";
 import { dateLocale } from "~/i18n/i18n";
-import type { Experience } from "~/i18n/types";
-
-type DisplayExperience = Experience & {
-	duration: string;
-};
 
 const technologies = [
 	{ name: ".NET Core", logo: "/logos/dotnet.svg" }, // Remplacez les chemins par vos images
@@ -69,42 +64,38 @@ const certifications = [
 	},
 ];
 
-function rawToDisplay(experience: Experience): DisplayExperience {
-	const now = new Date();
-	const startDate = new Date(experience.startDate);
-	const endDate = experience.endDate
-		? new Date(experience.endDate)
-		: new Date();
-	const duration = formatDistance(startDate, endDate, {
-		locale: dateLocale(),
-	});
-
-	return {
-		...experience,
-		startDate: format(startDate, "MMM yyyy", { locale: dateLocale() }),
-		endDate: experience.endDate
-			? format(new Date(experience.endDate), "MMM yyyy", {
-					locale: dateLocale(),
-				})
-			: formatRelative(
-					new Date(now.getFullYear(), now.getMonth(), now.getDate()),
-					new Date(now.getFullYear(), now.getMonth(), now.getDate()),
-					{
-						locale: dateLocale(),
-					},
-				).split(" ")[0],
-		duration,
-	} satisfies DisplayExperience;
-}
-
 const About = () => {
 	const { t } = useTranslation();
-	const experiences = (
-		t("experiences", {
-			returnObjects: true,
-			defaultValue: [],
-		}) as Experience[]
-	).map(rawToDisplay);
+	const experiences = t("experiences", {
+		returnObjects: true,
+		defaultValue: [],
+	}).map((experience) => {
+		const now = new Date();
+		const startDate = new Date(experience.startDate);
+		const endDate = experience.endDate
+			? new Date(experience.endDate)
+			: new Date();
+		const duration = formatDistance(startDate, endDate, {
+			locale: dateLocale(),
+		});
+
+		return {
+			...experience,
+			startDate: format(startDate, "MMM yyyy", { locale: dateLocale() }),
+			endDate: experience.endDate
+				? format(new Date(experience.endDate), "MMM yyyy", {
+						locale: dateLocale(),
+					})
+				: formatRelative(
+						new Date(now.getFullYear(), now.getMonth(), now.getDate()),
+						new Date(now.getFullYear(), now.getMonth(), now.getDate()),
+						{
+							locale: dateLocale(),
+						},
+					).split(" ")[0],
+			duration,
+		};
+	});
 
 	return (
 		<div className="max-w-4xl mx-auto p-6">
