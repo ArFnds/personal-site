@@ -61,6 +61,16 @@ const Footer = () => {
 						>
 							{t("footer.contact", "Me contacter")}
 						</NavLink>
+						<a
+							href="/fr/mentions-legales"
+							className={`${
+								isDarkTheme
+									? "text-gray-400 hover:text-gray-100"
+									: "text-gray-600 hover:text-gray-800"
+							} transition`}
+						>
+							{t("footer.legal", "Mentions légales")}
+						</a>
 					</div>
 				</div>
 			</div>

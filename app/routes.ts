@@ -10,4 +10,5 @@ export default [
 	route("/:lang?/conferences", "routes/conferences.tsx"),
 	route("/:lang?/mentoring", "routes/mentoring.tsx"),
 	route("/:lang?/contact", "routes/contact.tsx"),
+	route("/:lang?/mentions-legales", "routes/mentions-legales.tsx"),
 ] satisfies RouteConfig;
