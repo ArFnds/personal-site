@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Trans, useTranslation } from "react-i18next";
 import { HeadParaph } from "~/components/HeadParaph";
 import ProjectCard from "~/components/ProjectCard";
-import SectionHeader from "~/components/SectionHeader";
+import { SectionTitle } from "~/components/SectionTitle";
 
 const Portfolio = () => {
 	const { t } = useTranslation("projects");
@@ -17,8 +17,7 @@ const Portfolio = () => {
 	return (
 		<div className="min-h-screen py-16">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<SectionHeader
-					h1
+				<SectionTitle
 					title="Portfolio"
 					subtitle="Featured projects and professional achievements"
 				/>

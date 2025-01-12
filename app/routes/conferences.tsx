@@ -4,6 +4,7 @@ import { Trans, useTranslation } from "react-i18next";
 
 import { HeadParaph } from "~/components/HeadParaph";
 import { PhotoGallery } from "~/components/PhotoGallery";
+import { SectionTitle } from "~/components/SectionTitle";
 import { buttonVariants } from "~/components/ui/button";
 import {
 	Card,
@@ -15,7 +16,6 @@ import {
 	CardTitle,
 } from "~/components/ui/card";
 import { contactInfo } from "~/config/contact";
-import SectionHeader from "../components/SectionHeader";
 import type { Route } from "./+types/conferences";
 
 const Conferences = (_: Route.ComponentProps) => {
@@ -28,7 +28,7 @@ const Conferences = (_: Route.ComponentProps) => {
 	return (
 		<div className="min-h-screen py-16">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<SectionHeader h1 title={t("title")} subtitle={t("subtitle")} />
+				<SectionTitle title={t("title")} subtitle={t("subtitle")} />
 
 				<HeadParaph icon={<MicVocalIcon />}>
 					<Trans

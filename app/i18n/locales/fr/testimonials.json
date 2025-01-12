@@ -1,18 +1,27 @@
 {
+	"title": "Ce que disent nos clients",
+	"subtitle": "Découvrez les expériences de nos clients satisfaits",
 	"all": [
 		{
 			"id": 1,
-			"name": "Mourad Mouttaki",
+			"name": "Mourad",
 			"image": "/avatars/mourad.png",
 			"rating": 5,
 			"text": "Je recommande Arnaud pour son expertise. Il est polyvalent, réactif, et toujours prêt à proposer des solutions efficaces. Un excellent collaborateur, capable de faire avancer les projets en toute sérénité."
 		},
 		{
 			"id": 2,
-			"name": "Ronan Jaffré",
+			"name": "Ronan",
 			"image": "/avatars/ronan.png",
 			"rating": 5,
 			"text": "Je recommande vivement Arnaud pour tout poste de tech lead. J'ai eu le plaisir de travailler avec Arnaud à Cdiscount, où il a démontré ses compétences exceptionnelles en matière de leadership technique."
+		},
+		{
+			"id": 3,
+			"name": "Sara",
+			"image": "/avatars/sara.jpg",
+			"rating": 5,
+			"text": "C'est avec beaucoup de fierté que je recommande Arnaud Fernandès. J'ai eu l'opportunité de travailler avec lui pendant près de 2 ans et ai beaucoup appris à ses côtés. Arnaud a démontré une expertise de pointe. Non seulement en tant que Développeur Fullstack, mais également de part sa logique managériale et la qualité de ses interventions orales."
 		}
 	]
 }

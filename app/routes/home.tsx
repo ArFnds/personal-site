@@ -4,6 +4,7 @@ import { Trans, useTranslation } from "react-i18next";
 import { Link } from "react-router";
 import person from "~/assets/structured-data/person";
 import { HeadParaph } from "~/components/HeadParaph";
+import { SectionTitle } from "~/components/SectionTitle";
 import TestimonialList from "~/components/TestimonialList";
 import { buttonVariants } from "~/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
@@ -136,6 +137,10 @@ const Home = () => {
 				</div>
 			</Section>
 			<Section>
+				<SectionTitle
+					title={tTestimonials("title")}
+					subtitle={tTestimonials("subtitle")}
+				/>
 				<TestimonialList testimonials={testimonials} />
 			</Section>
 		</div>

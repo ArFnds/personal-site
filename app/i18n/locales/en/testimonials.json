@@ -1,18 +1,27 @@
 {
+	"title": "What our clients say",
+	"subtitle": "Discover experiences from our satisfied customers",
 	"all": [
 		{
 			"id": 1,
-			"name": "Mourad Mouttaki",
+			"name": "Mourad",
 			"image": "/avatars/mourad.png",
 			"rating": 5,
 			"text": "I recommend Arnaud for his expertise. He is versatile, responsive, and always ready to propose effective solutions. An excellent collaborator, capable of moving projects forward with complete peace of mind."
 		},
 		{
 			"id": 2,
-			"name": "Ronan Jaffré",
+			"name": "Ronan",
 			"image": "/avatars/ronan.png",
 			"rating": 5,
 			"text": "I highly recommend Arnaud for any tech lead position. I had the pleasure of working with Arnaud at Cdiscount, where he demonstrated his exceptional skills in technical leadership."
+		},
+		{
+			"id": 3,
+			"name": "Sara",
+			"image": "/avatars/sara.jpg",
+			"rating": 5,
+			"text": "It is with great pride that I recommend Arnaud Fernandes. I had the opportunity to work with him for nearly 2 years and learned a lot alongside him. Arnaud demonstrated cutting-edge expertise, not only as a Fullstack Developer but also through his managerial logic and the quality of his speaking engagements."
 		}
 	]
 }

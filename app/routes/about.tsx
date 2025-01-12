@@ -9,6 +9,7 @@ import {
 	MapPinIcon,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { SectionTitle } from "~/components/SectionTitle";
 import TechList from "~/components/TechList";
 import { Alert, AlertDescription, AlertTitle } from "~/components/ui/alert";
 
@@ -114,25 +115,10 @@ const About = () => {
 					</a>
 				</AlertDescription>
 			</Alert>
-			<motion.h1
-				className="text-3xl font-bold mb-6 text-center"
-				initial={{ opacity: 0, y: -20 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.5 }}
-			>
-				{t("about.digitalDna.title", "Digital DNA")}
-			</motion.h1>
+			<SectionTitle title={t("about.digitalDna.title")} />
 			<TechList technologies={technologies} />
 			<Separator className="my-8 invisible" />
-			<motion.h1
-				id="experiences"
-				className="text-3xl font-bold mt-12 mb-6 text-center"
-				initial={{ opacity: 0, y: -20 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.5 }}
-			>
-				{t("experiences.title", "Expériences Professionnelles")}
-			</motion.h1>
+			<SectionTitle title={t("experiences.title")} id="experiences" />
 			<motion.div
 				className="space-y-6"
 				initial="hidden"
@@ -205,15 +191,7 @@ const About = () => {
 				))}
 			</motion.div>
 			<Separator className="my-8 invisible" />
-			<motion.h1
-				id="certifications"
-				className="text-3xl font-bold mb-6 text-center"
-				initial={{ opacity: 0, y: -20 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.5 }}
-			>
-				{t("certifications.title", "Certifications")}
-			</motion.h1>
+			<SectionTitle title={t("certifications.title")} id="certifications" />
 			<motion.div
 				className="space-y-6"
 				initial="hidden"

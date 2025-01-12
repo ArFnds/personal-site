@@ -55,7 +55,7 @@ const TestimonialList: FC<{
 
 	return (
 		<motion.div
-			className="grid grid-cols-1 md:grid-cols-2 gap-2"
+			className="grid grid-cols-1 md:grid-cols-3 gap-2"
 			variants={containerVariants}
 			initial="hidden"
 			animate="visible"

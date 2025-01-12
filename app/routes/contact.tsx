@@ -4,6 +4,7 @@ import { Calendar, CheckCheckIcon, Mail, MapPin, Send } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router";
 import LinkedIn from "~/assets/linkedin.svg?react";
+import { SectionTitle } from "~/components/SectionTitle";
 import { TextField } from "~/components/TextField";
 import { Button } from "~/components/ui/button";
 import {
@@ -16,7 +17,6 @@ import {
 import { Label } from "~/components/ui/label";
 import { Textarea } from "~/components/ui/textarea";
 import { siteUrl, web3formsApiKey } from "~/config";
-import SectionHeader from "../components/SectionHeader";
 import { contactInfo } from "../config/contact";
 import type { Route } from "./+types/contact";
 
@@ -29,8 +29,7 @@ const Contact = (_: Route.ComponentProps) => {
 	return (
 		<div className="min-h-screen py-16">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<SectionHeader
-					h1
+				<SectionTitle
 					title={t("sectionHeader.title")}
 					subtitle={t("sectionHeader.subtitle")}
 				/>

@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { BookOpen, Target, Users } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { HeadParaph } from "~/components/HeadParaph";
+import { SectionTitle } from "~/components/SectionTitle";
 import { buttonVariants } from "~/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
-import SectionHeader from "../components/SectionHeader";
 
 const Mentoring = () => {
 	const { t } = useTranslation();
@@ -29,8 +29,7 @@ const Mentoring = () => {
 	return (
 		<div className="min-h-screen py-16">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<SectionHeader
-					h1
+				<SectionTitle
 					title={t("mentoring.title")}
 					subtitle={t("mentoring.subtitle")}
 				/>
