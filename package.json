@@ -10,7 +10,8 @@
 		"dev": "react-router dev",
 		"start": "cross-env NODE_ENV=production react-router-serve ./build/server/index.js",
 		"typecheck": "react-router typegen && tsc",
-		"i18n:gen": "i18next-resources-for-ts toc -i ./app/i18n/locales/en -o ./app/types/resources.ts"
+		"i18n:gen": "i18next-resources-for-ts toc -i ./app/i18n/locales/en -o ./app/types/resources.ts",
+		"release": "gh release create"
 	},
 	"dependencies": {
 		"@hookform/resolvers": "^3.9.1",

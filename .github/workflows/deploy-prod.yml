@@ -27,6 +27,7 @@ jobs:
           
           # Update the image.tag value in values.yaml
           yq -i '.image.tag = "${{ github.event.inputs.imageTag }}"' charts/values.yaml
+          yq -i '.vars.VERSION = "${{ github.event.inputs.imageTag }}"' charts/values.yaml
       
       - name: Commit and push changes
         run: |
