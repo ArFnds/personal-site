@@ -144,6 +144,10 @@
 			"url": "https://www.tech-magister.com/"
 		}
 	],
+	"portfolio": {
+		"title": "Portfolio",
+		"subtitle": "Projets phares et réalisations professionnelles"
+	},
 	"conferencePage": {
 		"title": "Conférences",
 		"subtitle": "Partage des connaissances et des expériences avec la communauté technologique",

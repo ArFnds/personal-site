@@ -1,0 +1,77 @@
+{
+	"description": "Jedes abgeschlossene Projekt spiegelt <1>tiefes technisches Fachwissen</1> und ein <2>Verständnis für spezifische Kundenbedürfnisse</2> wider. Von <3>modernen Webanwendungen</3> bis hin zu <4>robusten Microservice-Architekturen</4>, durch <5>maßgeschneiderte Lösungen</5>, zeigt jede Errungenschaft das Engagement für die Bereitstellung leistungsstarker und nachhaltiger Ergebnisse. Entdecken Sie eine Auswahl von Projekten, die die Fähigkeit demonstrieren, Ideen in konkrete und innovative Lösungen umzusetzen.",
+	"forClient": "Dieses Projekt wurde für den Kunden <1>{{client}}</1> realisiert.",
+	"project1": {
+		"title": "Eurotunnel Freight Tracking",
+		"description": "Bei diesem Projekt wurden innovative Microservices entwickelt, um die Tracking-Möglichkeiten von Frachtfahrzeugen bei der Überquerung des Ärmelkanals zu erweitern.\n Parallel dazu wurde eine technische Modernisierung wesentlicher Komponenten im Zusammenhang mit der Fahrzeugverfolgung durchgeführt.\n Zusätzlich wurde das Back-Office, das die von den Fahrern genutzte Anwendung verwaltet, mit neuen Funktionen aufgerüstet, um ihr Gesamterlebnis zu verbessern.",
+		"technologies": ["React", ".NET Core", "Azure", "Microservices"],
+		"imageUrl": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=800&h=200&auto=format&fit=crop",
+		"client": "GetLink"
+	},
+	"project2": {
+		"title": "Cdiscount à Volonté",
+		"description": "Bei diesem Projekt stand die Entwicklung des 'Cdiscount à volonté'-Angebots im Vordergrund. Dies beinhaltete die Erstellung von Microservices in Java mit Spring und die Verbesserung des Angebots auf der PC-Website mit .NET und C#.\n Zusätzlich wurden Verbesserungen am Angebot auf mobilen Plattformen und Anwendungen mit React JS und React Native vorgenommen, um eine optimale Benutzererfahrung zu gewährleisten.",
+		"technologies": ["React", ".NET Core", "Azure", "Microservices"],
+		"imageUrl": "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+		"liveUrl": "https://www.cdiscount.com/cdav",
+		"client": "Cdiscount"
+	},
+	"project3": {
+		"title": "Detection of NSFW images",
+		"description": "Entwicklung eines KI-basierten Dienstes zur Erkennung von NSFW-Bildern (Not Safe For Work) für ein Upload-System.",
+		"technologies": [
+			"Python",
+			"IA",
+			"Docker",
+			"Microservices",
+			"Kubernetes",
+			"GPU"
+		],
+		"imageUrl": "/projects/nsfw.jpg",
+		"client": "Private"
+	},
+	"ees": {
+		"title": "EES (Entry-Exit system)",
+		"description": "Das Entry/Exit System (EES) wird ein automatisiertes IT-System zur Registrierung von Reisenden aus Drittländern sein. Es ist ein von der Europäischen Kommission eingeführtes Projekt.\nMeine Rolle in diesem Projekt bestand darin, die Gesamtarchitektur der Lösung zu entwerfen und zu implementieren (etwa zehn Microservices, zwei Frontends, über fünf Anwendungsbereiche hinweg).",
+		"technologies": [
+			".NET Core",
+			"React",
+			"Microservices",
+			"Azure",
+			"Docker",
+			"Kubernetes"
+		],
+		"imageUrl": "/projects/ees.webp",
+		"liveUrl": "https://travel-europe.europa.eu/ees/what-ees_en",
+		"client": "GetLink"
+	},
+	"boardingpax": {
+		"title": "Boarding Pax",
+		"description": "Echtzeit-Bereitstellung von Ladeplänen für Fahrzeugtransportwagen im Ärmelkanal, damit das Personal die Fahrzeugplatzierung validieren kann. Dieser Ladeplan erleichtert auch die Intervention im Falle eines Zwischenfalls.",
+		"technologies": [
+			"React",
+			"Microservices",
+			"Azure",
+			"Docker",
+			"Kubernetes",
+			".NET Core"
+		],
+		"imageUrl": "/projects/boardingpax.avif",
+		"client": "GetLink"
+	},
+	"rancher": {
+		"title": "Rancher Cluster",
+		"description": "Ziel dieses Projekts war es, einen Kubernetes-Cluster mit der Rancher-Software zu erstellen. Der Cluster wurde dann für die Bereitstellung von Microservices und Anwendungen verwendet. Die gesamte Plattform wird mit dem Open Telemetry Standard und OpenObserve (OTLP) überwacht.",
+		"technologies": [
+			"Kubernetes",
+			"Rancher",
+			"Microservices",
+			"Docker",
+			"k3S",
+			"OpenObserve",
+			"Longhorn"
+		],
+		"imageUrl": "/projects/cluster.webp",
+		"client": "Tech Magister"
+	}
+}

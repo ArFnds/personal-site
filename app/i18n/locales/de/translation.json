@@ -1,0 +1,203 @@
+{
+	"common": {
+		"quickLink": "Schnellzugriff",
+		"seeMore": "Mehr anzeigen"
+	},
+	"meta": {
+		"title": "Arnaud Fernandes - Softwareingenieur für kundenspezifische digitale Projekte",
+		"description": "Arnaud Fernandes, Softwareingenieur, der Startups und Unternehmen bei der Entwicklung hochleistungsfähiger, maßgeschneiderter Lösungen unterstützt.",
+		"keywords": "Arnaud Fernandes, Fullstack Technical Lead, .NET Core, C#, React, Go, Webentwicklung, Microservices, kundenspezifische Lösungen, IT-Beratung, Softwarearchitektur, Startups, Softwareentwicklung, Anwendungsleistung, Anwendungssicherheit, technisches Coaching, IT-Projektmanagement"
+	},
+	"navigation": {
+		"home": "Startseite",
+		"about": "Über Mich",
+		"portfolio": "Portfolio",
+		"mentoring": "Mentoring",
+		"conferences": "Konferenzen",
+		"contact": "Kontakt"
+	},
+	"hero": {
+		"title": "Arnaud Fernandes",
+		"subtitle": "Entwicklung maßgeschneiderter digitaler Projekte | Innovative Hochleistungslösungen",
+		"cta": "Kontaktieren Sie mich"
+	},
+	"about": {
+		"title": "Über Mich",
+		"description": "Als leidenschaftlicher Fullstack-Lead-Entwickler und IT-Unternehmensgründer spezialisiere ich mich auf Microservices-Architekturen und biete innovative Hochleistungslösungen für Startups und wachsende Unternehmen.",
+		"digitalDna": {
+			"title": "Digitale DNA"
+		}
+	},
+	"home": {
+		"bio": "Leidenschaftlicher Softwareingenieur und Experte für digitale Lösungen, spezialisiert auf <1>moderne Webentwicklung</1>, <2>Microservices-Architekturdesign</2> und <3>fortgeschrittene Technologieberatung</3>. Mit fundierter Erfahrung in Großunternehmen und Startups ist jedes Projekt eine Gelegenheit, Ideen in konkrete und effiziente Ergebnisse umzusetzen."
+	},
+	"contact": {
+		"sectionHeader": {
+			"title": "Kontaktieren Sie mich",
+			"subtitle": "Lassen Sie uns besprechen, wie ich bei Ihrem nächsten Projekt helfen kann"
+		},
+		"formHeader": {
+			"title": "Kontakt aufnehmen",
+			"description": "Kontaktieren Sie mich über das Formular unten oder per E-Mail",
+			"success": "Vielen Dank für Ihre Nachricht! Ich werde mich bald bei Ihnen melden."
+		},
+		"form": {
+			"name": "Name",
+			"email": "E-Mail",
+			"subject": "Betreff",
+			"message": "Nachricht",
+			"submit": "Senden"
+		},
+		"info": {
+			"title": "Kontaktinformationen",
+			"description": "Ich freue mich von Ihnen zu hören! Ob Sie an einer Projektzusammenarbeit interessiert sind, eine Frage haben oder einfach in Kontakt treten möchten - ich bin hier, um zu helfen.",
+			"scheduleaMeeting": "Termin vereinbaren",
+			"linkedinProfile": "LinkedIn-Profil"
+		}
+	},
+	"themeSwitcher": {
+		"light": "Hell",
+		"dark": "Dunkel"
+	},
+	"features": {
+		"feature1": {
+			"title": "Technische Exzellenz",
+			"description": "Spezialisiert auf .NET Core, React, Go und Microservices-Architektur"
+		},
+		"feature2": {
+			"title": "Startup-Wachstum",
+			"description": "Innovative Lösungen für Startups und wachsende Unternehmen"
+		},
+		"feature3": {
+			"title": "Teamführung",
+			"description": "Leitung und Mentoring technischer Teams zur Erreichung von Spitzenleistungen"
+		}
+	},
+	"certifications": {
+		"title": "Zertifizierungen"
+	},
+	"experiences.title": "Erfahrung",
+	"experiences": [
+		{
+			"company": "Eurotunnel",
+			"role": "Technischer Leiter Fullstack .NET Core (C#) / React",
+			"headerImage": "https://images.unsplash.com/photo-1495870043034-74e1a009f631?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			"logo": "/logos/getlink.webp",
+			"startDate": "2022-12",
+			"location": "Fernbedienung",
+			"description": "Im Rahmen dieser Mission wurden innovative Microservices entwickelt, um die Verfolgungsmöglichkeiten von Frachtlastwagen, die den Ärmelkanal überqueren, zu verbessern.\n\nDarüber hinaus wurde die technische Modernisierung der wichtigsten Komponenten im Zusammenhang mit der Fahrzeugverfolgung erfolgreich durchgeführt. Das Backoffice der von Fahrern genutzten Anwendung wurde ebenfalls neu gestaltet und mit neuen Funktionen angereichert, um ihre Gesamtbenutzererfahrung zu verbessern.",
+			"technologies": [
+				"C#.NET 6/7/8",
+				"ReactJS",
+				"Typescript",
+				"Azure",
+				"Gherkin"
+			]
+		},
+		{
+			"company": "Sage",
+			"role": "Senior Developer Fullstack .NET Core (C#) / React",
+			"headerImage": "https://images.unsplash.com/photo-1511376868136-742c0de8c9a8?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			"logo": "/logos/sage.png",
+			"startDate": "2021-06",
+			"endDate": "2022-12",
+			"location": "Fernbedienung",
+			"description": "Es wurde Beratung zur Gestaltung und Implementierung einer Microservices-Architektur geleistet, um robuste und skalierbare Lösungen sicherzustellen.\n\nKorrektive Wartung wurde für Anwendungen durchgeführt, die mit .NET 4.8 entwickelt wurden, um technische Probleme zu beheben und die Leistung zu optimieren.\n\nTiefgehende Analysen wurden durchgeführt, die zur Entwicklung von Proofs of Concept (POC) für Echtzeit-Updates führten, um die Machbarkeit und Effektivität der vorgeschlagenen Lösungen zu demonstrieren.",
+			"technologies": [
+				"Docker",
+				"Kubernetes",
+				"Microservices",
+				"Apache Kafka",
+				".NET Core"
+			]
+		},
+		{
+			"company": "Cdiscount",
+			"role": "Technischer Leiter Fullstack .NET Core (C#) / React",
+			"headerImage": "https://images.unsplash.com/photo-1561069934-eee225952461?q=80&w=600&h=100&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+			"logo": "/logos/cdiscount.png",
+			"startDate": "2018-06",
+			"endDate": "2021-06",
+			"location": "Fernbedienung",
+			"description": "Diese Mission umfasste das Coaching, die Unterstützung und das Management der Expertise von Inshore- und Offshore-Technikteams. Es wurde eine gründliche Analyse der Anforderungen und technischen Einschränkungen durchgeführt, gefolgt von detaillierten Studien, präzisen Schätzungen und einer sorgfältigen Budgetierung für die Entwicklungen. Die komplexesten Entwicklungsphasen wurden direkt übernommen, um deren Erfolg sicherzustellen.\n\nAls React-Referent-Reviewer wurde der React-Code für die IT-Commerce-Abteilung überprüft, um sicherzustellen, dass hohe Qualitätsstandards eingehalten wurden.",
+			"technologies": [
+				"Docker",
+				"React",
+				"Apache Kafka",
+				"Kubernetes",
+				".NET Core",
+				"MongoDB"
+			]
+		},
+		{
+			"company": "Tech-Magister",
+			"role": "Gründer",
+			"headerImage": "/tech-magister-cover.jpg",
+			"startDate": "2016-11",
+			"location": "Frankreich und International",
+			"description": "Das Unternehmen bietet Coaching, Unterstützung und Expertenmanagement für technische Teams, um einen effektiven und nachhaltigen Wissenstransfer sicherzustellen.\n\nEine gründliche Analyse der Anforderungen und technischen Einschränkungen wird durchgeführt, um die besten Entwicklungsstrategien zu definieren. Dies umfasst detaillierte Studien, präzise Kostenschätzungen und eine rigorose Projektbudgetierung.\n\nEntwicklungsphasen, einschließlich der komplexesten Schritte, werden übernommen, ebenso wie die Einrichtung und Durchführung technischer Testphasen, um hochwertige, maßgeschneiderte Lösungen zu liefern.",
+			"technologies": ["Software development", "Project management", "Scrum"],
+			"url": "https://www.tech-magister.com/"
+		}
+	],
+	"portfolio": {
+		"title": "Portfolio",
+		"subtitle": "Ausgewählte Projekte und berufliche Erfolge"
+	},
+	"conferencePage": {
+		"title": "Konferenzvorträge",
+		"subtitle": "Wissen und Erfahrungen mit der Tech-Community teilen",
+		"cta": "Konferenzvortrag planen",
+		"headparaph": "Der Austausch von Wissen und Erfahrungen ist essenziell für den Fortschritt der technologischen Welt. Die Präsentationen behandeln Themen wie <1>Softwareentwicklung</1>, <2>Microservices-Architekturen</2>, <3>Leistungsoptimierung</3> und <4>IT-Geschäftswachstumsstrategien</4>. Diese Veranstaltungen bieten die Gelegenheit, zu inspirieren, praktisches Wissen zu vermitteln und bereichernden Austausch mit passionierten Fachleuten zu schaffen.",
+		"conferences": [
+			{
+				"title": "Vorstellung eines FinTech-Projekts",
+				"description": "Präsentation eines Projekts im FinTech-Bereich auf einer Konferenz.",
+				"date": "28. März 2023",
+				"imageUrl": "",
+				"link": "",
+				"location": "",
+				"photos": [
+					{
+						"id": "1",
+						"url": "/conferences/fintech/1.webp",
+						"alt": "Präsentation eines FinTech-Projekts Foto 1"
+					},
+					{
+						"id": "2",
+						"url": "/conferences/fintech/2.webp",
+						"alt": "Präsentation eines FinTech-Projekts Foto 2"
+					},
+					{
+						"id": "3",
+						"url": "/conferences/fintech/3.webp",
+						"alt": "Präsentation eines FinTech-Projekts Foto 3"
+					}
+				]
+			}
+		]
+	},
+	"mentoring": {
+		"title": "Mentoring-Dienste",
+		"subtitle": "Entwickler befähigen, ihr volles Potenzial zu entfalten",
+		"cta": "Mentoring-Sitzung planen",
+		"headparaph": "Sie sind nicht so weit gekommen, um nur bis hierher zu kommen.",
+		"services": {
+			"technicalGuidance": {
+				"title": "Technische Begleitung",
+				"description": "Personalisiertes Mentoring in .NET Core, React und Microservices-Architektur."
+			},
+			"teamLeadership": {
+				"title": "Teamführung",
+				"description": "Lernen Sie effektives Teammanagement und technische Führungskompetenzen."
+			},
+			"careerCounseling": {
+				"title": "Karriereberatung",
+				"description": "Strategische Begleitung für das Karrierewachstum in der Softwareentwicklung."
+			}
+		}
+	},
+	"footer": {
+		"contact": "Kontakt aufnehmen"
+	}
+}

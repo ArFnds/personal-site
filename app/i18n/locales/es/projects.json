@@ -1,5 +1,6 @@
 {
 	"description": "Cada proyecto completado refleja una <1>profunda experiencia técnica</1> y una <2>comprensión de las necesidades específicas del cliente</2>. Desde <3>aplicaciones web modernas</3> hasta <4>arquitecturas de microservicios robustas</4>, pasando por <5>soluciones personalizadas</5>, cada logro demuestra un compromiso con la entrega de resultados de alto rendimiento y sostenibles. Descubra una selección de proyectos que muestran la capacidad de transformar ideas en soluciones concretas e innovadoras.",
+	"forClient": "Este proyecto ha sido realizado para el cliente <1>{{client}}</1>.",
 	"project1": {
 		"title": "Seguimiento de carga del Eurotúnel",
 		"description": "En este proyecto, se desarrollaron microservicios innovadores para ampliar las capacidades de seguimiento de los camiones de mercancías que cruzan el Canal de la Mancha.\n Paralelamente, se realizó la modernización técnica de componentes esenciales relacionados con el seguimiento de vehículos.\n Además, se mejoró el sistema de back-office que gestiona la aplicación utilizada por los conductores, integrando nuevas funcionalidades para mejorar su experiencia general.",
@@ -64,11 +65,27 @@
 		"technologies": [
 			"React",
 			"Microservices",
+			"Azure",
 			"Docker",
 			"Kubernetes",
 			".NET Core"
 		],
 		"imageUrl": "/projects/boardingpax.avif",
 		"client": "GetLink"
+	},
+	"rancher": {
+		"title": "Clúster Rancher",
+		"description": "El objetivo de este proyecto era crear un clúster de Kubernetes utilizando el software Rancher. El clúster se utilizó luego para implementar microservicios y aplicaciones. Toda la plataforma está monitorizada utilizando el estándar Open Telemetry y OpenObserve (OTLP).",
+		"technologies": [
+			"Kubernetes",
+			"Rancher",
+			"Microservices",
+			"Docker",
+			"k3S",
+			"OpenObserve",
+			"Longhorn"
+		],
+		"imageUrl": "/projects/cluster.webp",
+		"client": "Tech Magister"
 	}
 }

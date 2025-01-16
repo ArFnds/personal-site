@@ -5,26 +5,28 @@ import ProjectCard from "~/components/ProjectCard";
 import { SectionTitle } from "~/components/SectionTitle";
 
 const Portfolio = () => {
-	const { t } = useTranslation("projects");
+	const { t } = useTranslation();
+	const { t: tProjects } = useTranslation("projects");
 	const projects = [
-		t("project1", { returnObjects: true }),
-		t("project2", { returnObjects: true }),
-		t("project3", { returnObjects: true }),
-		t("ees", { returnObjects: true }),
-		t("boardingpax", { returnObjects: true }),
+		tProjects("ees", { returnObjects: true }),
+		tProjects("boardingpax", { returnObjects: true }),
+		tProjects("rancher", { returnObjects: true }),
+		tProjects("project1", { returnObjects: true }),
+		tProjects("project2", { returnObjects: true }),
+		tProjects("project3", { returnObjects: true }),
 	];
 
 	return (
 		<div className="min-h-screen py-16">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<SectionTitle
-					title="Portfolio"
-					subtitle="Featured projects and professional achievements"
+					title={t("portfolio.title")}
+					subtitle={t("portfolio.subtitle")}
 				/>
 
 				<HeadParaph>
 					<Trans
-						t={t}
+						t={tProjects}
 						i18nKey="description"
 						components={[
 							<span key={0} className="text-blue-600 dark:text-blue-400" />,

@@ -1,0 +1,27 @@
+{
+	"title": "Was unsere Kunden sagen",
+	"subtitle": "Entdecken Sie Erfahrungen unserer zufriedenen Kunden",
+	"all": [
+		{
+			"id": 1,
+			"name": "Mourad",
+			"image": "/avatars/mourad.png",
+			"rating": 5,
+			"text": "Ich empfehle Arnaud für seine Expertise. Er ist vielseitig, reaktionsschnell und immer bereit, effektive Lösungen vorzuschlagen. Ein ausgezeichneter Mitarbeiter, der Projekte mit völliger Gelassenheit vorantreiben kann."
+		},
+		{
+			"id": 2,
+			"name": "Ronan",
+			"image": "/avatars/ronan.png",
+			"rating": 5,
+			"text": "Ich empfehle Arnaud wärmstens für jede Tech-Lead-Position. Ich hatte das Vergnügen, bei Cdiscount mit Arnaud zusammenzuarbeiten, wo er seine außergewöhnlichen Fähigkeiten in der technischen Führung unter Beweis stellte."
+		},
+		{
+			"id": 3,
+			"name": "Sara",
+			"image": "/avatars/sara.jpg",
+			"rating": 5,
+			"text": "Mit großem Stolz empfehle ich Arnaud Fernandes. Ich hatte die Gelegenheit, fast 2 Jahre lang mit ihm zusammenzuarbeiten und habe an seiner Seite viel gelernt. Arnaud zeigte modernste Expertise, nicht nur als Fullstack-Entwickler, sondern auch durch seine Managementlogik und die Qualität seiner Vorträge."
+		}
+	]
+}

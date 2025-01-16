@@ -1,5 +1,6 @@
 {
 	"description": "Chaque projet réalisé reflète une <1>expertise technique approfondie</1> et une <2>compréhension des besoins spécifiques des clients</2>. Des <3>applications web modernes</3> aux <4>architectures microservices robustes</4>, en passant par des <5>solutions sur mesure</5>, chaque réalisation témoigne d'un engagement à fournir des résultats performants et durables. Découvrez une sélection de projets qui illustrent une capacité à transformer des idées en solutions concrètes et innovantes.",
+	"forClient": "Ce projet a été réalisé pour le client <1>{{client}}</1>.",
 	"project1": {
 		"title": "Eurotunnel Freight Tracking",
 		"description": "Sur ce projet, des microservices innovants ont été développés pour étendre les capacités de suivi des camions de marchandises traversant la Manche.\n En parallèle, une modernisation technique de certains composants essentiels liés au suivi des véhicules a été réalisée.\n De plus, le back-office gérant l'application utilisée par les chauffeurs a été amélioré avec de nouvelles fonctionnalités pour optimiser leur expérience globale.",
@@ -64,11 +65,27 @@
 		"technologies": [
 			"React",
 			"Microservices",
+			"Azure",
 			"Docker",
 			"Kubernetes",
 			".NET Core"
 		],
 		"imageUrl": "/projects/boardingpax.avif",
 		"client": "GetLink"
+	},
+	"rancher": {
+		"title": "Cluster Rancher",
+		"description": "L'objectif de ce projet était de créer un cluster Kubernetes en utilisant le logiciel Rancher. Le cluster a ensuite été utilisé pour déployer des microservices et des applications. L'ensemble de la plateforme est surveillé à l'aide du standard Open Telemetry et d'OpenObserve (OTLP).",
+		"technologies": [
+			"Kubernetes",
+			"Rancher",
+			"Microservices",
+			"Docker",
+			"k3S",
+			"OpenObserve",
+			"Longhorn"
+		],
+		"imageUrl": "/projects/cluster.webp",
+		"client": "Tech Magister"
 	}
 }

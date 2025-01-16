@@ -140,6 +140,10 @@
 			"url": "https://www.tech-magister.com/"
 		}
 	],
+	"portfolio": {
+		"title": "Portfolio",
+		"subtitle": "Featured projects and professional achievements"
+	},
 	"conferencePage": {
 		"title": "Conference Talks",
 		"subtitle": "Sharing knowledge and experiences with the tech community",

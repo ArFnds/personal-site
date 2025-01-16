@@ -12,6 +12,7 @@ import {
 import { availableLanguages } from "~/i18n/i18n";
 import { cn } from "~/lib/utils";
 
+import DeFlag from "~/assets/flags/de.svg?react";
 import EsFlag from "~/assets/flags/es.svg?react";
 import FrFlag from "~/assets/flags/fr.svg?react";
 import EnFlag from "~/assets/flags/gb.svg?react";
@@ -37,6 +38,11 @@ const languages = [
 		code: "ru",
 		label: "Русский",
 		Flag: RuFlag,
+	},
+	{
+		code: "de",
+		label: "Deutsch",
+		Flag: DeFlag,
 	},
 ];
 

@@ -1,7 +1,7 @@
-import { ArrowDownToDot, ExternalLink, Github } from "lucide-react";
+import { ArrowRightToLine, ExternalLink, Github } from "lucide-react";
 import type React from "react";
-import { useTranslation } from "react-i18next";
-import { Badge } from "./ui/badge";
+import { Trans, useTranslation } from "react-i18next";
+
 import {
 	Card,
 	CardDescription,
@@ -9,7 +9,14 @@ import {
 	CardHeader,
 	CardImage,
 	CardTitle,
-} from "./ui/card";
+} from "~/components/ui/card";
+import {
+	Tooltip,
+	TooltipContent,
+	TooltipProvider,
+	TooltipTrigger,
+} from "~/components/ui/tooltip";
+import { Badge } from "./ui/badge";
 
 interface ProjectCardProps {
 	title: string;
@@ -33,6 +40,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 	client,
 }) => {
 	const { t } = useTranslation();
+	const { t: tProject } = useTranslation("projects");
 	return (
 		<Card className="overflow-hidden h-full">
 			<CardImage
@@ -52,10 +60,26 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 					)}
 					<h2>{title}</h2>
 					{client && (
-						<span className="text-muted-foreground ml-auto">
-							<ArrowDownToDot className="w-4 h-4 inline-block" />
-							{client}
-						</span>
+						<TooltipProvider>
+							<Tooltip>
+								<TooltipTrigger asChild>
+									<span className="text-muted-foreground ml-auto">
+										<ArrowRightToLine className="w-4 h-4 inline-block" />
+										{client}
+									</span>
+								</TooltipTrigger>
+								<TooltipContent>
+									<p>
+										<Trans
+											t={tProject}
+											i18nKey="forClient"
+											components={[<strong key={0} />]}
+											values={{ client }}
+										/>
+									</p>
+								</TooltipContent>
+							</Tooltip>
+						</TooltipProvider>
 					)}
 				</CardTitle>
 				<CardDescription className="indent-2 whitespace-pre-line">

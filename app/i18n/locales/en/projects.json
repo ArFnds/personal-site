@@ -1,5 +1,6 @@
 {
 	"description": "Each completed project reflects <1>deep technical expertise</1> and an <2>understanding of specific client needs</2>. From <3>modern web applications</3> to <4>robust microservice architectures</4>, through <5>customized solutions</5>, each achievement demonstrates a commitment to delivering high-performance and sustainable results. Discover a selection of projects that showcase the ability to transform ideas into concrete and innovative solutions.",
+	"forClient": "This project has been realized for the client <1>{{client}}</1>.",
 	"project1": {
 		"title": "Eurotunnel Freight Tracking",
 		"description": "On this project, innovative microservices were developed to expand the tracking capabilities of freight trucks crossing the English Channel.\n In parallel, technical modernization of essential components related to vehicle tracking was undertaken.\n Additionally, the back-office managing the application used by drivers was upgraded with new features to enhance their overall experience.",
@@ -50,11 +51,27 @@
 		"technologies": [
 			"React",
 			"Microservices",
+			"Azure",
 			"Docker",
 			"Kubernetes",
 			".NET Core"
 		],
 		"imageUrl": "/projects/boardingpax.avif",
 		"client": "GetLink"
+	},
+	"rancher": {
+		"title": "Rancher Cluster",
+		"description": "The goal of this project was to create a Kubernetes cluster using the Rancher software. The cluster was then used to deploy microservices and applications. The all platform is monitored using Open telemetry standard and OpenObserve (OTLP).",
+		"technologies": [
+			"Kubernetes",
+			"Rancher",
+			"Microservices",
+			"Docker",
+			"k3S",
+			"OpenObserve",
+			"Longhorn"
+		],
+		"imageUrl": "/projects/cluster.webp",
+		"client": "Tech Magister"
 	}
 }
