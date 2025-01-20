@@ -73,5 +73,21 @@
 		],
 		"imageUrl": "/projects/cluster.webp",
 		"client": "Tech Magister"
+	},
+	"3ie-report": {
+		"title": "Expertise Report",
+		"description": "Implementation of a web application to generate expertise reports by aggregating data from multiple sources.\n Use of the French cadastre, AI, and other APIs to complete and generate the Word document.",
+		"technologies": [
+			"React",
+			"Microservices",
+			"Docker",
+			"Kubernetes",
+			"IA",
+			"API",
+			"Word"
+		],
+		"imageUrl": "/projects/3ie-report.png",
+		"client": "3IE",
+		"liveUrl": "https://3ie-report.tech-magister.com/"
 	}
 }

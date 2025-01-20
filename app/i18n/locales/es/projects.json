@@ -87,5 +87,21 @@
 		],
 		"imageUrl": "/projects/cluster.webp",
 		"client": "Tech Magister"
+	},
+	"3ie-report": {
+		"title": "Informe de peritaje",
+		"description": "Implementación de una aplicación web para generar informes de peritaje mediante la agregación de datos de múltiples fuentes.\n Uso del catastro francés, IA y otras API para completar y generar el documento Word.",
+		"technologies": [
+			"React",
+			"Microservices",
+			"Docker",
+			"Kubernetes",
+			"IA",
+			"API",
+			"Word"
+		],
+		"imageUrl": "/projects/3ie-report.png",
+		"client": "3IE",
+		"liveUrl": "https://3ie-report.tech-magister.com/"
 	}
 }

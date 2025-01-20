@@ -87,5 +87,21 @@
 		],
 		"imageUrl": "/projects/cluster.webp",
 		"client": "Tech Magister"
+	},
+	"3ie-report": {
+		"title": "Rapport d'expertise",
+		"description": "Mis en place d'une application web pour générer des rapports d'expertises en aggrégeant les données de plusieurs sources.\n Utilisation du cadastre français, de l'IA et d'autres API pour complêter et générer le document word.",
+		"technologies": [
+			"React",
+			"Microservices",
+			"Docker",
+			"Kubernetes",
+			"IA",
+			"API",
+			"Word"
+		],
+		"imageUrl": "/projects/3ie-report.png",
+		"client": "3IE",
+		"liveUrl": "https://3ie-report.tech-magister.com/"
 	}
 }

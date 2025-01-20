@@ -73,5 +73,21 @@
 		],
 		"imageUrl": "/projects/cluster.webp",
 		"client": "Tech Magister"
+	},
+	"3ie-report": {
+		"title": "Отчет экспертизы",
+		"description": "Реализация веб-приложения для создания отчетов экспертизы путем агрегирования данных из различных источников.\n Использование французского кадастра, ИИ и других API для завершения и генерации документа Word.",
+		"technologies": [
+			"React",
+			"Microservices",
+			"Docker",
+			"Kubernetes",
+			"IA",
+			"API",
+			"Word"
+		],
+		"imageUrl": "/projects/3ie-report.png",
+		"client": "3IE",
+		"liveUrl": "https://3ie-report.tech-magister.com/"
 	}
 }
