@@ -1,6 +1,6 @@
 image:
   repository: "ghcr.io/arfnds/personal-site"
-  tag: "v1.10.0"
+  tag: "v1.11.0"
 imagePullSecrets:
   - "ghcr.io"
 containerPort: 3000
@@ -10,7 +10,7 @@ probe:
   enabled: false
 vars:
   OTEL_EXPORTER_OTLP_ENDPOINT: "https://obs.arbrerus.ru/api/default/"
-  VERSION: v1.10.0
+  VERSION: v1.11.0
 ingress:
   host: "arnaudfernandes.com"
   tlsEnabled: true
